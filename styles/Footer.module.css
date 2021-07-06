@@ -15,14 +15,32 @@
 
 .navFooter {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  
 }
 
 .navFooterItems {
   display: flex;
   text-align: center;
   list-style: none;
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+}
+
+.LogoItems {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  width: 10vw;
+  color: beige;
+  cursor: pointer;
+}
+
+.Copyright {
+  font-size: 3vmin;
+  padding-top: 5vh;
+  display: flex;
+}
+.CopyrightChild {
+  margin: auto;
 }
