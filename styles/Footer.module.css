@@ -10,7 +10,7 @@
 .wrapFooter {
   transform-origin: center bottom 0px;  
   padding: 10px 0px 0px 0px;
-  transform: translateY(-60px) scale(0.9);
+  transform: translateY(-40px) scale(0.9);
 }
 
 .navFooter {
@@ -29,15 +29,16 @@
 }
 
 .LogoItems {
-  margin-left: 1vw;
-  margin-right: 1vw;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
   width: 10vw;
   color: beige;
   cursor: pointer;
 }
 
 .Copyright {
-  font-size: 3vmin;
+  color: beige;
+  font-size: 2vmax;
   padding-top: 5vh;
   display: flex;
 }
