@@ -2,6 +2,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Logo from "./Logo";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
 if (typeof window !== "undefined") {
@@ -19,13 +20,14 @@ if (typeof window !== "undefined") {
     <div>
         <div className="wrapper">
         <div className="wrap">
-            <Navbar />
+            <Logo/>
             <section className="transparent">
             <div className="headline"></div>
             <div className="text"></div>
             <div className="text"></div>
             <div className="button"></div>
             </section>
+            <Navbar />
             <section className="cards ">
             <div className="card">
                 <img

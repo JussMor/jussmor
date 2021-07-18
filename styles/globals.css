@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap');
+
 :root {
   --clr1: #ddd;
   --clr2: #efefef;
   --clr3: #FFFFFF;
   --clr4: #004DFF;
+  --clr5: #000;
   --border-radius: 7px;
   --text-radius: 50em;
 }
@@ -24,9 +26,8 @@ body *, body :after, body :before {
 }
 
 .wrap {
-  
   max-width: 960px;
-  min-width: 360px;
+  min-width: 300px;
   margin: 0 auto;
   position: relative;
 }
@@ -63,12 +64,7 @@ header {
   max-width: 100% !important;
 }
 
-header .logo {
-  background: var(--clr1);
-  width: 50px;
-  height: 50px;
-  border-radius: var(--text-radius);
-}
+
 header nav {
   position: absolute;
   right: 0;
@@ -154,35 +150,6 @@ section.cards .card img {
   height: auto;
   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
 }
-/* 
-footer {
-  padding: 50px;
-  width: 100%;
-  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-  position: relative;
-  margin: 10px 0 0 0;
-}
-footer .logo {
-  background: var(--clr2);
-  width: 50px;
-  height: 50px;
-  border-radius: var(--text-radius);
-}
-footer nav {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(-50px, -50%);
-}
-footer nav ul li {
-  display: inline-block;
-  list-style: none;
-  width: 60px;
-  height: 10px;
-  background: var(--clr2);
-  border-radius: var(--text-radius);
-} */
-
 
 
 @media (max-width: 728px) {
@@ -194,7 +161,7 @@ footer nav ul li {
   }
 
   .wrapper {
-    padding: 50px 10px 100px 10px !important;
+    padding: 0px 10px 100px 10px !important;
   }
 }
 body, html {
@@ -217,18 +184,10 @@ body {
   transition: all 0.5s ease 0s;
   box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
   background: var(--clr3);
-  padding: 50px 50px 100px 50px;
+  padding: 0px 50px 100px 50px;
 }
 
 body.tight .wrapper {
   transform: translateY(-60px) scale(0.9);
   cursor: pointer;
 }
-
-/* .footer {
-  width: 90%;
-  max-width: 1440px;
-  margin: 0px auto;
-  text-align: center;
-  margin-bottom: 50px;
-} */
