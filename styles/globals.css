@@ -13,6 +13,10 @@
 body {
   padding: 0px;
   margin: 0px;
+  background: var(--clr4);
+  font-family: 'Josefin Sans', sans-serif;
+  text-rendering: optimizelegibility;
+  height: 100%;
 }
 
 body *, body :after, body :before {
@@ -22,13 +26,6 @@ body *, body :after, body :before {
 body, html {
   max-width: 100%;
   overflow-x: hidden;
-}
-
-.Mybody {
-  background: var(--clr4);
-  font-family: 'Josefin Sans', sans-serif;
-  text-rendering: optimizelegibility;
-  height: 100%;
 }
 
 .wrapper {

@@ -27,18 +27,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Logo />
           <Logo />
           <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
           <Navbar />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          {children}
+          <Logo />
+          <Logo />
+          <Logo />
         </div>
       </div>
       <Footer />
