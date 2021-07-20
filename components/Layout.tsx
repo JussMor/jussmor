@@ -5,54 +5,43 @@ import Footer from "./Footer";
 import Logo from "./Logo";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-if (typeof window !== "undefined") {
+  if (typeof window !== "undefined") {
     window.addEventListener("scroll", function () {
-        let wrapper = document.querySelector(".wrapper") as HTMLInputElement;
-        let cuerpo = this.document.querySelector("body");
-        if (window.pageYOffset + window.outerHeight > wrapper.scrollHeight) {
+      let wrapper = document.querySelector(".wrapper") as HTMLInputElement;
+      let cuerpo = this.document.querySelector("body");
+      wrapper.style.transition = "all 0.5s ease 0s";
+      if (window.pageYOffset + window.outerHeight > wrapper.scrollHeight) {
         cuerpo!.classList.add("tight");
-    } else {
+      } else {
         cuerpo!.classList.remove("tight");
-    }
+      }
     });
-}
-    return (
+  }
+  return (
     <div>
-        <div className="wrapper">
+      <div className="wrapper">
         <div className="wrap">
-            <Logo/>
-            <section className="transparent">
-            <div className="headline"></div>
-            <div className="text"></div>
-            <div className="text"></div>
-            <div className="button"></div>
-            </section>
-            <Navbar />
-            <section className="cards ">
-            <div className="card">
-                <img
-                src="httFps://imgplaceholder.com/500x300/transparent/ddd/ion-image"
-                alt=""
-                />
-                <div className="content">
-                <div className="headline"></div>
-                <div className="text"></div>
-                <div className="text"></div>
-                <div className="button"></div>
-                </div>
-            </div>
-            </section>
-            <section className="contentbox">
-            {children}
-            <div className="headline"></div>
-            <div className="text"></div>
-            <div className="text"></div>
-            <div className="text"></div>
-            <div className="button"></div>
-            </section>
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Logo />
+          <Navbar />
         </div>
-        </div>
-        <Footer />
+      </div>
+      <Footer />
     </div>
-);
+  );
 }

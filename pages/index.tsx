@@ -17,11 +17,11 @@ export default function Home() {
   }, [])
 
   return (
-    <div>
+    <div className="Mybody">
       <Layout>
-    <div className="container" style={{ padding: '50px 0 100px 0' }}>
+    {/* <div className="container" style={{ padding: '50px 0 100px 0' }}>
       {!session ? <Auth /> : <Account key={session.user!.id} session={session} />}
-    </div>
+    </div> */}
       </Layout>
     </div>
   )
