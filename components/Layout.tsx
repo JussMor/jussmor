@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Logo from "./Logo";
+import MHeader from "./MHeader";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   if (typeof window !== "undefined") {
@@ -22,11 +23,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="wrapper">
         <div className="wrap">
           <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
+          <MHeader/>
           <Navbar />
           <Logo />
           <Logo />
