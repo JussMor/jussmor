@@ -3,9 +3,10 @@ import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Logo from "./Logo";
+import MHeader from "./MHeader";
 
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function BLayout({ children }: { children: React.ReactNode }) {
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", function () {
       let wrapper = document.querySelector(".wrapper") as HTMLInputElement;
@@ -23,17 +24,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="wrapper">
         <div className="wrap">
           <Logo />
+          <MHeader/>
           <Navbar />
           {children}
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          
         </div>
       </div>
       <Footer />

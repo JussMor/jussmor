@@ -1,0 +1,14 @@
+.Hanimations {
+    animation-name: svgcolor;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes svgcolor {
+    0%   {fill: #CC583F;}
+  25%  {fill: #ECB447;}
+  50%  {fill: #75C095;}
+  75%  {fill:  #5991AA;}
+  100% {fill: #7D6AAD;}
+}

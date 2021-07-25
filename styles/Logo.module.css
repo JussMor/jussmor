@@ -2,7 +2,6 @@
 .logo {
     font-size: 6vh;
     font-weight: 800;
-    border-bottom: 0.5px solid #000;
     color:var(--clr1);
     padding:20px;
     text-align: center;
@@ -21,7 +20,7 @@
     .logo {
         font-size: 5vh;
         font-weight: 800;
-        border-bottom: 0.5px solid #000;
+        border-bottom: none;
         color:var(--clr1);
         padding:3vw;
         text-align: center;

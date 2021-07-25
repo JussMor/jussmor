@@ -1,5 +1,6 @@
 {
-    "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
-    "terminal.integrated.fontSize": 16,
-    "editor.fontSize": 20
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
+  "terminal.integrated.fontSize": 16,
+  "editor.fontSize": 20,
+  "svg.preview.background": "custom"
 }

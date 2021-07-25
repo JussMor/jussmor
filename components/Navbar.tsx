@@ -18,7 +18,7 @@ export default function Navbar() {
           <a href="">
             <li>Videos</li>
           </a>
-          <Link href="">
+          <Link href="/post/Blog">
             <a>Blog</a>
           </Link>
           <a href="">

@@ -13,10 +13,12 @@
 body {
   padding: 0px;
   margin: 0px;
-  background: var(--clr4);
   font-family: 'Josefin Sans', sans-serif;
   text-rendering: optimizelegibility;
   height: 100%;
+  animation-name: bodycolor;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 body *, body :after, body :before {
@@ -28,6 +30,13 @@ body, html {
   overflow-x: hidden;
 }
 
+@keyframes bodycolor {
+  0%   {background-color: #CC583F;}
+25%  {background-color: #ECB447;}
+50%  {background-color: #75C095;}
+75%  {background-color:  #5991AA;}
+100% {background-color: #7D6AAD;}
+}
 .wrapper {
   position: relative;
   z-index: 10;
