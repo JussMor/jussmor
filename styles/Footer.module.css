@@ -1,5 +1,5 @@
 .mytitle {
-  font-weight: 800;
+  font-weight: 400;
   text-shadow: 
       4px 4px 0px #d5d5d5, 
       7px 7px 0px rgba(0, 0, 0, 0.2);
@@ -7,10 +7,13 @@
   font-size: 15vw;
 }
 
+
 .wrapFooter {
+  position: absolute;
+  width: 100%;
   transform-origin: center bottom 0px;  
   padding: 10px 0px 0px 0px;
-  transform: translateY(-40px) scale(0.9);
+  transform: translateY(-200px) scale(0.9);
 }
 
 .navFooter {
@@ -37,6 +40,7 @@
 }
 
 .Copyright {
+  font-family: 'Josefin Sans';
   color: beige;
   font-size: 2vmax;
   padding-top: 5vh;
@@ -44,4 +48,22 @@
 }
 .CopyrightChild {
   margin: auto;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 728px) {
+  .mytitle {
+    font-weight: 400;
+    text-shadow: 
+        1.5px 1.5px 0px #d5d5d5, 
+        3px 3px 0px rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+    font-size: 15vw;
+  }
+
+  .CopyrightChild {
+    margin: auto;
+    padding-bottom: 30px;
+  }
+
 }

@@ -1,12 +1,13 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Navbar from "./Navbar";
 import Footer from "./Footer";
-import Logo from "./Logo";
+import styles from "../styles/Layout.module.css"
 
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  if (typeof window !== "undefined") {
+
+   if (typeof window !== "undefined") {
     window.addEventListener("scroll", function () {
       let wrapper = document.querySelector(".wrapper") as HTMLInputElement;
       let cuerpo = this.document.querySelector("body");
@@ -17,26 +18,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         cuerpo!.classList.remove("tight");
       }
     });
+
   }
   return (
     <div>
+      <picture>
+        <source media="(max-width:726px)" srcSet="fotos/moviler.png"/>
+        <source media="(max-width:1024px)" srcSet="fotos/tablet1.png"/>
+        <img className={styles.NewImg}  src="fotos/web.png"/> 
+      </picture>
+      
       <div className="wrapper">
         <div className="wrap">
-          <Logo />
-          <Navbar />
           {children}
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          <Logo />
-          
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

@@ -8,9 +8,9 @@ export default function Footer() {
   let date = new Date();
   let year = date.getUTCFullYear();
   return (
-    <div>
+    <div className= { styles.divFooter}>
       <div className={styles.wrapFooter}>
-        <div className={styles.mytitle}>JUSSMOR</div>
+        <div className={styles.mytitle}>Jussmor</div>
         <nav className={styles.navFooter}>
           <div> </div>
           <div>

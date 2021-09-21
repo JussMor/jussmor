@@ -10,14 +10,19 @@
   --text-radius: 50em;
 }
 
+@font-face {
+  font-family: 'JackRollDemoRegular';
+  src:  url('../public/fonts/JackRollDemoRegular.ttf') format('truetype')
+}
+
 body {
   padding: 0px;
   margin: 0px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'JackRollDemoRegular', sans-serif;
   text-rendering: optimizelegibility;
   height: 100%;
   animation-name: bodycolor;
-  animation-duration: 10s;
+  animation-duration: 360s;
   animation-iteration-count: infinite;
 }
 
@@ -31,14 +36,16 @@ body, html {
 }
 
 @keyframes bodycolor {
-  0%   {background-color: #CC583F;}
-25%  {background-color: #ECB447;}
-50%  {background-color: #75C095;}
-75%  {background-color:  #5991AA;}
-100% {background-color: #7D6AAD;}
+  0%   {background-color: #060126;}
+25%  {background-color: #049DD9;}
+50%  {background-color: #05DBF2;}
+75%  {background-color:  #D904A0;}
+100% {background-color: #F20530;}
 }
 .wrapper {
   position: relative;
+  border-radius: 20px;
+  top: -180px;
   z-index: 10;
   transform-origin: center bottom 0px;
   /* transition: all 0.5s ease 0s; */
