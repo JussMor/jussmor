@@ -23,9 +23,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <picture>
-        <source media="(max-width:726px)" srcSet="fotos/moviler.png"/>
-        <source media="(max-width:1024px)" srcSet="fotos/tablet1.png"/>
-        <img className={styles.NewImg}  src="fotos/web.png"/> 
+        <source media="(max-width:726px)"  srcSet="fotos/moviler.webp"/>
+        <source media="(max-width:1024px)"  srcSet="fotos/tablet.webp"/>
+        <img className={styles.NewImg} alt="web" src="fotos/web.webp"/> 
       </picture>
       
       <div className="wrapper">

@@ -1,32 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import { useState, useEffect } from 'react'
-import { supabase } from '../utils/supabaseClient'
-import Auth from '../components/Auth'
-import Account from '../components/Account'
-import { AuthSession } from '@supabase/supabase-js'
 import Layout from '../components/Layout'
 import { social } from "../utils/Social";
-import Footer from "../components/Footer";
 import  styles  from  "../styles/Layout.module.css"
+import Head from 'next/head'
 
 export default function Home() {
-  const [session, setSession] = useState<AuthSession | null >(null)
-
-  useEffect(() => {
-    setSession(supabase.auth.session())
-
-    supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session)
-    })
-  }, [])
 
   return (
     <div>
+      <Head>
+        <meta charSet="UTF-8"/>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" content="José Moreira"/>
+        <meta name="description" content="Amante de la danza, mi perro, la ciencia, los hechos curiosos y aspirante a astronauta imaginario de SpaceX 
+        creo videos para inspirar a la gente."/>
+        <meta name="keywords" content="jussmor, storyteller, visionario, content creator, speaker, ciencia"/>
+        <title>Jussmor</title>
+      </Head>
       <Layout>
-      {/* <div className="container" style={{ padding: '50px 0 100px 0' }}>
-        {!session ? <Auth /> : <Account key={session.user!.id} session={session} />}
-      </div> */}
       <div style={{ padding: '50px 50px 50px 50px' }}>
         <h1  className={styles.Ititle}> Hola soy Jussmor</h1>
         <div className={styles.ItitleText}>
@@ -54,7 +47,6 @@ export default function Home() {
           <button className={ styles.CoBottom}> <a style={{ color: 'beige', textDecoration:'none' }} href="mailto:jussmor@outlook.es"> Correo </a> </button>
         </div>
       </div>
-
       </Layout>
     </div>
   )
