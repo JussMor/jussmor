@@ -3,3 +3,66 @@
     height: 100%;
     width: 100%;
 }
+
+.Ititle {
+    text-align: center;
+}
+
+.ItitleText{
+    font-family: 'Josefin Sans';
+    text-align: end;
+
+}
+
+.IBottom {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px   ;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.IgBottom {
+    font-family: 'Josefin Sans';
+    color: beige;
+    box-shadow: 3px 3px 0px 0px #CBC3C3;
+    background: #060126;
+    border-radius: 10px;
+    border-width: 1.5px;
+    font-size: 25px;
+    padding: 15px;
+}
+
+.TkBottom {
+    font-family: 'Josefin Sans';
+    box-shadow: 3px 3px 0px 0px #CBC3C3;
+    background: #060126;
+    color: beige;
+    border-radius: 10px;
+    border-width: 1.5px;
+    font-size: 25px;
+    padding: 15px;
+}
+
+.YtBottom {
+    font-family: 'Josefin Sans';
+    box-shadow: 3px 3px 0px 0px #CBC3C3;
+    background: #060126;
+    color: beige;
+    border-radius: 10px;
+    border-width: 1.5px;
+    font-size: 25px;
+    padding: 15px;
+}
+
+.CoBottom {
+    font-family: 'Josefin Sans';
+    box-shadow: 3px 3px 0px 0px #CBC3C3;
+    color: beige;
+    background: #060126;
+    border-radius: 10px;
+    border-width: 1.5px;
+    font-size: 25px;
+    padding: 15px;
+}
