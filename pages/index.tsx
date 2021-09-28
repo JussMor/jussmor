@@ -28,7 +28,7 @@ export default function Home() {
           </p>
         <p>Decidí iniciar este proyecto para unirme a la ola de personas que incentivan 
           e inspiran a crear un mundo mejor como CdeCiencia, Quatum Fracture, Date un Voltio,
-          Xyla Foxlin, Verisatium, Vsauce, etc. 
+          Xyla Foxlin, Veritasium, Vsauce, etc. 
         </p>
         <p>
         Compartiré contenido variado con la finalidad de que su mente explote y juntos aquí
@@ -41,10 +41,9 @@ export default function Home() {
         </div>
         <div><h1 className={styles.Ititle}>Redes Sociales</h1></div>
         <div className={styles.IBottom}>
-          <button className={ styles.IgBottom}> <a style={{ color: 'beige', textDecoration:'none' }} href={social.Instagram}> Instagram </a> </button>
-          <button className={ styles.TkBottom}> <a style={{ color: 'beige' , textDecoration:'none'}} href={social.Tiktok}> Tiktok </a> </button>
-          <button className={ styles.YtBottom}> <a style={{ color: 'beige', textDecoration:'none' }} href={social.Youtube}> Youtube </a> </button>
-          <button className={ styles.CoBottom}> <a style={{ color: 'beige', textDecoration:'none' }} href="mailto:jussmor@outlook.es"> Correo </a> </button>
+           <a style={{ color: 'beige', textDecoration:'none',textAlign: 'center' }} href={social.Instagram}> <button className={ styles.IgBottom}> Instagram </button> </a> 
+           <a style={{ color: 'beige' , textDecoration:'none',textAlign: 'center' }} href={social.Tiktok}> <button className={ styles.TkBottom}> Tiktok   </button> </a>
+           <a style={{ color: 'beige', textDecoration:'none' ,textAlign: 'center'  }} href="mailto:jussmor@outlook.es"> <button className={ styles.CoBottom}> Correo </button> </a> 
         </div>
       </div>
       </Layout>
