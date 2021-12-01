@@ -16,6 +16,7 @@ and I love spending my time reading documentation and doing implementations, but
 those errors need to be resolved
 </p>
 
+<p align="right"><img  src="https://github-readme-stats.vercel.app/api/top-langs?username=jussmor&show_icons=true&locale=en&layout=compact" alt="jussmor" /></p>
 
 - 🌱 I’m currently learning **Flutter, Backend**
 
@@ -57,7 +58,7 @@ those errors need to be resolved
 
 
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=jussmor&show_icons=true&locale=en&layout=compact" alt="jussmor" /></p>
+
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jussmor&show_icons=true&locale=en" alt="jussmor" /></p>
 
