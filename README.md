@@ -6,6 +6,16 @@
 <h1 align="center">Hi 👋, I'm Junior Moreira (jussmor)</h1>
 <h3 align="center">A passionate frontend developer from Ecuador</h3>
 
+<p align="right">
+I am Junior Moreira, who am I ?. I am very happy, I love to dance and travel but currently I have finished my university degree
+as a mechanical engineer but You know sometimes You dream of starting to do something and finally
+You decide to do something different, but why do I love software development?. I love this because in my career as
+mechanical engineer I took a programming course and I did not pass that course (Ok I did but that's a bigger story).
+With that failure, I became obsessed with programming and decided to learn on my own. I fell in love with programming
+and I love spending my time reading documentation and doing implementations, but it's best when you have bugs and
+those errors need to be resolved
+</p>
+
 
 - 🌱 I’m currently learning **Flutter, Backend**
 
