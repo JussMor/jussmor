@@ -1,7 +1,7 @@
+[![MasterHead](https://media-exp1.licdn.com/dms/image/C4E16AQGDLURwP-MxHQ/profile-displaybackgroundimage-shrink_350_1400/0/1624432677770?e=1639008000&v=beta&t=BWvsqjIVnIKpjYocWZJQz6CKeyahHC6WDPqE6_Lpo20)](https://khushboogoel01.github.io)
 
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=jussmor&label=Profile%20views&color=0e75b6&style=flat" alt="jussmor" /> </p>
 
-<p align="left"> <a href="https://twitter.com/jussmorX" target="blank"><img src="https://img.shields.io/twitter/follow/jussmorX?logo=twitter&style=for-the-badge" alt="jussmorX" /></a> </p>
 
 <h1 align="center">Hi 👋, I'm Junior Moreira (jussmor)</h1>
 <h3 align="center">A passionate frontend developer from Ecuador</h3>
