@@ -1,4 +1,4 @@
-[![MasterHead](https://media-exp1.licdn.com/dms/image/C4E16AQGDLURwP-MxHQ/profile-displaybackgroundimage-shrink_350_1400/0/1624432677770?e=1639008000&v=beta&t=BWvsqjIVnIKpjYocWZJQz6CKeyahHC6WDPqE6_Lpo20)](https://www.jussmor.com/)
+[![MasterHead](https://github.com/JussMor/JussMor/blob/master/public/fotos/bannergithub.png)](https://www.jussmor.com/)
 
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=jussmor&label=Profile%20views&color=0e75b6&style=flat" alt="jussmor" /> </p>
 
