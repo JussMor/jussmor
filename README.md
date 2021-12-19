@@ -20,11 +20,11 @@ those errors need to be resolved
 
 - 🌱 I’m currently learning **Flutter, Backend**
 
-- 👨‍💻 All of my projects are available at [https://www.jussmor.com/](https://www.jussmor.com/)
+- 👨‍💻 All of my projects are available at [https://fronfolio.herokuapp.com/](https://fronfolio.herokuapp.com/)
 
-- 📫 How to reach me **jussmor16@gmail.com**
+- 📫 How to reach me **jussmor@outlook.es**
 
-- 📄 Know about my experiences [https://www.jussmor.com/](https://www.jussmor.com/)
+- 📄  My personal website [https://www.jussmor.com/](https://www.jussmor.com/)
 
 
 <h3 align="left">Connect with me:</h3>
