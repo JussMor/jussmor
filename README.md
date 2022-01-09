@@ -22,7 +22,6 @@ those errors need to be resolved
 
 - 👨‍💻 All of my projects are available at [https://fronfolio.herokuapp.com/](https://fronfolio.herokuapp.com/)
 
-- 🔭 Would you like to see my work?. Visit my Repos: Fronfolio y Backfolio.
 
 - 📫 How to reach me **jussmor@outlook.es**
 
