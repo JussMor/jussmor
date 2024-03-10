@@ -1,6 +1,3 @@
 {
-  "name": "website.ui",
-  "scripts": {
-    "postinstall": "basehub --output connect"
-  }
+  "name": "website.ui"
 }
