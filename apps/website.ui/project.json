@@ -11,7 +11,8 @@
         "outputPath": "dist/apps/website.ui"
       },
       "configurations": {
-        "preview": {}
+        "preview": {},
+        "production": {}
       }
     },
     "build.client": {
@@ -31,6 +32,9 @@
         "preview": {
           "ssr": "src/entry.preview.tsx",
           "mode": "production"
+        },
+        "production": {
+          "configFile": "apps/website.ui/adapters/cloudflare-pages/vite.config.ts"
         }
       }
     },
@@ -68,6 +72,26 @@
       "executor": "@nx/eslint:lint",
       "options": {
         "lintFilePatterns": ["apps/website.ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "deploy": {
+      "executor": "@k11r/nx-cloudflare-wrangler:deploy-page",
+      "options": {
+        "dist": "dist/apps/website.ui/client"
+      },
+      "dependsOn": ["build-cloudflare"]
+    },
+    "preview-cloudflare": {
+      "executor": "@k11r/nx-cloudflare-wrangler:serve-page",
+      "options": {
+        "dist": "dist/apps/website.ui/client"
+      },
+      "dependsOn": ["build-cloudflare"]
+    },
+    "build-cloudflare": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx nx run website.ui:build:production"
       }
     }
   },
