@@ -70,7 +70,7 @@ export const getStuffFromEnv = (options) => {
     // These params can either come disambiguated, or in the URL.
     // Params that come from the URL take precedence.
 
-    const parsedBasehubTokenEnv = process.env.BASEHUB_TOKEN;
+    const parsedBasehubTokenEnv = process.env.BASEHUB_TOKEN || "bshb_pk_ra919smqrsehro5a9vuf8b87pg6rpel39ed8zg03bkqa15n6zjm4oopvfir7zv5g";
     const parsedBasehubRefEnv = process.env.BASEHUB_REF;
     const parsedBasehubDraftEnv = process.env.BASEHUB_DRAFT;
 
