@@ -1,6 +1,7 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
+import { Ui } from '@monorepo/ui';
 
 export default component$(() => {
   return (
@@ -20,6 +21,7 @@ export default component$(() => {
           More info about development in <code>README.md</code>
         </li>
       </ul>
+      <Ui></Ui>
 
       <h2>Commands</h2>
 
