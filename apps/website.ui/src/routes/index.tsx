@@ -1,13 +1,14 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
-import { Ui } from '@jussmor/ui';
+import { Button } from '@jussmor/ui';
 
 
 export default component$(() => {
   return (
-    <div>
-      <h1>
+    <div >
+      test
+      <h1 >
         Welcome website.ui <span class="lightning">⚡️</span>
       </h1>
 
@@ -25,7 +26,7 @@ export default component$(() => {
 
       <h2>Commands</h2>
 
-      <Ui></Ui>
+      <Button  size={"lg"} look={"secondary"} class={"text-red-500"}> JussMor</Button>
 
       <table class="commands">
         <tbody>

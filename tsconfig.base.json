@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@jussmor/helpers": ["libs/helpers/src/index.ts"],
       "@jussmor/ui": ["libs/ui/src/index.ts"]
     }
   },
