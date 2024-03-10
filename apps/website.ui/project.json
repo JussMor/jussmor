@@ -91,7 +91,7 @@
     "build-cloudflare": {
       "executor": "nx:run-commands",
       "options": {
-        "command": "npx nx run website.ui:build:production"
+        "command": "npx nx run website.ui:build:production" 
       }
     }
   },
