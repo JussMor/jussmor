@@ -1,10 +1,28 @@
-import { component$ } from '@builder.io/qwik';
+import { component$, $ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { Link } from '@builder.io/qwik-city';
 import { Button } from '@jussmor/ui';
+import { useTheme } from 'qwik-themes';
 
 
 export default component$(() => {
+
+  const  {theme, setTheme } = useTheme()
+
+  console.log(theme , 'theme')
+
+    const switchLightDark = $((input: string | string[]): string | string[] | undefined => {
+    const switchWord = (word: string): string =>
+      word.includes('light')
+        ? word.replace('light', 'dark')
+        : word.replace('dark', 'light');
+    if (typeof input === 'string') {
+      return switchWord(input);
+    } else if (Array.isArray(input)) {
+      return input.map((item) => switchWord(item));
+    }
+  });
+
   return (
     <div >
       test
@@ -24,9 +42,18 @@ export default component$(() => {
         </li>
       </ul>
 
-      <h2>Commands</h2>
+      <h2 class='text-primary text-lg dark:text-secondary'>Commands</h2>
 
-      <Button  size={"lg"} look={"secondary"} class={"text-red-500"}> JussMor</Button>
+      <Button  size={"lg"} look={"secondary"} class={"text-red-500"} 
+      aria-label="Toggle dark mode"
+      onClick$={async () => setTheme(await switchLightDark(theme || 'light'))}
+      >  <div class="hidden dark:block">
+              Mon
+            </div>
+            <div class="block dark:hidden">
+              Sun
+            </div>
+      </Button>
 
       <table class="commands">
         <tbody>
