@@ -32,9 +32,11 @@ const buttonVariants = cva(
   },
 );
 
+
 type ButtonProps = PropsOf<'button'> & VariantProps<typeof buttonVariants>;
 
 const Button = component$<ButtonProps>(({ size, look, ...props }) => {
+  
   return (
     <button {...props} class={cn(buttonVariants({ size, look }), props.class)}>
       <Slot />
