@@ -1,17 +1,7 @@
-interface Sublink {
-    look: "highlight" | "minimal";
-    name: string;
-    link: string;
-    internal: boolean | string;
-}
+import type { LinkNavbar } from "@jussmor/ui";
 
-interface Link {
-    name: string;
-    link: string;
-    sublink: Sublink[];
-}
 
-export const links: Link[] = [
+export const links: LinkNavbar[] = [
     {
         name: 'Me',
         link: '/',
@@ -20,7 +10,7 @@ export const links: Link[] = [
                 look: "highlight",
                 name: "Meet me",
                 link: "",
-                internal: "",
+                internal: true,
             },
             {
                 look: "minimal",

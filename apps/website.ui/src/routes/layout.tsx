@@ -1,4 +1,4 @@
-import { component$, Slot, useSignal } from '@builder.io/qwik';
+import { component$, Slot } from '@builder.io/qwik';
 import { GeneralNavbar } from '@jussmor/ui';
 import { links } from '../constast/navbar';
 

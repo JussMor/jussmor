@@ -3,21 +3,21 @@ import { Navbar, NavbarLinks } from "./navbar";
 import { Link } from "../../link/link";
 import { Container } from "../../container/container";
 
-interface Sublink {
+ interface Sublink {
     look: "highlight" | "minimal";
     name: string;
     link: string;
     internal: boolean | string;
 }
 
-interface Link {
+interface LinkNavbar {
     name: string;
     link: string;
     sublink: Sublink[];
 }
 
 
-const GeneralNavbar  = component$(({ links }: { links: Link[] })=> {
+const GeneralNavbar  = component$(({ links }: { links: LinkNavbar[] })=> {
 
       const activeNav = useSignal<number>(0)
 
@@ -47,9 +47,18 @@ const GeneralNavbar  = component$(({ links }: { links: Link[] })=> {
                 <Container class='pt-10 pb-20'>
                     { links[activeNav.value]?.sublink?.map(({name, link, look, internal}, subIndex) => (
                         <div key={`sublink-${subIndex}`} class={`${look === 'highlight' ? 'pb-3' : 'py-1'}`}>
-                            <Link  look={look} href={link} class={`${look === 'highlight' ? 'font-bold' : 'leading-none'}`}
-                            target={internal ? '_self' : '_blank'}
-                            >{name}</Link>
+                            { look === 'highlight' ? 
+                                <p class='text-sm'> {name} </p>
+                            :
+                            <Link  
+                                look={look} 
+                                href={link} 
+                                class='leading-none'
+                                target={internal ? '' : '_blank'}
+                            >
+                                {name}
+                            </Link>
+                            }
                         </div> 
                         ))
                     }
@@ -64,6 +73,7 @@ const GeneralNavbar  = component$(({ links }: { links: Link[] })=> {
     )
 })
 
-export { GeneralNavbar }
+export { GeneralNavbar };
+export type { LinkNavbar };
 
 
