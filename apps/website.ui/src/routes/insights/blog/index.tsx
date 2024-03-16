@@ -1,12 +1,12 @@
 import { component$ } from "@builder.io/qwik"
+import { Container } from '@jussmor/ui';
 
 export default component$(() => { 
 
 
     return (
-        <div class='pt-32'>
-            <h1 > JussMor</h1>
-
-        </div>
+        <Container mainClass="bg-background" class='py-32'>
+            <h1 > This page is under development  ⚙️</h1>
+        </Container>
     )
 })
