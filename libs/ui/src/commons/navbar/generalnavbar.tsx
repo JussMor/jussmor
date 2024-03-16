@@ -19,7 +19,7 @@ interface LinkNavbar {
 
 const GeneralNavbar  = component$(({ links }: { links: LinkNavbar[] })=> {
 
-      const activeNav = useSignal<number>(0)
+      const activeNav = useSignal<number>(-1)
 
     return (
     <>
@@ -30,9 +30,12 @@ const GeneralNavbar  = component$(({ links }: { links: LinkNavbar[] })=> {
                 <div class='flex gap-8 justify-center px-8 py-3 bg-background'>
                     {links.map(({name, link}, index)=> (
                         <div
+                            key={`{link-${index}}`}
                             onMouseEnter$={()=> activeNav.value = index}
                         >
-                            <NavbarLinks key={`navbar-${index}`} >
+                            <NavbarLinks key={`navbar-${index}`} 
+                                onClick$={()=> activeNav.value = -1}
+                                >
                                 <Link look={'highlight'} href={link}>{name}</Link>
                             </NavbarLinks>
                         </div>
@@ -46,7 +49,9 @@ const GeneralNavbar  = component$(({ links }: { links: LinkNavbar[] })=> {
                 >
                 <Container class='pt-10 pb-20'>
                     { links[activeNav.value]?.sublink?.map(({name, link, look, internal}, subIndex) => (
-                        <div key={`sublink-${subIndex}`} class={`${look === 'highlight' ? 'pb-3' : 'py-1'}`}>
+                        <div 
+                        onClick$={()=> activeNav.value = -1}
+                        key={`sublink-${subIndex}`} class={`${look === 'highlight' ? 'pb-3' : 'py-1'}`}>
                             { look === 'highlight' ? 
                                 <p class='text-sm'> {name} </p>
                             :

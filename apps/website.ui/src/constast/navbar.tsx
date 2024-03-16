@@ -51,7 +51,7 @@ export const links: LinkNavbar[] = [
             {
                 look: "minimal",
                 name: "Blog",
-                link: "blog",
+                link: "/insights/blog",
                 internal: true,
             },
             {
