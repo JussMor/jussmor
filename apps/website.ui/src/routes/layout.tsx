@@ -10,14 +10,12 @@ export default component$(() => {
     <>
       <GeneralNavbar links={links}/>
 
-      <main  >
-        <section>
+      <main>
           <Slot />
-        </section>
       </main>
-      <footer>
+      <footer class='text-center py-8'>
         <a href="https://www.builder.io/" target="_blank">
-          Made with ♡ by Builder.io
+         JussMor
         </a>
       </footer>
     </>

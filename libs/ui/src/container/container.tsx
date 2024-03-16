@@ -24,20 +24,24 @@ const containerVariants  = cva('', {
         maxWidth: 'responsive',
         margin: 'auto',
         position: 'relative',
-        paddingX: 'lg'
+        paddingX: 'sm'
     }
 })
 
 
-type ContainerProps = PropsOf<'section'>  & VariantProps<typeof containerVariants>;
+type ContainerProps = PropsOf<'div'>  & VariantProps<typeof containerVariants> & {
+    mainClass: string
+};
 
 
 
-const Container = component$<ContainerProps>(({maxWidth, margin, position, paddingX, ...props}) => {
+const Container = component$<ContainerProps>(({mainClass, maxWidth, margin, position, paddingX, ...props}) => {
     
     return (
-    <section {...props} class={cn(containerVariants({ maxWidth, margin, position, paddingX}), props.class)}>
-        <Slot/>
+    <section  class={cn(mainClass)}>
+        <div {...props} class={cn(containerVariants({ maxWidth, margin, position, paddingX}), props.class)}>
+            <Slot/>
+        </div>
     </section>
     )
 })

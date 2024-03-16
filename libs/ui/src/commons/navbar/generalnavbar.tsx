@@ -1,4 +1,4 @@
-import { component$,  useSignal } from "@builder.io/qwik";
+import { component$,  useSignal, useOnDocument, $, useStore } from "@builder.io/qwik";
 import { Navbar, NavbarLinks } from "./navbar";
 import { Link } from "../../link/link";
 import { Container } from "../../container/container";
@@ -19,15 +19,24 @@ interface LinkNavbar {
 
 const GeneralNavbar  = component$(({ links }: { links: LinkNavbar[] })=> {
 
-      const activeNav = useSignal<number>(-1)
+    const activeNav = useSignal<number>(-1)
+    const scrollPosition = useStore({ scrolly: 0 });
 
+    useOnDocument(
+        'scroll',
+        $(() => {
+            scrollPosition.scrolly =  window.scrollY 
+        })
+    );
+
+        
     return (
     <>
     <Navbar 
         onMouseLeave$={() => activeNav.value = -1}
-        class='fixed w-full z-40  '>
+        class={`${scrollPosition.scrolly > 1 ? 'fixed' : 'relative'}  w-full z-40`}>
             <div class='relative z-50'>
-                <div class='flex gap-8 justify-center px-8 py-3 bg-background'>
+                <div class='flex gap-8 justify-center px-8 py-3 bg-primary'>
                     {links.map(({name, link}, index)=> (
                         <div
                             key={`{link-${index}}`}
@@ -44,10 +53,10 @@ const GeneralNavbar  = component$(({ links }: { links: LinkNavbar[] })=> {
             </div>
             <div class='relative z-20'>
                 <div 
-                class={`absolute bg-background w-full transition-all duration-300 ease-in-out  drop-shadow-sm transform
+                class={`absolute bg-primary w-full transition-all duration-300 ease-in-out  drop-shadow-sm transform
                     ${activeNav.value !== -1 ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'}`}
                 >
-                <Container class='pt-10 pb-20'>
+                <Container class='pt-10 pb-20' mainClass="bg-primary">
                     { links[activeNav.value]?.sublink?.map(({name, link, look, internal}, subIndex) => (
                         <div 
                         onClick$={()=> activeNav.value = -1}

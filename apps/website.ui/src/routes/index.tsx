@@ -16,8 +16,6 @@ export default component$(() => {
   const rootStore = useAppState();
 
 
-  console.log(theme , 'theme')
-
     const switchLightDark = $((input: string | string[]): string | string[] | undefined => {
     const switchWord = (word: string): string =>
       word.includes('light')
@@ -51,7 +49,38 @@ export default component$(() => {
 
 
   return (
-    <Container>
+    <>
+
+    <Container  mainClass='bg-background' class='py-12'>
+      test
+    </Container>
+
+    <Container mainClass='bg-primary' class='py-12 flex flex-col items-stretch md:flex-row gap-2' >
+
+      <article class=" relative m-auto">
+        <button  class='w-full sm:w-[600px] md:w-[375px] lg:w-[500px] bg-card p-4  rounded-lg 
+                drop-shadow-sm inline-flex gap-2 items-center'>
+          <img  src='/img/top-stories.png' width={50} height={50} alt='history'/>
+          <div>
+            <h2  class='text-sm text-left dark:text-background'>The IRS say microsoft owes more in back taxes than it invested OpenAI budget</h2>
+            <p class='dark:text-background text-left text-xs font-bold mt-1'>Junior  Moreira <span class='ml-2'> Dec 13</span></p>
+          </div>
+        </button>
+      </article>
+       <article class="md:basis-full relative m-auto ">
+        <button  class='w-full sm:w-[600px] md:w-[375px] lg:w-[500px] bg-card p-4  rounded-lg 
+                drop-shadow-sm inline-flex gap-2 items-center'>
+          <img  src='/img/top-stories.png' width={50} height={50} alt='history'/>
+          <div>
+            <h2  class='text-sm text-left dark:text-background'>The IRS say microsoft owes more in back taxes than it invested OpenAI budget</h2>
+            <p class='dark:text-background text-left text-xs font-bold mt-1'>Junior  Moreira <span class='ml-2'> Dec 13</span></p>
+          </div>
+        </button>
+      </article>
+    </Container>
+
+
+      <Container mainClass='bg-background'>
           <div >
           test
           <h1 >
@@ -72,7 +101,7 @@ export default component$(() => {
 
           <h2 class='text-primary text-lg dark:text-secondary'>Commands</h2>
 
-            <div class="w-52">
+            {/* <div class="w-52">
               <select
                 class="bg-background rounded-base h-12 w-full border p-2"
                 value={themeComputedObjectSig.value.style}
@@ -98,7 +127,7 @@ export default component$(() => {
                   <option value={'neumorphic'}>Neumorphic</option>
                 )}
               </select>
-            </div>
+            </div> */}
 
           <Button  size={"lg"} look={"secondary"} class={"text-red-500"} 
           aria-label="Toggle dark mode"
@@ -111,9 +140,7 @@ export default component$(() => {
                 </div>
           </Button>
 
-          <div>
-
-
+          {/* <div>
               <label class="mb-1 mt-8 block font-medium">Radius</label>
                 <div class="flex space-x-3">
                   {borderRadiusOptions.map((borderRadius) => {
@@ -138,125 +165,16 @@ export default component$(() => {
                     );
                   })}
                 </div>
-          </div>
+          </div> */}
 
         <div class='bg-foreground'> testing colors </div>
 
           <Button class={cn('p-4  border-ring border')}> hola</Button>
 
-          <table class="commands">
-            <tbody>
-              <tr>
-                <td>
-                  <code>npm run dev</code>
-                </td>
-                <td>Start the dev server and watch for changes.</td>
-              </tr>
-              <tr>
-                <td>
-                  <code>npm run preview</code>
-                </td>
-                <td>Production build and start preview server.</td>
-              </tr>
-              <tr>
-                <td>
-                  <code>npm run build</code>
-                </td>
-                <td>Production build.</td>
-              </tr>
-              <tr>
-                <td>
-                  <code>npm run qwik add</code>
-                </td>
-                <td>Select an integration to add.</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2>Add Integrations</h2>
-
-          <table class="commands">
-            <tbody>
-              <tr>
-                <td>
-                  <code>npm run qwik add cloudflare-pages</code>
-                </td>
-                <td>
-                  <a href="https://developers.cloudflare.com/pages" target="_blank">
-                    Cloudflare Pages Server
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code>npm run qwik add express</code>
-                </td>
-                <td>
-                  <a href="https://expressjs.com/" target="_blank">
-                    Nodejs Express Server
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code>npm run qwik add netlify-edge</code>
-                </td>
-                <td>
-                  <a href="https://docs.netlify.com/" target="_blank">
-                    Netlify Edge Functions
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <code>npm run qwik add static</code>
-                </td>
-                <td>
-                  <a
-                    href="https://qwik.builder.io/qwikcity/static-site-generation/overview/"
-                    target="_blank"
-                  >
-                    Static Site Generation (SSG)
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2>Community</h2>
-
-          <ul>
-            <li>
-              <span>Questions or just want to say hi? </span>
-              <a href="https://qwik.builder.io/chat" target="_blank">
-                Chat on discord!
-              </a>
-            </li>
-            <li>
-              <span>Follow </span>
-              <a href="https://twitter.com/QwikDev" target="_blank">
-                @QwikDev
-              </a>
-              <span> on Twitter</span>
-            </li>
-            <li>
-              <span>Open issues and contribute on </span>
-              <a href="https://github.com/BuilderIO/qwik" target="_blank">
-                GitHub
-              </a>
-            </li>
-            <li>
-              <span>Watch </span>
-              <a href="https://qwik.builder.io/media/" target="_blank">
-                Presentations, Podcasts, Videos, etc.
-              </a>
-            </li>
-          </ul>
-          <Link class="mindblow" href="/flower/">
-            Blow my mind 🤯
-          </Link>
         </div>
     </Container>
+    </>
+  
   );
 });
 

@@ -24,7 +24,6 @@ module.exports = {
         'source-serif-pro': ['Source Serif 4', 'serif'],
       },
       screens: {
-        xs: '314px',
         sm: '640px',
         md: '768px',
         lg: '1024px',
