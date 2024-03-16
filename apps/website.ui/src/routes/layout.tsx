@@ -15,7 +15,7 @@ export default component$(() => {
       </main>
       <footer class='text-center py-8'>
         <a href="https://www.builder.io/" target="_blank">
-         JussMor
+         JussMor - Copyright © 2024
         </a>
       </footer>
     </>

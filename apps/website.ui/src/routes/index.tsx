@@ -51,8 +51,13 @@ export default component$(() => {
   return (
     <>
 
-    <Container  mainClass='bg-background' class='py-12'>
-      test
+    <Container  mainClass='bg-background' class='py-12 flex flex-col md:flex-row gap-2  items-center'>
+      <img class='rounded-full' src='/img/jussmor.webp' width={100} height={100}/>
+      <div class='text-center md:text-left'>
+        <p class='text-base font-bold' >Junior Moreira - JussMor</p>
+        <p class='text-sm'>Software Development</p>
+        <p class='text-sm'>Learn Software the easy way</p>
+      </div>
     </Container>
 
     <Container mainClass='bg-primary' class='py-12 flex flex-col items-stretch md:flex-row gap-2' >
@@ -62,7 +67,7 @@ export default component$(() => {
                 drop-shadow-sm inline-flex gap-2 items-center'>
           <img  src='/img/top-stories.png' width={50} height={50} alt='history'/>
           <div>
-            <h2  class='text-sm text-left dark:text-background'>The IRS say microsoft owes more in back taxes than it invested OpenAI budget</h2>
+            <h2  class='text-sm text-left dark:text-background font-serif'>The IRS say microsoft owes more in back taxes than it invested OpenAI budget</h2>
             <p class='dark:text-background text-left text-xs font-bold mt-1'>Junior  Moreira <span class='ml-2'> Dec 13</span></p>
           </div>
         </button>
@@ -72,7 +77,7 @@ export default component$(() => {
                 drop-shadow-sm inline-flex gap-2 items-center'>
           <img  src='/img/top-stories.png' width={50} height={50} alt='history'/>
           <div>
-            <h2  class='text-sm text-left dark:text-background'>The IRS say microsoft owes more in back taxes than it invested OpenAI budget</h2>
+            <h2  class='text-sm text-left dark:text-background font-serif'>The IRS say microsoft owes more in back taxes than it invested OpenAI budget</h2>
             <p class='dark:text-background text-left text-xs font-bold mt-1'>Junior  Moreira <span class='ml-2'> Dec 13</span></p>
           </div>
         </button>
@@ -80,28 +85,10 @@ export default component$(() => {
     </Container>
 
 
-      <Container mainClass='bg-background'>
+      {/* <Container mainClass='bg-background'>
           <div >
-          test
-          <h1 >
-            Welcome website.ui <span class="lightning">⚡️</span>
-          </h1>
 
-          <ul>
-            <li>
-              Check out the <code>src/routes</code> directory to get started.
-            </li>
-            <li>
-              Add integrations with <code>npm run qwik add</code>.
-            </li>
-            <li>
-              More info about development in <code>README.md</code>
-            </li>
-          </ul>
-
-          <h2 class='text-primary text-lg dark:text-secondary'>Commands</h2>
-
-            {/* <div class="w-52">
+            <div class="w-52">
               <select
                 class="bg-background rounded-base h-12 w-full border p-2"
                 value={themeComputedObjectSig.value.style}
@@ -127,7 +114,7 @@ export default component$(() => {
                   <option value={'neumorphic'}>Neumorphic</option>
                 )}
               </select>
-            </div> */}
+            </div>
 
           <Button  size={"lg"} look={"secondary"} class={"text-red-500"} 
           aria-label="Toggle dark mode"
@@ -140,7 +127,7 @@ export default component$(() => {
                 </div>
           </Button>
 
-          {/* <div>
+          <div>
               <label class="mb-1 mt-8 block font-medium">Radius</label>
                 <div class="flex space-x-3">
                   {borderRadiusOptions.map((borderRadius) => {
@@ -165,14 +152,10 @@ export default component$(() => {
                     );
                   })}
                 </div>
-          </div> */}
-
-        <div class='bg-foreground'> testing colors </div>
-
-          <Button class={cn('p-4  border-ring border')}> hola</Button>
+          </div>
 
         </div>
-    </Container>
+    </Container> */}
     </>
   
   );
