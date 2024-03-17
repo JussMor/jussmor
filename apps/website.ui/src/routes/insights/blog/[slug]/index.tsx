@@ -59,7 +59,7 @@ export default component$(() => {
           body={body}
           class='lg:max-w-[748px] '
         />
-        <div class='hidden lg:block w-[276px]'> second color</div>
+        <div class='hidden lg:block w-[276px]'> </div>
       </div>
 
     </Container>
