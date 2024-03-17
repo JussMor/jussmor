@@ -2,7 +2,6 @@ import { component$ } from "@builder.io/qwik";
 import { routeLoader$ } from '@builder.io/qwik-city';
 import type { AuthorsItemGenqlSelection, InsightsGenqlSelection, BlogGenqlSelection , BlogPostsItemGenqlSelection, SeoComponentGenqlSelection, BlockImageGenqlSelection, CategoriesItemGenqlSelection, BodyGenqlSelection, BodyRichTextGenqlSelection} from "../../../connect";
 import { basehub } from "../../../connect";
-// import { css } from "~/styled-system/css";
 import { RichText } from "../../RichText/primitives";
 
 
@@ -75,7 +74,7 @@ export const blogPostItemFragment = {
 
 export const blogFragment = {
     blogPosts :  {
-        items: blogPostItemFragment
+        items: blogPostItemFragment 
     },
     seo: SeoFragment
 
@@ -123,10 +122,7 @@ export default component$<InsightsGenqlSelection>(() => {
                 )}
             </>
             
-        )) }
-
-            {/* <h1 class={css({ color:'red' })}> test</h1> */}
-        
+        )) }        
         </>
     )
 })

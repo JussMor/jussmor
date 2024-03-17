@@ -1,51 +1,56 @@
-import { component$, $, useComputed$ } from '@builder.io/qwik';
+import { component$,
+  //  $, 
+  //  useComputed$ 
+  } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import { Link } from '@builder.io/qwik-city';
-import { Button,  Container } from '@jussmor/ui';
-import { useTheme } from 'qwik-themes';
-import { useAppState } from  '../_states/use-app-state';
-import { baseOptions, borderRadiusOptions } from '../_states/make-it-yours';
-import { cn } from '@jussmor/helpers';
+// import { Link } from '@builder.io/qwik-city';
+import { 
+  // Button,  
+  Container } from '@jussmor/ui';
+// import { useTheme } from 'qwik-themes';
+// import { useAppState } from  '../_states/use-app-state';
+// import { baseOptions, borderRadiusOptions } from '../_states/make-it-yours';
+// import { cn } from '@jussmor/helpers';
 
 
 
 export default component$(() => {
 
-  const  {theme, setTheme } = useTheme()
+  // const  {theme, setTheme } = useTheme()
 
-  const rootStore = useAppState();
-
-
-    const switchLightDark = $((input: string | string[]): string | string[] | undefined => {
-    const switchWord = (word: string): string =>
-      word.includes('light')
-        ? word.replace('light', 'dark')
-        : word.replace('dark', 'light');
-    if (typeof input === 'string') {
-      return switchWord(input);
-    } else if (Array.isArray(input)) {
-      return input.map((item) => switchWord(item));
-    }
-  });
+  // const rootStore = useAppState();
 
 
-    const themeComputedObjectSig = useComputed$(() => {
-    const themeArray = Array.isArray(theme) ? theme : theme?.split(' ');
-    return {
-      font: themeArray?.[0] || 'font-serif',
-      mode: themeArray?.[1] || 'light',
-      style: themeArray?.[2] || 'simple',
-      base: themeArray?.[3] || 'base-slate',
-      primary: themeArray?.[4] || 'primary-cyan-600',
-      borderRadius: themeArray?.[5] || 'border-radius-0',
-    };
-  });
+  //   const switchLightDark = $((input: string | string[]): string | string[] | undefined => {
+  //   const switchWord = (word: string): string =>
+  //     word.includes('light')
+  //       ? word.replace('light', 'dark')
+  //       : word.replace('dark', 'light');
+  //   if (typeof input === 'string') {
+  //     return switchWord(input);
+  //   } else if (Array.isArray(input)) {
+  //     return input.map((item) => switchWord(item));
+  //   }
+  // });
 
-  const themeStoreToThemeClasses$ = $(() => {
-    const { font, mode, style, base, primary, borderRadius } =
-      themeComputedObjectSig.value;
-    return [font, mode, style, base, primary, borderRadius];
-  });
+
+  //   const themeComputedObjectSig = useComputed$(() => {
+  //   const themeArray = Array.isArray(theme) ? theme : theme?.split(' ');
+  //   return {
+  //     font: themeArray?.[0] || 'font-serif',
+  //     mode: themeArray?.[1] || 'light',
+  //     style: themeArray?.[2] || 'simple',
+  //     base: themeArray?.[3] || 'base-slate',
+  //     primary: themeArray?.[4] || 'primary-cyan-600',
+  //     borderRadius: themeArray?.[5] || 'border-radius-0',
+  //   };
+  // });
+
+  // const themeStoreToThemeClasses$ = $(() => {
+  //   const { font, mode, style, base, primary, borderRadius } =
+  //     themeComputedObjectSig.value;
+  //   return [font, mode, style, base, primary, borderRadius];
+  // });
 
 
   return (
@@ -84,7 +89,7 @@ export default component$(() => {
       </article>
     </Container>
 
-
+    {/* <a href='/insights/blog/how-to-develop-a-career'> TEST URL</a> */}
       {/* <Container mainClass='bg-background'>
           <div >
 
