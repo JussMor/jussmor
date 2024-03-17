@@ -8,7 +8,7 @@ const heading2Variants  = cva('', {
             default: 'text-2xl lg:text-3xl font-extrabold capitalize '
         },
         paddingY: {
-            default: 'pt-12  pb-4 lg:pt-20 '
+            default: 'pt-12  pb-4 lg:pt-16 '
         },
     },
     defaultVariants: { 

@@ -1408,11 +1408,11 @@
   }
 
   ul {
-    list-style: square;
+    list-style: square inside ;
   }
 
   ol {
-    list-style: auto;
+    list-style: decimal inside;
   }
 
   *::-webkit-scrollbar {

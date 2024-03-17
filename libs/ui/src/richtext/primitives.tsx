@@ -254,7 +254,7 @@ export const RichText = <
 
 
 const defaultHandlers: Handlers = {
-    a: ({ children, href }) => <a href={href}>{children}</a>,
+    a: ({ children, href }) => <a class='font-bold underline' href={href} target='_blank' rel='noopener noreferrer'>{children}</a>,
     p: ({ children }) => <p>{children}</p>,
     b: ({ children }) => <b>{children}</b>,
     em: ({ children }) => <em>{children}</em>,
@@ -281,8 +281,8 @@ const defaultHandlers: Handlers = {
         
     );
 },
-    ol: ({ children }) => <ol class='ml-12'>{children} </ol>,
-    ul: ({ children }) => <ul class='ml-12'>{children}</ul>,
+    ol: ({ children }) => <ol class='ml-6 md:ml-8 lg:ml-12'>{children} </ol>,
+    ul: ({ children }) => <ul class='ml-6 md:ml-8 lg:ml-12'>{children}</ul>,
     li: ({ children, ...rest }) => {
 
         return (
