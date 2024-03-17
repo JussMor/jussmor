@@ -1,9 +1,8 @@
 import { component$, useStyles$ } from '@builder.io/qwik';
-import { useLocation, routeLoader$, DocumentHead} from '@builder.io/qwik-city';
-import { Container } from '@jussmor/ui';
+import { routeLoader$, DocumentHead} from '@builder.io/qwik-city';
+import { Container, BlogRichText } from '@jussmor/ui';
 import { basehub } from '../../../../../connect';
 import { blogFragment } from '../../../../queries/insights-by-id';
-import { RichText } from '../../../../RichText/primitives';
 import stylesfromCode from 'prismjs/themes/prism-okaidia.min.css?inline'
 
 
@@ -55,8 +54,10 @@ export default component$(() => {
   return (
     <Container mainClass='bg-background'>
         {/* <h1>{title}</h1> */}
-        <RichText
-        >{body}</RichText>
+        <BlogRichText
+          body={body}
+
+        />
     </Container>
   );
 });
