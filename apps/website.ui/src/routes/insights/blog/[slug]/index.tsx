@@ -59,7 +59,7 @@ export default component$(() => {
           body={body}
           class='lg:max-w-[748px] '
         />
-        <div class='hidden lg:block w-[276px]'> </div>
+        <div class='hidden lg:block w-[276px]'> second color</div>
       </div>
 
     </Container>
@@ -70,19 +70,71 @@ export const head: DocumentHead = ({resolveValue, params}) => {
 
   const SEO = resolveValue(useInsightsById)
 
-  const title =  SEO.items[0].seo._title
+  const metaImage = SEO.items[0].seo.metaImage?.url
   const keywords = SEO.items[0].seo.keywords
   const metaDescription = SEO.items[0].seo.metaDescription
   const metaTitle = SEO.items[0].seo.metaTitle
   const sharingTtile = SEO.items[0].seo.sharingTitle
 
   return {
-    title: "JussMor",
+    title: sharingTtile || '',
     meta: [
       {
-        name: "description",
-        content: "Qwik site description",
+        name: "title",
+        content: metaTitle || '',
       },
-    ],
+      {
+        name: "description",
+        content: metaDescription || '',
+      },
+      {
+        name: "keywords",
+        content: keywords || ''
+      },
+      {
+        name: "googlebot",
+        content: "index, follow"
+      },
+      {
+        name: "robots",
+        content: "index, follow"
+      },
+      {
+          property: "og:title",
+          content: metaTitle || '',
+      },
+      {
+          property: "og:description",
+          content: metaDescription || '',
+      },
+      {
+          property: "og:image",
+          content: metaImage || '',
+      },
+      {
+          property: "og:url",
+          content:`https://www.jussmor.com/insights/blog/${params.slug}/` || '',
+      },
+      {
+          property: "og:type",
+          content: "website",
+      },
+      {
+          name: "twitter:title",
+          content: metaTitle || '',
+      },
+      {
+          name: "twitter:description",
+          content: metaDescription || '',
+      },
+      {
+          name: "twitter:image",
+          content: metaImage || '',
+      },
+      {
+          name: "twitter:card",
+          content: "summary_large_image",
+      }
+    ]
   }
-};
+}
