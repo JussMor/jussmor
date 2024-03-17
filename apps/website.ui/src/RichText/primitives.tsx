@@ -1,6 +1,8 @@
 import type { JSXOutput } from '@builder.io/qwik';
 import slugify from 'slugify';
 import { extractTextFromNode, incrementID } from './utils/headings-id';
+import { marked } from 'marked';
+import Prism from 'prismjs';
 /**
  * TODOs
  *
@@ -257,17 +259,28 @@ const defaultHandlers: Handlers = {
     b: ({ children }) => <b>{children}</b>,
     em: ({ children }) => <em>{children}</em>,
     s: ({ children }) => <s>{children}</s>,
-    code: ({ children, isInline, language }) => {
-        return (
-            <code
-                {...(isInline === false
-                    ? { "data-language": language, class: `language-${language}` }
-                    : {})}
-            >
-                {children}
-            </code>
-        );
-    },
+    code:  ({ children, isInline, language }) => {
+    let code;
+
+    const content = typeof children === 'string' ? children : '';
+    if(language === 'markdown' || language === 'text') {
+        code =  marked(content);
+    }
+
+    if(language !== 'markdown' && language !== 'text') {
+        code =  Prism.highlight(content, Prism.languages[language], language)
+    }
+
+    return (
+        <code
+            {...(isInline === false
+                ? { "data-language": language, className: `language-${language}` }
+                : {})}
+                dangerouslySetInnerHTML={code}
+        />
+        
+    );
+},
     ol: ({ children }) => <ol>{children}</ol>,
     ul: ({ children }) => <ul>{children}</ul>,
     li: ({ children, ...rest }) => {
