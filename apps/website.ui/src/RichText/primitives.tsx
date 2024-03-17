@@ -270,13 +270,13 @@ const defaultHandlers: Handlers = {
     if(language !== 'markdown' && language !== 'text') {
         code =  Prism.highlight(content, Prism.languages[language], language)
     }
-
+    console.log(code)
     return (
         <code
             {...(isInline === false
                 ? { "data-language": language, className: `language-${language}` }
                 : {})}
-                dangerouslySetInnerHTML={code}
+                dangerouslySetInnerHTML={code as string}
         />
         
     );
