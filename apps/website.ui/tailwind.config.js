@@ -14,14 +14,13 @@ module.exports = {
   darkMode: 'class',
   safelist: [
     'font-sans',
-    'font-source-serif-pro',
+    'font-serif'
   ],
   theme: {
     important: true,
     extend: {
       fontFamily: {
         sans: ['Wix Madefor Text', 'sans-serif'],
-        'source-serif-pro': ['Source Serif 4', 'serif'],
       },
       screens: {
         sm: '640px',

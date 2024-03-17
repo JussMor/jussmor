@@ -274,24 +274,26 @@ const defaultHandlers: Handlers = {
     return (
         <code
             {...(isInline === false
-                ? { "data-language": language, className: `language-${language}` }
+                ? { "data-language": language, class: `language-${language} ` }
                 : {})}
                 dangerouslySetInnerHTML={code as string}
         />
         
     );
 },
-    ol: ({ children }) => <ol>{children}</ol>,
-    ul: ({ children }) => <ul>{children}</ul>,
+    ol: ({ children }) => <ol class='ml-12'>{children} </ol>,
+    ul: ({ children }) => <ul class='ml-12'>{children}</ul>,
     li: ({ children, ...rest }) => {
+
         return (
             <li
                 {...(rest.isTaskListItem
                     ? { style: { display: "flex", alignItems: "baseline" } }
                     : undefined)}
             >
+                
                 {rest.isTaskListItem ? (
-                    <input type="checkbox" defaultChecked={rest.checked} />
+                    <input type="checkbox" checked={rest.checked} disabled class='mr-2'/>
                 ) : null}
                 {children}
             </li>
@@ -306,6 +308,7 @@ const defaultHandlers: Handlers = {
     hr: () => <hr />,
     img: ({ caption, alt, ...rest }) => (
         <img
+            class='py-4 lg:py-8'
             {...rest}
             alt={alt ?? caption}
             {...(caption ? { ["data-caption"]: caption } : {})}
