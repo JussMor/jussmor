@@ -1,5 +1,7 @@
-export * from './tailwinds/common-name'
+import time from './dayjs/day'
 
+export * from './tailwinds/common-name'
+export default time 
 
 
 // Theme exports

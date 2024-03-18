@@ -1,9 +1,10 @@
 import { component$, useStyles$ } from '@builder.io/qwik';
 import { routeLoader$, DocumentHead} from '@builder.io/qwik-city';
-import { Container, BlogRichText, Heading1 } from '@jussmor/ui';
+import { Container, BlogRichText, Heading1, Paragraph } from '@jussmor/ui';
 import { basehub } from '../../../../../connect';
 import { blogFragment } from '../../../../queries/insights-by-id';
 import stylesfromCode from 'prismjs/themes/prism-okaidia.min.css?inline'
+import time from '@jussmor/helpers';
 
 
 export const useInsightsById = routeLoader$(async (req) => {
@@ -35,9 +36,10 @@ export const useInsightsById = routeLoader$(async (req) => {
 
  
 export default component$(() => {
+
   useStyles$(stylesfromCode)
   const data = useInsightsById()
-  // console.log(data.value.items[0].body?.json.content)
+
   // blog
   const title = data.value.items[0]._title
   const subtitle = data.value.items[0].subtitle
@@ -47,13 +49,34 @@ export default component$(() => {
   const coverImgAlt = data.value.items[0].coverImage?.alt
   const date = data.value.items[0].date
   const isPublished = data.value.items[0].isPublished
+  const author = data.value.items[0].author?._title
+  const imgauthor = data.value.items[0].author?.avatar?.url
+  const imagealt = data.value.items[0].author?.avatar?.alt
   const body = data.value.items[0].body?.json.content
-  // console.log(body)
-  
-  // console.log(data.value.items[0]) 
+
+
+
   return (
     <Container mainClass='bg-background'>
       <Heading1>{title}</Heading1>
+
+      <div class='flex flex-col gap-4 md:flex-row justify-between py-4 border-t-base border-b-base border-foreground mb-12'>
+          <div class='flex gap-4 items-center'>
+              <img src={imgauthor} alt={imagealt || ''} width={50} height={50} class='rounded-full' />
+            <div>
+              <Paragraph look={'normal'}  paddingY={'normal'} class='font-extrabold leading-none lg:text-sm'>Written by</Paragraph>
+              <Paragraph look={'normal'} paddingY={'normal'} class='lg:leading-none lg:text-sm'>{author}</Paragraph>
+            </div>
+          </div>
+          <div class='flex gap-4 items-center '>
+            <div>
+              <Paragraph look={'normal'}  paddingY={'normal'} class='font-semibold leading-none lg:text-sm pr-4 border-r-foreground border-r-2'> {category}</Paragraph>
+            </div>
+            <div>
+              <Paragraph look={'normal'}  paddingY={'normal'} class='font-semibold leading-none lg:text-sm'>{time(date).format('YYYY/MM/DD')}</Paragraph>
+            </div>
+          </div>
+      </div>
       <div class='flex gap-3 lg:justify-between'>
         <BlogRichText
           body={body}

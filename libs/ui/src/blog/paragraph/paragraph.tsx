@@ -7,9 +7,11 @@ const paragraphVariants  = cva('', {
         look: {
             blog: 'text-md lg:text-lg font-serif inline-block',
             default: 'text-md lg:text-lg font-serif ',
+            normal: 'text-md lg:text-lg font-sans'
         },
         paddingY: {
-            default: 'py-2'
+            default: 'py-2',
+            normal: 'py-0'
         },
     },
     defaultVariants: { 

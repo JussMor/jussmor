@@ -40,7 +40,7 @@ export const links: LinkNavbar[] = [
     },
     {
         name: 'Insights',
-        link: '/insights/blog',
+        link: '/',
         sublink: [
             {
                 look: "highlight",
