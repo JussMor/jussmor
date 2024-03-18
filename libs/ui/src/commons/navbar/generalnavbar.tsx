@@ -41,6 +41,7 @@ const GeneralNavbar  = component$(({ links }: { links: LinkNavbar[] })=> {
                         <div
                             key={`{link-${index}}`}
                             onMouseEnter$={()=> activeNav.value = index}
+                            onTouchStart$={()=> activeNav.value = index}
                         >
                             <NavbarLinks key={`navbar-${index}`} 
                                 onClick$={()=> activeNav.value = -1}
