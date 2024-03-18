@@ -1,4 +1,4 @@
-import type { AuthorsItemGenqlSelection, InsightsGenqlSelection, BlogGenqlSelection , BlogPostsItemGenqlSelection, SeoComponentGenqlSelection, BlockImageGenqlSelection, CategoriesItemGenqlSelection, BodyGenqlSelection, BodyRichTextGenqlSelection} from "../../connect";
+import type { AuthorsItemGenqlSelection, BlogGenqlSelection , BlogPostsItemGenqlSelection, SeoComponentGenqlSelection, BlockImageGenqlSelection, CategoriesItemGenqlSelection, BodyGenqlSelection, BodyRichTextGenqlSelection} from "../../connect";
 
 
 

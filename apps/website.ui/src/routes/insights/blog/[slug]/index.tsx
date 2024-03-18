@@ -42,13 +42,13 @@ export default component$(() => {
 
   // blog
   const title = data.value.items[0]._title
-  const subtitle = data.value.items[0].subtitle
-  const timeToRead = data.value.items[0].timeToRead
+  // const subtitle = data.value.items[0].subtitle
+  // const timeToRead = data.value.items[0].timeToRead
   const category = data.value.items[0].category?._title
-  const coverImg = data.value.items[0].coverImage?.url
-  const coverImgAlt = data.value.items[0].coverImage?.alt
+  // const coverImg = data.value.items[0].coverImage?.url
+  // const coverImgAlt = data.value.items[0].coverImage?.alt
   const date = data.value.items[0].date
-  const isPublished = data.value.items[0].isPublished
+  // const isPublished = data.value.items[0].isPublished
   const author = data.value.items[0].author?._title
   const imgauthor = data.value.items[0].author?.avatar?.url
   const imagealt = data.value.items[0].author?.avatar?.alt

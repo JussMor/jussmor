@@ -2,19 +2,41 @@ import { component$,
   //  $, 
   //  useComputed$ 
   } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
+import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city';
 // import { Link } from '@builder.io/qwik-city';
 import { 
   // Button,  
   Container } from '@jussmor/ui';
+import { basehub } from  '../../connect';
+import { blogFragment } from '../queries/insights';
+import time from '@jussmor/helpers';
 // import { useTheme } from 'qwik-themes';
 // import { useAppState } from  '../_states/use-app-state';
 // import { baseOptions, borderRadiusOptions } from '../_states/make-it-yours';
 // import { cn } from '@jussmor/helpers';
 
 
+export const useInsightsData = routeLoader$(async () => {
+
+    
+    const data = await basehub({ token: 'bshb_pk_ra919smqrsehro5a9vuf8b87pg6rpel39ed8zg03bkqa15n6zjm4oopvfir7zv5g'}).query({
+        __typename: true,
+        insights: {
+          blog: blogFragment
+        }
+    })
+
+
+    return data.insights.blog.blogPosts
+});
+
+
 
 export default component$(() => {
+
+  const data = useInsightsData()
+
+  const blogPost = data.value 
 
   // const  {theme, setTheme } = useTheme()
 
@@ -65,28 +87,22 @@ export default component$(() => {
       </div>
     </Container>
 
-    <Container mainClass='bg-primary' class='py-12 flex flex-col items-stretch md:flex-row gap-2' >
+    <Container mainClass='bg-primary' class='py-12 flex flex-col items-stretch flex-wrap md:flex-row gap-2' >
 
-      <article class=" relative m-auto">
-        <button  class='w-full sm:w-[600px] md:w-[375px] lg:w-[500px] bg-card p-4  rounded-lg 
-                drop-shadow-sm inline-flex gap-2 items-center'>
-          <img  src='/img/top-stories.png' width={50} height={50} alt='history'/>
-          <div>
-            <h2  class='text-sm text-left dark:text-background font-serif'>The IRS say microsoft owes more in back taxes than it invested OpenAI budget</h2>
-            <p class='dark:text-background text-left text-xs font-bold mt-1'>Junior  Moreira <span class='ml-2'> Dec 13</span></p>
-          </div>
-        </button>
-      </article>
-       <article class="md:basis-full relative m-auto ">
-        <button  class='w-full sm:w-[600px] md:w-[375px] lg:w-[500px] bg-card p-4  rounded-lg 
-                drop-shadow-sm inline-flex gap-2 items-center'>
-          <img  src='/img/top-stories.png' width={50} height={50} alt='history'/>
-          <div>
-            <h2  class='text-sm text-left dark:text-background font-serif'>The IRS say microsoft owes more in back taxes than it invested OpenAI budget</h2>
-            <p class='dark:text-background text-left text-xs font-bold mt-1'>Junior  Moreira <span class='ml-2'> Dec 13</span></p>
-          </div>
-        </button>
-      </article>
+      {blogPost.items.map((items, index)=> (
+        <article key={`article-${index}`} class={` md:relative md:m-auto`}>
+          <a  
+            href={`insights/blog/${items._slug}`}
+            class='w-full sm:w-[600px] md:w-[375px] lg:w-[500px] bg-card p-4  rounded-lg 
+                  drop-shadow-sm inline-flex gap-2 items-center'>
+            <img  src='/img/top-stories.png' width={50} height={50} alt='history'/>
+            <div>
+              <h2  class='text-sm text-left dark:text-background font-serif'>{items._title}</h2>
+              <p class='dark:text-background text-left text-xs font-bold mt-1'>{items.author?.name}<span class='ml-2'> {time(items.date).format('MMM D')}</span></p>
+            </div>
+          </a>
+        </article>
+      ))}
     </Container>
 
     {/* <a href='/insights/blog/how-to-develop-a-career'> TEST URL</a> */}
