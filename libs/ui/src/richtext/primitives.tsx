@@ -281,8 +281,8 @@ const defaultHandlers: Handlers = {
         
     );
 },
-    ol: ({ children }) => <ol class='ml-6 md:ml-8 lg:ml-12'>{children} </ol>,
-    ul: ({ children }) => <ul class='ml-6 md:ml-8 lg:ml-12'>{children}</ul>,
+    ol: ({ children }) => <ol class='ml-6 md:ml-8 my-2 lg:ml-12 styled-ol'>{children} </ol>,
+    ul: ({ children }) => <ul class='ml-6 md:ml-8 my-2 lg:ml-12 styled-ul'>{children}</ul>,
     li: ({ children, ...rest }) => {
 
         return (

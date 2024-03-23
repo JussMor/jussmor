@@ -5,14 +5,13 @@ import { cva, VariantProps } from 'class-variance-authority';
 const paragraphVariants  = cva('', {
     variants : {
         look: {
-            blog: 'text-md lg:text-lg font-serif inline lg:leading-loose leading-loose',
+            blog: 'text-md lg:text-lg font-serif',
             default: 'text-md lg:text-lg font-serif ',
             normal: 'text-md lg:text-lg font-sans'
         },
         paddingY: {
             default: 'py-2',
-            normal: 'py-0',
-            blog: 'py-2'
+            normal: 'py-0'
         },
     },
     defaultVariants: { 

@@ -1415,6 +1415,14 @@
     list-style: decimal inside;
   }
 
+  .styled-ul li p{
+    display: inline;
+  }
+
+  .styeld-ol li p{
+    display: inline;
+  }
+
   *::-webkit-scrollbar {
     background-color: transparent;
     width: 1rem;
