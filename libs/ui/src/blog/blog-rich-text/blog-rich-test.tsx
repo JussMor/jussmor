@@ -24,7 +24,7 @@ const BlogRichText =  component$<BlogProps>(({...props}) => {
                     h1: ({children}) => <Heading1>{children}</Heading1>,
                     h2: ({children}) => <Heading2>{children}</Heading2>,
                     h3: ({children}) => <Heading3>{children}</Heading3>,
-                    p: ({children}) =>  <Paragraph look={'blog'}>{children} </Paragraph>,
+                    p: ({children}) =>  <Paragraph look={'blog'} paddingY={'blog'}>{children} </Paragraph>,
                 }}
             >
                 {body}
