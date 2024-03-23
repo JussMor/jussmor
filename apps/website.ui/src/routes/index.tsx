@@ -182,12 +182,67 @@ export default component$(() => {
   );
 });
 
-export const head: DocumentHead = {
-  title: 'Hard topics made easy',
-  meta: [
-    {
-      name: 'description',
-      content: 'Qwik site description',
-    },
-  ],
+export const head: DocumentHead =  () => {
+  
+ return {
+    title: 'Unleash Frontend Mastery: Expert Insights in Web & AR/VR | JussMor',
+    meta: [
+      {
+        name: "title",
+        content: "Discover the Art of Frontend Mastery with JussMor's Expert Insights!",
+      },
+      {
+        name: "description",
+        content: " Unlock the secrets of frontend development in web and AR/VR with our expert resources and clear explanations. Dive into specific issues and think differently about software creation.",
+      },
+      {
+        name: "keywords",
+        content: "frontend development tips, AR/VR web development resources, clear explanations in software creation"
+      },
+      {
+        name: "googlebot",
+        content: "index, follow"
+      },
+      {
+        name: "robots",
+        content: "index, follow"
+      },
+      {
+          property: "og:title",
+          content: "Discover the Art of Frontend Mastery with JussMor's Expert Insights!",
+      },
+      {
+          property: "og:description",
+          content: " Unlock the secrets of frontend development in web and AR/VR with our expert resources and clear explanations. Dive into specific issues and think differently about software creation.",
+      },
+      {
+          property: "og:image",
+          content: 'https://www.jussmor.com/img/mainShare.png',
+      },
+      {
+          property: "og:url",
+          content:`https://www.jussmor.com/` || '',
+      },
+      {
+          property: "og:type",
+          content: "website",
+      },
+      {
+          name: "twitter:title",
+          content: "Discover the Art of Frontend Mastery with JussMor's Expert Insights!",
+      },
+      {
+          name: "twitter:description",
+          content: " Unlock the secrets of frontend development in web and AR/VR with our expert resources and clear explanations. Dive into specific issues and think differently about software creation.",
+      },
+      {
+          name: "twitter:image",
+          content: 'https://www.jussmor.com/img/mainShare.png',
+      },
+      {
+          name: "twitter:card",
+          content: "summary_large_image",
+      }
+    ]
+  }
 };
