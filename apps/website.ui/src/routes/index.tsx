@@ -83,7 +83,7 @@ export default component$(() => {
       <div class='text-center md:text-left'>
         <p class='text-base font-bold' >Junior Moreira - JussMor</p>
         <p class='text-sm'>Software Development</p>
-        <p class='text-sm'>Learn Software the easy way</p>
+        <p class='text-sm'>Learning software where even a teapot can lend a hand.</p>
       </div>
     </Container>
 
