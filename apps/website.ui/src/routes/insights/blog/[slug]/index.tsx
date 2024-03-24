@@ -80,7 +80,7 @@ export default component$(() => {
       <div class='flex gap-3 lg:justify-between'>
         <BlogRichText
           body={body}
-          class='lg:max-w-[748px] '
+          class='lg:max-w-[748px] w-full'
         />
         <div class='hidden lg:block w-[276px]'> </div>
       </div>
