@@ -13,9 +13,9 @@ interface RichTextProps {
 type BlogProps = PropsOf<'section'>  & RichTextProps
 
 
-const BlogRichText =  component$<BlogProps>(({...props}) => {
+const BlogRichText =  component$<BlogProps>(({body, ...props}) => {
 
-    const  { body } = props
+    const content = body?.content
 
     return (
         <section {...props}>
@@ -27,7 +27,7 @@ const BlogRichText =  component$<BlogProps>(({...props}) => {
                     p: ({children}) =>  <Paragraph look={'blog'}>{children} </Paragraph>,
                 }}
             >
-                {body}
+                {content}
             </RichText>
         </section>
     )

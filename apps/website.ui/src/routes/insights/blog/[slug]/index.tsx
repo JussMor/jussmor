@@ -52,7 +52,7 @@ export default component$(() => {
   const author = data.value.items[0].author?._title
   const imgauthor = data.value.items[0].author?.avatar?.url
   const imagealt = data.value.items[0].author?.avatar?.alt
-  const body = data.value.items[0].body?.json.content
+  const body = data.value.items[0].body?.json
 
 
 
