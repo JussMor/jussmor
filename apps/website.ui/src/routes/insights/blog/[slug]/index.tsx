@@ -5,13 +5,14 @@ import { basehub } from '../../../../../connect';
 import { blogFragment } from '../../../../queries/insights-by-id';
 import stylesfromCode from 'prismjs/themes/prism-okaidia.min.css?inline'
 import time from '@jussmor/helpers';
+import { env } from 'node:process';
 
 
 export const useInsightsById = routeLoader$(async (req) => {
 
     // const test  = 'how-to-develop-a-career';
     
-    const data = await basehub({ token: `${process.env.BASEHUB_TOKEN}`}).query({
+    const data = await basehub({ token: `${env.BASEHUB_TOKEN}`}).query({
         __typename: true,
         insights: {
           blog: {

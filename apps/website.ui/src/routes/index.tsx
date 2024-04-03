@@ -10,6 +10,7 @@ import {
 import { basehub } from  '../../connect';
 import { blogFragment } from '../queries/insights';
 import time from '@jussmor/helpers';
+import { env } from 'node:process';
 // import { useTheme } from 'qwik-themes';
 // import { useAppState } from  '../_states/use-app-state';
 // import { baseOptions, borderRadiusOptions } from '../_states/make-it-yours';
@@ -19,7 +20,7 @@ import time from '@jussmor/helpers';
 export const useInsightsData = routeLoader$(async () => {
 
     
-    const data = await basehub({ token: `${process.env.BASEHUB_TOKEN}`}).query({
+    const data = await basehub({ token: `${env.BASEHUB_TOKEN}`}).query({
         __typename: true,
         insights: {
           blog: blogFragment
