@@ -19,7 +19,7 @@ import time from '@jussmor/helpers';
 export const useInsightsData = routeLoader$(async () => {
 
     
-    const data = await basehub({ token: `${env.BASEHUB_TOKEN}`}).query({
+    const data = await basehub({ token: `${process.env.BASEHUB_TOKEN}`}).query({
         __typename: true,
         insights: {
           blog: blogFragment

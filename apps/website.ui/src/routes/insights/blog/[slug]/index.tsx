@@ -11,7 +11,7 @@ export const useInsightsById = routeLoader$(async (req) => {
 
     // const test  = 'how-to-develop-a-career';
     
-    const data = await basehub({ token: `${env.BASEHUB_TOKEN}`}).query({
+    const data = await basehub({ token: `${process.env.BASEHUB_TOKEN}`}).query({
         __typename: true,
         insights: {
           blog: {
