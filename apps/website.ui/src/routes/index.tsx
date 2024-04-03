@@ -16,10 +16,10 @@ import time from '@jussmor/helpers';
 // import { cn } from '@jussmor/helpers';
 
 
-export const useInsightsData = routeLoader$(async () => {
+export const useInsightsData = routeLoader$(async (req) => {
 
     
-    const data = await basehub({ token: `${import.meta.env.BASEHUB_TOKEN}`}).query({
+    const data = await basehub({ token: `${req.env.get('BASEHUB_TOKEN')}` }).query({
         __typename: true,
         insights: {
           blog: blogFragment
