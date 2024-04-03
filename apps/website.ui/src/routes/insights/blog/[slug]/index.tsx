@@ -5,7 +5,6 @@ import { basehub } from '../../../../../connect';
 import { blogFragment } from '../../../../queries/insights-by-id';
 import stylesfromCode from 'prismjs/themes/prism-okaidia.min.css?inline'
 import time from '@jussmor/helpers';
-import { env } from "process"
 
 
 export const useInsightsById = routeLoader$(async (req) => {
