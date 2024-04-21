@@ -3,8 +3,8 @@ import slugify from 'slugify';
 import { extractTextFromNode, incrementID } from './utils/headings-id';
 import { marked } from 'marked';
 import Prism from 'prismjs';
-// import  loadLanguages from 'prismjs/components/'
-// loadLanguages(['bash'])
+import loadLanguages  from 'prismjs/components/';
+loadLanguages(['bash'])
 /**
  * TODOs
  *
