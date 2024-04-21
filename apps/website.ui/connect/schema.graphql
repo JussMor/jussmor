@@ -1,7 +1,9 @@
 type Authors implements BlockDocument & BlockList {
   _id: String!
+  _idPath: String!
   _meta: ListMeta!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   items: [AuthorsItem!]!
@@ -10,7 +12,9 @@ type Authors implements BlockDocument & BlockList {
 """"""
 type AuthorsItem implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   avatar: BlockImage
@@ -35,11 +39,14 @@ type AuthorsItem implements BlockDocument {
 input AuthorsItemFilterInput {
   AND: AuthorsItemFilterInput
   OR: AuthorsItemFilterInput
+  _sys_apiNamePath: StringFilter
   _sys_createdAt: DateFilter
   _sys_hash: StringFilter
   _sys_id: StringFilter
+  _sys_idPath: StringFilter
   _sys_lastModifiedAt: DateFilter
   _sys_slug: StringFilter
+  _sys_slugPath: StringFilter
   _sys_title: StringFilter
   name: StringFilter
   role: StringFilter
@@ -127,17 +134,22 @@ type BlockColor {
 
 interface BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
 }
 
 type BlockDocumentSys {
+  apiNamePath: String!
   createdAt: String!
   hash: String!
   id: ID!
+  idPath: String!
   lastModifiedAt: String!
   slug: String!
+  slugPath: String!
   title: String!
 }
 
@@ -164,8 +176,10 @@ type BlockImage {
 
 interface BlockList implements BlockDocument {
   _id: String!
+  _idPath: String!
   _meta: ListMeta!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
 }
@@ -203,7 +217,9 @@ type BlockVideo {
 
 type Blog implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   blogPosts(
@@ -224,8 +240,10 @@ type Blog implements BlockDocument {
 
 type BlogPosts implements BlockDocument & BlockList {
   _id: String!
+  _idPath: String!
   _meta: ListMeta!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   items: [BlogPostsItem!]!
@@ -234,7 +252,9 @@ type BlogPosts implements BlockDocument & BlockList {
 """"""
 type BlogPostsItem implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   author: AuthorsItem
@@ -255,11 +275,14 @@ type BlogPostsItem implements BlockDocument {
 input BlogPostsItemFilterInput {
   AND: BlogPostsItemFilterInput
   OR: BlogPostsItemFilterInput
+  _sys_apiNamePath: StringFilter
   _sys_createdAt: DateFilter
   _sys_hash: StringFilter
   _sys_id: StringFilter
+  _sys_idPath: StringFilter
   _sys_lastModifiedAt: DateFilter
   _sys_slug: StringFilter
+  _sys_slugPath: StringFilter
   _sys_title: StringFilter
   author: BlogPostsItemFilterInput__author_0___untitled
   date: DateFilter
@@ -346,14 +369,17 @@ type Body implements BlockRichText {
 }
 
 type BodyRichText implements RichTextJson {
+  blocks: [LinkComponent!]!
   content: JSON!
   toc: JSON!
 }
 
 type Categories implements BlockDocument & BlockList {
   _id: String!
+  _idPath: String!
   _meta: ListMeta!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   items: [CategoriesItem!]!
@@ -362,7 +388,9 @@ type Categories implements BlockDocument & BlockList {
 """"""
 type CategoriesItem implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
 }
@@ -370,11 +398,14 @@ type CategoriesItem implements BlockDocument {
 input CategoriesItemFilterInput {
   AND: CategoriesItemFilterInput
   OR: CategoriesItemFilterInput
+  _sys_apiNamePath: StringFilter
   _sys_createdAt: DateFilter
   _sys_hash: StringFilter
   _sys_id: StringFilter
+  _sys_idPath: StringFilter
   _sys_lastModifiedAt: DateFilter
   _sys_slug: StringFilter
+  _sys_slugPath: StringFilter
   _sys_title: StringFilter
 }
 
@@ -395,7 +426,9 @@ enum CategoriesItemOrderByEnum {
 
 type Collections implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   authors(
@@ -439,31 +472,14 @@ type Collections implements BlockDocument {
   ): Types!
 }
 
-""""""
-type ColorsSettingsComponent implements BlockDocument {
-  _id: String!
-  _slug: String!
-  _sys: BlockDocumentSys!
-  _title: String!
-  backgroundColor: BlockColor
-  disabledColor: BlockColor
-  dividerColor: BlockColor
-  foregroundColor: BlockColor
-  hoverColor: BlockColor
-  secondaryHoverTextColor: BlockColor
-  secondaryTextColor: BlockColor
-  textColor: BlockColor
-  textHoverColor: BlockColor
-}
-
 type Components implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   link: LinkComponent!
-  linkWithSubLinks: LinkWithSubLinksComponent!
-  navbar: NavbarComponent!
   seo: SeoComponent!
   socialMedia: SocialMediaComponent!
 }
@@ -484,7 +500,9 @@ scalar DateTime
 
 type Docs implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   docsPosts(
@@ -505,8 +523,10 @@ type Docs implements BlockDocument {
 
 type DocsPosts implements BlockDocument & BlockList {
   _id: String!
+  _idPath: String!
   _meta: ListMeta!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   items: [DocsPostsItem!]!
@@ -515,7 +535,9 @@ type DocsPosts implements BlockDocument & BlockList {
 """"""
 type DocsPostsItem implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   docs: String
@@ -524,11 +546,14 @@ type DocsPostsItem implements BlockDocument {
 input DocsPostsItemFilterInput {
   AND: DocsPostsItemFilterInput
   OR: DocsPostsItemFilterInput
+  _sys_apiNamePath: StringFilter
   _sys_createdAt: DateFilter
   _sys_hash: StringFilter
   _sys_id: StringFilter
+  _sys_idPath: StringFilter
   _sys_lastModifiedAt: DateFilter
   _sys_slug: StringFilter
+  _sys_slugPath: StringFilter
   _sys_title: StringFilter
   docs: StringFilter
 }
@@ -552,7 +577,9 @@ enum DocsPostsItemOrderByEnum {
 
 type HomePage implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   seo: SeoComponent!
@@ -560,7 +587,9 @@ type HomePage implements BlockDocument {
 
 type Insights implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   blog: Blog!
@@ -573,69 +602,12 @@ scalar JSON
 """"""
 type LinkComponent implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   externalUrl: Boolean!
-  text: String
-  url: String
-}
-
-input LinkComponentFilterInput {
-  AND: LinkComponentFilterInput
-  OR: LinkComponentFilterInput
-  _sys_createdAt: DateFilter
-  _sys_hash: StringFilter
-  _sys_id: StringFilter
-  _sys_lastModifiedAt: DateFilter
-  _sys_slug: StringFilter
-  _sys_title: StringFilter
-  externalUrl: Boolean
-  text: StringFilter
-  url: StringFilter
-}
-
-enum LinkComponentOrderByEnum {
-  _sys_createdAt__ASC
-  _sys_createdAt__DESC
-  _sys_hash__ASC
-  _sys_hash__DESC
-  _sys_id__ASC
-  _sys_id__DESC
-  _sys_lastModifiedAt__ASC
-  _sys_lastModifiedAt__DESC
-  _sys_slug__ASC
-  _sys_slug__DESC
-  _sys_title__ASC
-  _sys_title__DESC
-  externalUrl__ASC
-  externalUrl__DESC
-  text__ASC
-  text__DESC
-  url__ASC
-  url__DESC
-}
-
-""""""
-type LinkWithSubLinksComponent implements BlockDocument {
-  _id: String!
-  _slug: String!
-  _sys: BlockDocumentSys!
-  _title: String!
-  externalUrl: Boolean!
-  subLinks(
-    """Filter by a field."""
-    filter: LinkComponentFilterInput
-
-    """Limit the number of items returned. Defaults to 500."""
-    first: Int = 500
-
-    """Order by a field."""
-    orderBy: LinkComponentOrderByEnum
-
-    """Skip the first n items."""
-    skip: Int = 0
-  ): SubLinks!
   text: String
   url: String
 }
@@ -649,16 +621,6 @@ type ListMeta {
   totalCount: Int!
 }
 
-""""""
-type NavbarComponent implements BlockDocument {
-  _id: String!
-  _slug: String!
-  _sys: BlockDocumentSys!
-  _title: String!
-  link: LinkWithSubLinksComponent!
-  navbarColors: ColorsSettingsComponent!
-}
-
 input NumberFilter {
   eq: Float
   gt: Float
@@ -668,23 +630,16 @@ input NumberFilter {
   neq: Float
 }
 
-""""""
-type PaddingsSettingsComponent implements BlockDocument {
-  _id: String!
-  _slug: String!
-  _sys: BlockDocumentSys!
-  _title: String!
-  paddingBottonDesktop: Float
-  paddingTopDesktop: Float
-}
-
 type Query {
+  """
+  Query across all of the instances of a component. Pass in filters and sorts if you want, and get each instance via the `items` key.
+  """
+  _componentInstances: _components!
   _sys: RepoSys!
   collections: Collections!
   components: Components!
   homePage: HomePage!
   insights: Insights!
-  settings: Settings!
 }
 
 type RepoSys {
@@ -702,7 +657,9 @@ interface RichTextJson {
 """"""
 type SeoComponent implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   keywords: String
@@ -712,19 +669,12 @@ type SeoComponent implements BlockDocument {
   sharingTitle: String
 }
 
-type Settings implements BlockDocument {
-  _id: String!
-  _slug: String!
-  _sys: BlockDocumentSys!
-  _title: String!
-  colorsSettings: ColorsSettingsComponent!
-  paddingsSettings: PaddingsSettingsComponent!
-}
-
 type SocialMedia implements BlockDocument & BlockList {
   _id: String!
+  _idPath: String!
   _meta: ListMeta!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   items: [SocialMediaComponent!]!
@@ -733,7 +683,9 @@ type SocialMedia implements BlockDocument & BlockList {
 """"""
 type SocialMediaComponent implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   icon: BlockImage
@@ -744,11 +696,14 @@ type SocialMediaComponent implements BlockDocument {
 input SocialMediaComponentFilterInput {
   AND: SocialMediaComponentFilterInput
   OR: SocialMediaComponentFilterInput
+  _sys_apiNamePath: StringFilter
   _sys_createdAt: DateFilter
   _sys_hash: StringFilter
   _sys_id: StringFilter
+  _sys_idPath: StringFilter
   _sys_lastModifiedAt: DateFilter
   _sys_slug: StringFilter
+  _sys_slugPath: StringFilter
   _sys_title: StringFilter
   link: SocialMediaComponentFilterInput__link
   name: StringFilter
@@ -782,9 +737,12 @@ enum SocialMediaComponentOrderByEnum {
 }
 
 input StringFilter {
+  contains: String
+  endsWith: String
   eq: String
   matches: StringMatchesFilter
   notEq: String
+  startsWith: String
 }
 
 input StringMatchesFilter {
@@ -792,19 +750,12 @@ input StringMatchesFilter {
   pattern: String!
 }
 
-type SubLinks implements BlockDocument & BlockList {
-  _id: String!
-  _meta: ListMeta!
-  _slug: String!
-  _sys: BlockDocumentSys!
-  _title: String!
-  items: [LinkComponent!]!
-}
-
 type Types implements BlockDocument & BlockList {
   _id: String!
+  _idPath: String!
   _meta: ListMeta!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   items: [TypesItem!]!
@@ -813,7 +764,9 @@ type Types implements BlockDocument & BlockList {
 """"""
 type TypesItem implements BlockDocument {
   _id: String!
+  _idPath: String!
   _slug: String!
+  _slugPath: String!
   _sys: BlockDocumentSys!
   _title: String!
   name: String
@@ -823,11 +776,14 @@ type TypesItem implements BlockDocument {
 input TypesItemFilterInput {
   AND: TypesItemFilterInput
   OR: TypesItemFilterInput
+  _sys_apiNamePath: StringFilter
   _sys_createdAt: DateFilter
   _sys_hash: StringFilter
   _sys_id: StringFilter
+  _sys_idPath: StringFilter
   _sys_lastModifiedAt: DateFilter
   _sys_slug: StringFilter
+  _sys_slugPath: StringFilter
   _sys_title: StringFilter
   name: StringFilter
   slug: StringFilter
@@ -850,4 +806,85 @@ enum TypesItemOrderByEnum {
   name__DESC
   slug__ASC
   slug__DESC
+}
+
+type _components {
+  authorsItem(
+    """Filter by a field."""
+    filter: AuthorsItemFilterInput
+
+    """Limit the number of items returned. Defaults to 500."""
+    first: Int = 500
+
+    """Order by a field."""
+    orderBy: AuthorsItemOrderByEnum
+
+    """Skip the first n items."""
+    skip: Int = 0
+  ): Authors!
+  blogPostsItem(
+    """Filter by a field."""
+    filter: BlogPostsItemFilterInput
+
+    """Limit the number of items returned. Defaults to 500."""
+    first: Int = 500
+
+    """Order by a field."""
+    orderBy: BlogPostsItemOrderByEnum
+
+    """Skip the first n items."""
+    skip: Int = 0
+  ): BlogPosts!
+  categoriesItem(
+    """Filter by a field."""
+    filter: CategoriesItemFilterInput
+
+    """Limit the number of items returned. Defaults to 500."""
+    first: Int = 500
+
+    """Order by a field."""
+    orderBy: CategoriesItemOrderByEnum
+
+    """Skip the first n items."""
+    skip: Int = 0
+  ): Categories!
+  docsPostsItem(
+    """Filter by a field."""
+    filter: DocsPostsItemFilterInput
+
+    """Limit the number of items returned. Defaults to 500."""
+    first: Int = 500
+
+    """Order by a field."""
+    orderBy: DocsPostsItemOrderByEnum
+
+    """Skip the first n items."""
+    skip: Int = 0
+  ): DocsPosts!
+  socialMedia(
+    """Filter by a field."""
+    filter: SocialMediaComponentFilterInput
+
+    """Limit the number of items returned. Defaults to 500."""
+    first: Int = 500
+
+    """Order by a field."""
+    orderBy: SocialMediaComponentOrderByEnum
+
+    """Skip the first n items."""
+    skip: Int = 0
+  ): SocialMedia!
+  typesItem(
+    """Filter by a field."""
+    filter: TypesItemFilterInput
+
+    """Limit the number of items returned. Defaults to 500."""
+    first: Int = 500
+
+    """Order by a field."""
+    orderBy: TypesItemOrderByEnum
+
+    """Skip the first n items."""
+    skip: Int = 0
+  ): Types!
 }

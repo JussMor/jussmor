@@ -40,6 +40,14 @@ export const categoriesFragment = {
 
 export const jsonFragment = {
     content: true,
+    blocks: {
+        __typename:true,
+        _id:true,
+        _title:true,
+        url:true,
+        text:true,
+        externalUrl:true,
+    }
 } satisfies BodyRichTextGenqlSelection
 
 export const bodyFragment = {

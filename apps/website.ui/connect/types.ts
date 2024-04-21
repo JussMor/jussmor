@@ -7,53 +7,64 @@ export default {
         24,
         27,
         31,
-        36,
+        35,
+        40,
         41,
-        42,
-        44,
+        43,
+        45,
         46,
-        47,
-        50,
-        66,
-        67,
-        74
+        59,
+        60,
+        66
     ],
     "types": {
         "Authors": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_meta": [
-                53
+                49
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "items": [
                 1
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "AuthorsItem": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "avatar": [
                 13
@@ -62,30 +73,30 @@ export default {
                 5
             ],
             "name": [
-                67
+                60
             ],
             "role": [
-                67
+                60
             ],
             "socialMedia": [
-                62,
+                55,
                 {
                     "filter": [
-                        64
+                        57
                     ],
                     "first": [
-                        46
+                        45
                     ],
                     "orderBy": [
-                        66
+                        59
                     ],
                     "skip": [
-                        46
+                        45
                     ]
                 }
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "AuthorsItemFilterInput": {
@@ -95,55 +106,64 @@ export default {
             "OR": [
                 2
             ],
+            "_sys_apiNamePath": [
+                61
+            ],
             "_sys_createdAt": [
-                35
+                34
             ],
             "_sys_hash": [
-                68
+                61
             ],
             "_sys_id": [
-                68
+                61
+            ],
+            "_sys_idPath": [
+                61
             ],
             "_sys_lastModifiedAt": [
-                35
+                34
             ],
             "_sys_slug": [
-                68
+                61
+            ],
+            "_sys_slugPath": [
+                61
             ],
             "_sys_title": [
-                68
+                61
             ],
             "name": [
-                68
+                61
             ],
             "role": [
-                68
+                61
             ],
             "socialMedia": [
-                52
+                48
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "AuthorsItemOrderByEnum": {},
         "BaseRichTextJson": {
             "blocks": [
-                67
+                60
             ],
             "content": [
-                47
+                46
             ],
             "toc": [
-                47
+                46
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "Biography": {
             "html": [
-                67,
+                60,
                 {
                     "slugs": [
                         27
@@ -157,102 +177,108 @@ export default {
                 6
             ],
             "markdown": [
-                67
+                60
             ],
             "plainText": [
-                67
+                60
             ],
             "readingTime": [
-                46,
+                45,
                 {
                     "wpm": [
-                        46
+                        45
                     ]
                 }
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BiographyRichText": {
             "content": [
-                47
+                46
             ],
             "toc": [
-                47
+                46
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockAudio": {
             "fileName": [
-                67
+                60
             ],
             "fileSize": [
-                46
+                45
             ],
             "lastModified": [
-                42
+                41
             ],
             "mimeType": [
-                67
+                60
             ],
             "url": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockCodeSnippet": {
             "allowedLanguages": [
-                67
+                60
             ],
             "code": [
-                67
+                60
             ],
             "html": [
-                67,
+                60,
                 {
                     "theme": [
-                        67
+                        60
                     ]
                 }
             ],
             "language": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockColor": {
             "hex": [
-                67
+                60
             ],
             "hsl": [
-                67
+                60
             ],
             "rgb": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockDocument": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "on_Authors": [
                 0
@@ -278,189 +304,186 @@ export default {
             "on_Collections": [
                 32
             ],
-            "on_ColorsSettingsComponent": [
+            "on_Components": [
                 33
             ],
-            "on_Components": [
-                34
-            ],
             "on_Docs": [
-                37
+                36
             ],
             "on_DocsPosts": [
-                38
+                37
             ],
             "on_DocsPostsItem": [
-                39
+                38
             ],
             "on_HomePage": [
-                43
+                42
             ],
             "on_Insights": [
-                45
+                44
             ],
             "on_LinkComponent": [
-                48
-            ],
-            "on_LinkWithSubLinksComponent": [
-                51
-            ],
-            "on_NavbarComponent": [
-                54
-            ],
-            "on_PaddingsSettingsComponent": [
-                56
+                47
             ],
             "on_SeoComponent": [
-                60
-            ],
-            "on_Settings": [
-                61
+                54
             ],
             "on_SocialMedia": [
-                62
+                55
             ],
             "on_SocialMediaComponent": [
-                63
-            ],
-            "on_SubLinks": [
-                70
+                56
             ],
             "on_Types": [
-                71
+                63
             ],
             "on_TypesItem": [
-                72
+                64
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockDocumentSys": {
+            "apiNamePath": [
+                60
+            ],
             "createdAt": [
-                67
+                60
             ],
             "hash": [
-                67
+                60
             ],
             "id": [
-                44
+                43
+            ],
+            "idPath": [
+                60
             ],
             "lastModifiedAt": [
-                67
+                60
             ],
             "slug": [
-                67
+                60
+            ],
+            "slugPath": [
+                60
             ],
             "title": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockFile": {
             "fileName": [
-                67
+                60
             ],
             "fileSize": [
-                46
+                45
             ],
             "lastModified": [
-                42
+                41
             ],
             "mimeType": [
-                67
+                60
             ],
             "url": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockImage": {
             "alt": [
-                67
+                60
             ],
             "aspectRatio": [
-                67
+                60
             ],
             "fileName": [
-                67
+                60
             ],
             "fileSize": [
-                46
+                45
             ],
             "height": [
-                46
+                45
             ],
             "lastModified": [
-                42
+                41
             ],
             "mimeType": [
-                67
+                60
             ],
             "rawUrl": [
-                67
+                60
             ],
             "url": [
-                67,
+                60,
                 {
                     "blur": [
-                        46
+                        45
                     ],
                     "brightness": [
-                        46
+                        45
                     ],
                     "compression": [
-                        67
+                        60
                     ],
                     "contrast": [
-                        46
+                        45
                     ],
                     "dpr": [
-                        46
+                        45
                     ],
                     "fit": [
-                        67
+                        60
                     ],
                     "format": [
-                        67
+                        60
                     ],
                     "height": [
-                        46
+                        45
                     ],
                     "quality": [
-                        46
+                        45
                     ],
                     "width": [
-                        46
+                        45
                     ]
                 }
             ],
             "width": [
-                46
+                45
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockList": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_meta": [
-                53
+                49
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "on_Authors": [
                 0
@@ -472,24 +495,21 @@ export default {
                 28
             ],
             "on_DocsPosts": [
-                38
+                37
             ],
             "on_SocialMedia": [
-                62
-            ],
-            "on_SubLinks": [
-                70
+                55
             ],
             "on_Types": [
-                71
+                63
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockRichText": {
             "html": [
-                67,
+                60,
                 {
                     "slugs": [
                         27
@@ -500,19 +520,19 @@ export default {
                 }
             ],
             "json": [
-                59
+                53
             ],
             "markdown": [
-                67
+                60
             ],
             "plainText": [
-                67
+                60
             ],
             "readingTime": [
-                46,
+                45,
                 {
                     "wpm": [
-                        46
+                        45
                     ]
                 }
             ],
@@ -523,50 +543,56 @@ export default {
                 25
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlockVideo": {
             "aspectRatio": [
-                67
+                60
             ],
             "fileName": [
-                67
+                60
             ],
             "fileSize": [
-                46
+                45
             ],
             "height": [
-                46
+                45
             ],
             "lastModified": [
-                42
+                41
             ],
             "mimeType": [
-                67
+                60
             ],
             "url": [
-                67
+                60
             ],
             "width": [
-                46
+                45
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "Blog": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "blogPosts": [
                 18,
@@ -575,58 +601,70 @@ export default {
                         20
                     ],
                     "first": [
-                        46
+                        45
                     ],
                     "orderBy": [
                         24
                     ],
                     "skip": [
-                        46
+                        45
                     ]
                 }
             ],
             "seo": [
-                60
+                54
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlogPosts": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_meta": [
-                53
+                49
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "items": [
                 19
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlogPostsItem": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "author": [
                 1
@@ -641,28 +679,28 @@ export default {
                 13
             ],
             "date": [
-                67
+                60
             ],
             "isPublished": [
                 27
             ],
             "seo": [
-                60
+                54
             ],
             "subtitle": [
-                67
+                60
             ],
             "summary": [
-                67
+                60
             ],
             "timeToRead": [
-                67
+                60
             ],
             "type": [
-                72
+                64
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlogPostsItemFilterInput": {
@@ -672,29 +710,38 @@ export default {
             "OR": [
                 20
             ],
+            "_sys_apiNamePath": [
+                61
+            ],
             "_sys_createdAt": [
-                35
+                34
             ],
             "_sys_hash": [
-                68
+                61
             ],
             "_sys_id": [
-                68
+                61
+            ],
+            "_sys_idPath": [
+                61
             ],
             "_sys_lastModifiedAt": [
-                35
+                34
             ],
             "_sys_slug": [
-                68
+                61
+            ],
+            "_sys_slugPath": [
+                61
             ],
             "_sys_title": [
-                68
+                61
             ],
             "author": [
                 21
             ],
             "date": [
-                35
+                34
             ],
             "isPublished": [
                 27
@@ -703,67 +750,67 @@ export default {
                 22
             ],
             "subtitle": [
-                68
+                61
             ],
             "summary": [
-                68
+                61
             ],
             "timeToRead": [
-                68
+                61
             ],
             "type": [
                 23
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlogPostsItemFilterInput__author_0___untitled": {
             "name": [
-                68
+                61
             ],
             "role": [
-                68
+                61
             ],
             "socialMedia": [
-                52
+                48
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlogPostsItemFilterInput__seo": {
             "keywords": [
-                68
+                61
             ],
             "metaDescription": [
-                68
+                61
             ],
             "metaTitle": [
-                68
+                61
             ],
             "sharingTitle": [
-                68
+                61
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlogPostsItemFilterInput__type_0___untitled": {
             "name": [
-                68
+                61
             ],
             "slug": [
-                68
+                61
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BlogPostsItemOrderByEnum": {},
         "Body": {
             "html": [
-                67,
+                60,
                 {
                     "slugs": [
                         27
@@ -777,73 +824,88 @@ export default {
                 26
             ],
             "markdown": [
-                67
+                60
             ],
             "plainText": [
-                67
+                60
             ],
             "readingTime": [
-                46,
+                45,
                 {
                     "wpm": [
-                        46
+                        45
                     ]
                 }
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "BodyRichText": {
-            "content": [
+            "blocks": [
                 47
+            ],
+            "content": [
+                46
             ],
             "toc": [
-                47
+                46
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "Boolean": {},
         "Categories": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_meta": [
-                53
+                49
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "items": [
                 29
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "CategoriesItem": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "CategoriesItemFilterInput": {
@@ -853,41 +915,56 @@ export default {
             "OR": [
                 30
             ],
+            "_sys_apiNamePath": [
+                61
+            ],
             "_sys_createdAt": [
-                35
+                34
             ],
             "_sys_hash": [
-                68
+                61
             ],
             "_sys_id": [
-                68
+                61
+            ],
+            "_sys_idPath": [
+                61
             ],
             "_sys_lastModifiedAt": [
-                35
+                34
             ],
             "_sys_slug": [
-                68
+                61
+            ],
+            "_sys_slugPath": [
+                61
             ],
             "_sys_title": [
-                68
+                61
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "CategoriesItemOrderByEnum": {},
         "Collections": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "authors": [
                 0,
@@ -896,13 +973,13 @@ export default {
                         2
                     ],
                     "first": [
-                        46
+                        45
                     ],
                     "orderBy": [
                         3
                     ],
                     "skip": [
-                        46
+                        45
                     ]
                 }
             ],
@@ -913,406 +990,325 @@ export default {
                         30
                     ],
                     "first": [
-                        46
+                        45
                     ],
                     "orderBy": [
                         31
                     ],
                     "skip": [
-                        46
+                        45
                     ]
                 }
             ],
             "types": [
-                71,
+                63,
                 {
                     "filter": [
-                        73
+                        65
                     ],
                     "first": [
-                        46
+                        45
                     ],
                     "orderBy": [
-                        74
+                        66
                     ],
                     "skip": [
-                        46
+                        45
                     ]
                 }
             ],
             "__typename": [
-                67
-            ]
-        },
-        "ColorsSettingsComponent": {
-            "_id": [
-                67
-            ],
-            "_slug": [
-                67
-            ],
-            "_sys": [
-                11
-            ],
-            "_title": [
-                67
-            ],
-            "backgroundColor": [
-                9
-            ],
-            "disabledColor": [
-                9
-            ],
-            "dividerColor": [
-                9
-            ],
-            "foregroundColor": [
-                9
-            ],
-            "hoverColor": [
-                9
-            ],
-            "secondaryHoverTextColor": [
-                9
-            ],
-            "secondaryTextColor": [
-                9
-            ],
-            "textColor": [
-                9
-            ],
-            "textHoverColor": [
-                9
-            ],
-            "__typename": [
-                67
+                60
             ]
         },
         "Components": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
-            ],
-            "link": [
-                48
-            ],
-            "linkWithSubLinks": [
-                51
-            ],
-            "navbar": [
-                54
-            ],
-            "seo": [
                 60
             ],
+            "link": [
+                47
+            ],
+            "seo": [
+                54
+            ],
             "socialMedia": [
-                63
+                56
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "DateFilter": {
             "eq": [
-                36
+                35
             ],
             "isAfter": [
-                36
+                35
             ],
             "isBefore": [
-                36
+                35
             ],
             "neq": [
-                36
+                35
             ],
             "onOrAfter": [
-                36
+                35
             ],
             "onOrBefore": [
-                36
+                35
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "DateTime": {},
         "Docs": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "docsPosts": [
-                38,
+                37,
                 {
                     "filter": [
-                        40
+                        39
                     ],
                     "first": [
-                        46
+                        45
                     ],
                     "orderBy": [
-                        41
+                        40
                     ],
                     "skip": [
-                        46
+                        45
                     ]
                 }
             ],
             "seo": [
-                60
+                54
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "DocsPosts": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_meta": [
-                53
+                49
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "items": [
-                39
+                38
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "DocsPostsItem": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "docs": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "DocsPostsItemFilterInput": {
             "AND": [
-                40
+                39
             ],
             "OR": [
-                40
+                39
+            ],
+            "_sys_apiNamePath": [
+                61
             ],
             "_sys_createdAt": [
-                35
+                34
             ],
             "_sys_hash": [
-                68
+                61
             ],
             "_sys_id": [
-                68
+                61
+            ],
+            "_sys_idPath": [
+                61
             ],
             "_sys_lastModifiedAt": [
-                35
+                34
             ],
             "_sys_slug": [
-                68
+                61
+            ],
+            "_sys_slugPath": [
+                61
             ],
             "_sys_title": [
-                68
+                61
             ],
             "docs": [
-                68
+                61
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "DocsPostsItemOrderByEnum": {},
         "Float": {},
         "HomePage": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
-            ],
-            "seo": [
                 60
             ],
+            "seo": [
+                54
+            ],
             "__typename": [
-                67
+                60
             ]
         },
         "ID": {},
         "Insights": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "blog": [
                 17
             ],
             "docs": [
-                37
+                36
             ],
             "seo": [
-                60
+                54
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "Int": {},
         "JSON": {},
         "LinkComponent": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "externalUrl": [
                 27
             ],
             "text": [
-                67
+                60
             ],
             "url": [
-                67
+                60
             ],
             "__typename": [
-                67
-            ]
-        },
-        "LinkComponentFilterInput": {
-            "AND": [
-                49
-            ],
-            "OR": [
-                49
-            ],
-            "_sys_createdAt": [
-                35
-            ],
-            "_sys_hash": [
-                68
-            ],
-            "_sys_id": [
-                68
-            ],
-            "_sys_lastModifiedAt": [
-                35
-            ],
-            "_sys_slug": [
-                68
-            ],
-            "_sys_title": [
-                68
-            ],
-            "externalUrl": [
-                27
-            ],
-            "text": [
-                68
-            ],
-            "url": [
-                68
-            ],
-            "__typename": [
-                67
-            ]
-        },
-        "LinkComponentOrderByEnum": {},
-        "LinkWithSubLinksComponent": {
-            "_id": [
-                67
-            ],
-            "_slug": [
-                67
-            ],
-            "_sys": [
-                11
-            ],
-            "_title": [
-                67
-            ],
-            "externalUrl": [
-                27
-            ],
-            "subLinks": [
-                70,
-                {
-                    "filter": [
-                        49
-                    ],
-                    "first": [
-                        46
-                    ],
-                    "orderBy": [
-                        50
-                    ],
-                    "skip": [
-                        46
-                    ]
-                }
-            ],
-            "text": [
-                67
-            ],
-            "url": [
-                67
-            ],
-            "__typename": [
-                67
+                60
             ]
         },
         "ListFilter": {
@@ -1320,135 +1316,89 @@ export default {
                 27
             ],
             "length": [
-                46
+                45
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "ListMeta": {
             "totalCount": [
-                46
+                45
             ],
             "__typename": [
-                67
-            ]
-        },
-        "NavbarComponent": {
-            "_id": [
-                67
-            ],
-            "_slug": [
-                67
-            ],
-            "_sys": [
-                11
-            ],
-            "_title": [
-                67
-            ],
-            "link": [
-                51
-            ],
-            "navbarColors": [
-                33
-            ],
-            "__typename": [
-                67
+                60
             ]
         },
         "NumberFilter": {
             "eq": [
-                42
+                41
             ],
             "gt": [
-                42
+                41
             ],
             "gte": [
-                42
+                41
             ],
             "lt": [
-                42
+                41
             ],
             "lte": [
-                42
+                41
             ],
             "neq": [
-                42
+                41
             ],
             "__typename": [
-                67
-            ]
-        },
-        "PaddingsSettingsComponent": {
-            "_id": [
-                67
-            ],
-            "_slug": [
-                67
-            ],
-            "_sys": [
-                11
-            ],
-            "_title": [
-                67
-            ],
-            "paddingBottonDesktop": [
-                42
-            ],
-            "paddingTopDesktop": [
-                42
-            ],
-            "__typename": [
-                67
+                60
             ]
         },
         "Query": {
+            "_componentInstances": [
+                67
+            ],
             "_sys": [
-                58
+                52
             ],
             "collections": [
                 32
             ],
             "components": [
-                34
+                33
             ],
             "homePage": [
-                43
+                42
             ],
             "insights": [
-                45
-            ],
-            "settings": [
-                61
+                44
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "RepoSys": {
             "hash": [
-                67
+                60
             ],
             "id": [
-                44
+                43
             ],
             "slug": [
-                67
+                60
             ],
             "title": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "RichTextJson": {
             "content": [
-                47
+                46
             ],
             "toc": [
-                47
+                46
             ],
             "on_BaseRichTextJson": [
                 4
@@ -1460,146 +1410,150 @@ export default {
                 26
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "SeoComponent": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "keywords": [
-                67
+                60
             ],
             "metaDescription": [
-                67
+                60
             ],
             "metaImage": [
                 13
             ],
             "metaTitle": [
-                67
+                60
             ],
             "sharingTitle": [
-                67
+                60
             ],
             "__typename": [
-                67
-            ]
-        },
-        "Settings": {
-            "_id": [
-                67
-            ],
-            "_slug": [
-                67
-            ],
-            "_sys": [
-                11
-            ],
-            "_title": [
-                67
-            ],
-            "colorsSettings": [
-                33
-            ],
-            "paddingsSettings": [
-                56
-            ],
-            "__typename": [
-                67
+                60
             ]
         },
         "SocialMedia": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_meta": [
-                53
+                49
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "items": [
-                63
+                56
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "SocialMediaComponent": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "icon": [
                 13
             ],
             "link": [
-                48
+                47
             ],
             "name": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "SocialMediaComponentFilterInput": {
             "AND": [
-                64
+                57
             ],
             "OR": [
-                64
+                57
+            ],
+            "_sys_apiNamePath": [
+                61
             ],
             "_sys_createdAt": [
-                35
+                34
             ],
             "_sys_hash": [
-                68
+                61
             ],
             "_sys_id": [
-                68
+                61
+            ],
+            "_sys_idPath": [
+                61
             ],
             "_sys_lastModifiedAt": [
-                35
+                34
             ],
             "_sys_slug": [
-                68
+                61
+            ],
+            "_sys_slugPath": [
+                61
             ],
             "_sys_title": [
-                68
+                61
             ],
             "link": [
-                65
+                58
             ],
             "name": [
-                68
+                61
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "SocialMediaComponentFilterInput__link": {
@@ -1607,29 +1561,38 @@ export default {
                 27
             ],
             "text": [
-                68
+                61
             ],
             "url": [
-                68
+                61
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "SocialMediaComponentOrderByEnum": {},
         "String": {},
         "StringFilter": {
+            "contains": [
+                60
+            ],
+            "endsWith": [
+                60
+            ],
             "eq": [
-                67
+                60
             ],
             "matches": [
-                69
+                62
             ],
             "notEq": [
-                67
+                60
+            ],
+            "startsWith": [
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "StringMatchesFilter": {
@@ -1637,116 +1600,221 @@ export default {
                 27
             ],
             "pattern": [
-                67
+                60
             ],
             "__typename": [
-                67
-            ]
-        },
-        "SubLinks": {
-            "_id": [
-                67
-            ],
-            "_meta": [
-                53
-            ],
-            "_slug": [
-                67
-            ],
-            "_sys": [
-                11
-            ],
-            "_title": [
-                67
-            ],
-            "items": [
-                48
-            ],
-            "__typename": [
-                67
+                60
             ]
         },
         "Types": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_meta": [
-                53
+                49
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "items": [
-                72
+                64
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "TypesItem": {
             "_id": [
-                67
+                60
+            ],
+            "_idPath": [
+                60
             ],
             "_slug": [
-                67
+                60
+            ],
+            "_slugPath": [
+                60
             ],
             "_sys": [
                 11
             ],
             "_title": [
-                67
+                60
             ],
             "name": [
-                67
+                60
             ],
             "slug": [
-                67
+                60
             ],
             "__typename": [
-                67
+                60
             ]
         },
         "TypesItemFilterInput": {
             "AND": [
-                73
+                65
             ],
             "OR": [
-                73
+                65
+            ],
+            "_sys_apiNamePath": [
+                61
             ],
             "_sys_createdAt": [
-                35
+                34
             ],
             "_sys_hash": [
-                68
+                61
             ],
             "_sys_id": [
-                68
+                61
+            ],
+            "_sys_idPath": [
+                61
             ],
             "_sys_lastModifiedAt": [
-                35
+                34
             ],
             "_sys_slug": [
-                68
+                61
+            ],
+            "_sys_slugPath": [
+                61
             ],
             "_sys_title": [
-                68
+                61
             ],
             "name": [
-                68
+                61
             ],
             "slug": [
-                68
+                61
             ],
             "__typename": [
-                67
+                60
             ]
         },
-        "TypesItemOrderByEnum": {}
+        "TypesItemOrderByEnum": {},
+        "_components": {
+            "authorsItem": [
+                0,
+                {
+                    "filter": [
+                        2
+                    ],
+                    "first": [
+                        45
+                    ],
+                    "orderBy": [
+                        3
+                    ],
+                    "skip": [
+                        45
+                    ]
+                }
+            ],
+            "blogPostsItem": [
+                18,
+                {
+                    "filter": [
+                        20
+                    ],
+                    "first": [
+                        45
+                    ],
+                    "orderBy": [
+                        24
+                    ],
+                    "skip": [
+                        45
+                    ]
+                }
+            ],
+            "categoriesItem": [
+                28,
+                {
+                    "filter": [
+                        30
+                    ],
+                    "first": [
+                        45
+                    ],
+                    "orderBy": [
+                        31
+                    ],
+                    "skip": [
+                        45
+                    ]
+                }
+            ],
+            "docsPostsItem": [
+                37,
+                {
+                    "filter": [
+                        39
+                    ],
+                    "first": [
+                        45
+                    ],
+                    "orderBy": [
+                        40
+                    ],
+                    "skip": [
+                        45
+                    ]
+                }
+            ],
+            "socialMedia": [
+                55,
+                {
+                    "filter": [
+                        57
+                    ],
+                    "first": [
+                        45
+                    ],
+                    "orderBy": [
+                        59
+                    ],
+                    "skip": [
+                        45
+                    ]
+                }
+            ],
+            "typesItem": [
+                63,
+                {
+                    "filter": [
+                        65
+                    ],
+                    "first": [
+                        45
+                    ],
+                    "orderBy": [
+                        66
+                    ],
+                    "skip": [
+                        45
+                    ]
+                }
+            ],
+            "__typename": [
+                60
+            ]
+        }
     }
 }

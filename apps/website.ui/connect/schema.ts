@@ -17,8 +17,10 @@ export type Scalars = {
 
 export interface Authors {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _meta: ListMeta
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     items: AuthorsItem[]
@@ -27,7 +29,9 @@ export interface Authors {
 
 export interface AuthorsItem {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     avatar: (BlockImage | null)
@@ -87,14 +91,17 @@ export interface BlockColor {
     __typename: 'BlockColor'
 }
 
-export type BlockDocument = (Authors | AuthorsItem | Blog | BlogPosts | BlogPostsItem | Categories | CategoriesItem | Collections | ColorsSettingsComponent | Components | Docs | DocsPosts | DocsPostsItem | HomePage | Insights | LinkComponent | LinkWithSubLinksComponent | NavbarComponent | PaddingsSettingsComponent | SeoComponent | Settings | SocialMedia | SocialMediaComponent | SubLinks | Types | TypesItem) & { __isUnion?: true }
+export type BlockDocument = (Authors | AuthorsItem | Blog | BlogPosts | BlogPostsItem | Categories | CategoriesItem | Collections | Components | Docs | DocsPosts | DocsPostsItem | HomePage | Insights | LinkComponent | SeoComponent | SocialMedia | SocialMediaComponent | Types | TypesItem) & { __isUnion?: true }
 
 export interface BlockDocumentSys {
+    apiNamePath: Scalars['String']
     createdAt: Scalars['String']
     hash: Scalars['String']
     id: Scalars['ID']
+    idPath: Scalars['String']
     lastModifiedAt: Scalars['String']
     slug: Scalars['String']
+    slugPath: Scalars['String']
     title: Scalars['String']
     __typename: 'BlockDocumentSys'
 }
@@ -122,7 +129,7 @@ export interface BlockImage {
     __typename: 'BlockImage'
 }
 
-export type BlockList = (Authors | BlogPosts | Categories | DocsPosts | SocialMedia | SubLinks | Types) & { __isUnion?: true }
+export type BlockList = (Authors | BlogPosts | Categories | DocsPosts | SocialMedia | Types) & { __isUnion?: true }
 
 
 /** Rich text block */
@@ -142,7 +149,9 @@ export interface BlockVideo {
 
 export interface Blog {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     blogPosts: BlogPosts
@@ -152,8 +161,10 @@ export interface Blog {
 
 export interface BlogPosts {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _meta: ListMeta
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     items: BlogPostsItem[]
@@ -162,7 +173,9 @@ export interface BlogPosts {
 
 export interface BlogPostsItem {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     author: (AuthorsItem | null)
@@ -192,6 +205,7 @@ export interface Body {
 }
 
 export interface BodyRichText {
+    blocks: LinkComponent[]
     content: Scalars['JSON']
     toc: Scalars['JSON']
     __typename: 'BodyRichText'
@@ -199,8 +213,10 @@ export interface BodyRichText {
 
 export interface Categories {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _meta: ListMeta
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     items: CategoriesItem[]
@@ -209,7 +225,9 @@ export interface Categories {
 
 export interface CategoriesItem {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     __typename: 'CategoriesItem'
@@ -219,7 +237,9 @@ export type CategoriesItemOrderByEnum = '_sys_createdAt__ASC' | '_sys_createdAt_
 
 export interface Collections {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     authors: Authors
@@ -228,31 +248,14 @@ export interface Collections {
     __typename: 'Collections'
 }
 
-export interface ColorsSettingsComponent {
-    _id: Scalars['String']
-    _slug: Scalars['String']
-    _sys: BlockDocumentSys
-    _title: Scalars['String']
-    backgroundColor: (BlockColor | null)
-    disabledColor: (BlockColor | null)
-    dividerColor: (BlockColor | null)
-    foregroundColor: (BlockColor | null)
-    hoverColor: (BlockColor | null)
-    secondaryHoverTextColor: (BlockColor | null)
-    secondaryTextColor: (BlockColor | null)
-    textColor: (BlockColor | null)
-    textHoverColor: (BlockColor | null)
-    __typename: 'ColorsSettingsComponent'
-}
-
 export interface Components {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     link: LinkComponent
-    linkWithSubLinks: LinkWithSubLinksComponent
-    navbar: NavbarComponent
     seo: SeoComponent
     socialMedia: SocialMediaComponent
     __typename: 'Components'
@@ -260,7 +263,9 @@ export interface Components {
 
 export interface Docs {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     docsPosts: DocsPosts
@@ -270,8 +275,10 @@ export interface Docs {
 
 export interface DocsPosts {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _meta: ListMeta
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     items: DocsPostsItem[]
@@ -280,7 +287,9 @@ export interface DocsPosts {
 
 export interface DocsPostsItem {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     docs: (Scalars['String'] | null)
@@ -291,7 +300,9 @@ export type DocsPostsItemOrderByEnum = '_sys_createdAt__ASC' | '_sys_createdAt__
 
 export interface HomePage {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     seo: SeoComponent
@@ -300,7 +311,9 @@ export interface HomePage {
 
 export interface Insights {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     blog: Blog
@@ -311,7 +324,9 @@ export interface Insights {
 
 export interface LinkComponent {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     externalUrl: Scalars['Boolean']
@@ -320,52 +335,19 @@ export interface LinkComponent {
     __typename: 'LinkComponent'
 }
 
-export type LinkComponentOrderByEnum = '_sys_createdAt__ASC' | '_sys_createdAt__DESC' | '_sys_hash__ASC' | '_sys_hash__DESC' | '_sys_id__ASC' | '_sys_id__DESC' | '_sys_lastModifiedAt__ASC' | '_sys_lastModifiedAt__DESC' | '_sys_slug__ASC' | '_sys_slug__DESC' | '_sys_title__ASC' | '_sys_title__DESC' | 'externalUrl__ASC' | 'externalUrl__DESC' | 'text__ASC' | 'text__DESC' | 'url__ASC' | 'url__DESC'
-
-export interface LinkWithSubLinksComponent {
-    _id: Scalars['String']
-    _slug: Scalars['String']
-    _sys: BlockDocumentSys
-    _title: Scalars['String']
-    externalUrl: Scalars['Boolean']
-    subLinks: SubLinks
-    text: (Scalars['String'] | null)
-    url: (Scalars['String'] | null)
-    __typename: 'LinkWithSubLinksComponent'
-}
-
 export interface ListMeta {
     totalCount: Scalars['Int']
     __typename: 'ListMeta'
 }
 
-export interface NavbarComponent {
-    _id: Scalars['String']
-    _slug: Scalars['String']
-    _sys: BlockDocumentSys
-    _title: Scalars['String']
-    link: LinkWithSubLinksComponent
-    navbarColors: ColorsSettingsComponent
-    __typename: 'NavbarComponent'
-}
-
-export interface PaddingsSettingsComponent {
-    _id: Scalars['String']
-    _slug: Scalars['String']
-    _sys: BlockDocumentSys
-    _title: Scalars['String']
-    paddingBottonDesktop: (Scalars['Float'] | null)
-    paddingTopDesktop: (Scalars['Float'] | null)
-    __typename: 'PaddingsSettingsComponent'
-}
-
 export interface Query {
+    /** Query across all of the instances of a component. Pass in filters and sorts if you want, and get each instance via the `items` key. */
+    _componentInstances: _components
     _sys: RepoSys
     collections: Collections
     components: Components
     homePage: HomePage
     insights: Insights
-    settings: Settings
     __typename: 'Query'
 }
 
@@ -381,7 +363,9 @@ export type RichTextJson = (BaseRichTextJson | BiographyRichText | BodyRichText)
 
 export interface SeoComponent {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     keywords: (Scalars['String'] | null)
@@ -392,20 +376,12 @@ export interface SeoComponent {
     __typename: 'SeoComponent'
 }
 
-export interface Settings {
-    _id: Scalars['String']
-    _slug: Scalars['String']
-    _sys: BlockDocumentSys
-    _title: Scalars['String']
-    colorsSettings: ColorsSettingsComponent
-    paddingsSettings: PaddingsSettingsComponent
-    __typename: 'Settings'
-}
-
 export interface SocialMedia {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _meta: ListMeta
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     items: SocialMediaComponent[]
@@ -414,7 +390,9 @@ export interface SocialMedia {
 
 export interface SocialMediaComponent {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     icon: (BlockImage | null)
@@ -425,20 +403,12 @@ export interface SocialMediaComponent {
 
 export type SocialMediaComponentOrderByEnum = '_sys_createdAt__ASC' | '_sys_createdAt__DESC' | '_sys_hash__ASC' | '_sys_hash__DESC' | '_sys_id__ASC' | '_sys_id__DESC' | '_sys_lastModifiedAt__ASC' | '_sys_lastModifiedAt__DESC' | '_sys_slug__ASC' | '_sys_slug__DESC' | '_sys_title__ASC' | '_sys_title__DESC' | 'icon__ASC' | 'icon__DESC' | 'link__ASC' | 'link__DESC' | 'name__ASC' | 'name__DESC'
 
-export interface SubLinks {
-    _id: Scalars['String']
-    _meta: ListMeta
-    _slug: Scalars['String']
-    _sys: BlockDocumentSys
-    _title: Scalars['String']
-    items: LinkComponent[]
-    __typename: 'SubLinks'
-}
-
 export interface Types {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _meta: ListMeta
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     items: TypesItem[]
@@ -447,7 +417,9 @@ export interface Types {
 
 export interface TypesItem {
     _id: Scalars['String']
+    _idPath: Scalars['String']
     _slug: Scalars['String']
+    _slugPath: Scalars['String']
     _sys: BlockDocumentSys
     _title: Scalars['String']
     name: (Scalars['String'] | null)
@@ -457,10 +429,22 @@ export interface TypesItem {
 
 export type TypesItemOrderByEnum = '_sys_createdAt__ASC' | '_sys_createdAt__DESC' | '_sys_hash__ASC' | '_sys_hash__DESC' | '_sys_id__ASC' | '_sys_id__DESC' | '_sys_lastModifiedAt__ASC' | '_sys_lastModifiedAt__DESC' | '_sys_slug__ASC' | '_sys_slug__DESC' | '_sys_title__ASC' | '_sys_title__DESC' | 'name__ASC' | 'name__DESC' | 'slug__ASC' | 'slug__DESC'
 
+export interface _components {
+    authorsItem: Authors
+    blogPostsItem: BlogPosts
+    categoriesItem: Categories
+    docsPostsItem: DocsPosts
+    socialMedia: SocialMedia
+    typesItem: Types
+    __typename: '_components'
+}
+
 export interface AuthorsGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _meta?: ListMetaGenqlSelection
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     items?: AuthorsItemGenqlSelection
@@ -470,7 +454,9 @@ export interface AuthorsGenqlSelection{
 
 export interface AuthorsItemGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     avatar?: BlockImageGenqlSelection
@@ -490,7 +476,7 @@ export interface AuthorsItemGenqlSelection{
     __scalar?: boolean | number
 }
 
-export interface AuthorsItemFilterInput {AND?: (AuthorsItemFilterInput | null),OR?: (AuthorsItemFilterInput | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_title?: (StringFilter | null),name?: (StringFilter | null),role?: (StringFilter | null),socialMedia?: (ListFilter | null)}
+export interface AuthorsItemFilterInput {AND?: (AuthorsItemFilterInput | null),OR?: (AuthorsItemFilterInput | null),_sys_apiNamePath?: (StringFilter | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_idPath?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_slugPath?: (StringFilter | null),_sys_title?: (StringFilter | null),name?: (StringFilter | null),role?: (StringFilter | null),socialMedia?: (ListFilter | null)}
 
 export interface BaseRichTextJsonGenqlSelection{
     blocks?: boolean | number
@@ -555,7 +541,9 @@ export interface BlockColorGenqlSelection{
 
 export interface BlockDocumentGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     on_Authors?: AuthorsGenqlSelection
@@ -566,7 +554,6 @@ export interface BlockDocumentGenqlSelection{
     on_Categories?: CategoriesGenqlSelection
     on_CategoriesItem?: CategoriesItemGenqlSelection
     on_Collections?: CollectionsGenqlSelection
-    on_ColorsSettingsComponent?: ColorsSettingsComponentGenqlSelection
     on_Components?: ComponentsGenqlSelection
     on_Docs?: DocsGenqlSelection
     on_DocsPosts?: DocsPostsGenqlSelection
@@ -574,14 +561,9 @@ export interface BlockDocumentGenqlSelection{
     on_HomePage?: HomePageGenqlSelection
     on_Insights?: InsightsGenqlSelection
     on_LinkComponent?: LinkComponentGenqlSelection
-    on_LinkWithSubLinksComponent?: LinkWithSubLinksComponentGenqlSelection
-    on_NavbarComponent?: NavbarComponentGenqlSelection
-    on_PaddingsSettingsComponent?: PaddingsSettingsComponentGenqlSelection
     on_SeoComponent?: SeoComponentGenqlSelection
-    on_Settings?: SettingsGenqlSelection
     on_SocialMedia?: SocialMediaGenqlSelection
     on_SocialMediaComponent?: SocialMediaComponentGenqlSelection
-    on_SubLinks?: SubLinksGenqlSelection
     on_Types?: TypesGenqlSelection
     on_TypesItem?: TypesItemGenqlSelection
     __typename?: boolean | number
@@ -589,11 +571,14 @@ export interface BlockDocumentGenqlSelection{
 }
 
 export interface BlockDocumentSysGenqlSelection{
+    apiNamePath?: boolean | number
     createdAt?: boolean | number
     hash?: boolean | number
     id?: boolean | number
+    idPath?: boolean | number
     lastModifiedAt?: boolean | number
     slug?: boolean | number
+    slugPath?: boolean | number
     title?: boolean | number
     __typename?: boolean | number
     __scalar?: boolean | number
@@ -626,8 +611,10 @@ export interface BlockImageGenqlSelection{
 
 export interface BlockListGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _meta?: ListMetaGenqlSelection
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     on_Authors?: AuthorsGenqlSelection
@@ -635,7 +622,6 @@ export interface BlockListGenqlSelection{
     on_Categories?: CategoriesGenqlSelection
     on_DocsPosts?: DocsPostsGenqlSelection
     on_SocialMedia?: SocialMediaGenqlSelection
-    on_SubLinks?: SubLinksGenqlSelection
     on_Types?: TypesGenqlSelection
     __typename?: boolean | number
     __scalar?: boolean | number
@@ -676,7 +662,9 @@ export interface BlockVideoGenqlSelection{
 
 export interface BlogGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     blogPosts?: (BlogPostsGenqlSelection & { __args?: {
@@ -695,8 +683,10 @@ export interface BlogGenqlSelection{
 
 export interface BlogPostsGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _meta?: ListMetaGenqlSelection
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     items?: BlogPostsItemGenqlSelection
@@ -706,7 +696,9 @@ export interface BlogPostsGenqlSelection{
 
 export interface BlogPostsItemGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     author?: AuthorsItemGenqlSelection
@@ -725,7 +717,7 @@ export interface BlogPostsItemGenqlSelection{
     __scalar?: boolean | number
 }
 
-export interface BlogPostsItemFilterInput {AND?: (BlogPostsItemFilterInput | null),OR?: (BlogPostsItemFilterInput | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_title?: (StringFilter | null),author?: (BlogPostsItemFilterInput__author_0___untitled | null),date?: (DateFilter | null),isPublished?: (Scalars['Boolean'] | null),seo?: (BlogPostsItemFilterInput__seo | null),subtitle?: (StringFilter | null),summary?: (StringFilter | null),timeToRead?: (StringFilter | null),type?: (BlogPostsItemFilterInput__type_0___untitled | null)}
+export interface BlogPostsItemFilterInput {AND?: (BlogPostsItemFilterInput | null),OR?: (BlogPostsItemFilterInput | null),_sys_apiNamePath?: (StringFilter | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_idPath?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_slugPath?: (StringFilter | null),_sys_title?: (StringFilter | null),author?: (BlogPostsItemFilterInput__author_0___untitled | null),date?: (DateFilter | null),isPublished?: (Scalars['Boolean'] | null),seo?: (BlogPostsItemFilterInput__seo | null),subtitle?: (StringFilter | null),summary?: (StringFilter | null),timeToRead?: (StringFilter | null),type?: (BlogPostsItemFilterInput__type_0___untitled | null)}
 
 export interface BlogPostsItemFilterInput__author_0___untitled {name?: (StringFilter | null),role?: (StringFilter | null),socialMedia?: (ListFilter | null)}
 
@@ -750,6 +742,7 @@ export interface BodyGenqlSelection{
 }
 
 export interface BodyRichTextGenqlSelection{
+    blocks?: LinkComponentGenqlSelection
     content?: boolean | number
     toc?: boolean | number
     __typename?: boolean | number
@@ -758,8 +751,10 @@ export interface BodyRichTextGenqlSelection{
 
 export interface CategoriesGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _meta?: ListMetaGenqlSelection
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     items?: CategoriesItemGenqlSelection
@@ -769,18 +764,22 @@ export interface CategoriesGenqlSelection{
 
 export interface CategoriesItemGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     __typename?: boolean | number
     __scalar?: boolean | number
 }
 
-export interface CategoriesItemFilterInput {AND?: (CategoriesItemFilterInput | null),OR?: (CategoriesItemFilterInput | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_title?: (StringFilter | null)}
+export interface CategoriesItemFilterInput {AND?: (CategoriesItemFilterInput | null),OR?: (CategoriesItemFilterInput | null),_sys_apiNamePath?: (StringFilter | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_idPath?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_slugPath?: (StringFilter | null),_sys_title?: (StringFilter | null)}
 
 export interface CollectionsGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     authors?: (AuthorsGenqlSelection & { __args?: {
@@ -814,32 +813,14 @@ export interface CollectionsGenqlSelection{
     __scalar?: boolean | number
 }
 
-export interface ColorsSettingsComponentGenqlSelection{
-    _id?: boolean | number
-    _slug?: boolean | number
-    _sys?: BlockDocumentSysGenqlSelection
-    _title?: boolean | number
-    backgroundColor?: BlockColorGenqlSelection
-    disabledColor?: BlockColorGenqlSelection
-    dividerColor?: BlockColorGenqlSelection
-    foregroundColor?: BlockColorGenqlSelection
-    hoverColor?: BlockColorGenqlSelection
-    secondaryHoverTextColor?: BlockColorGenqlSelection
-    secondaryTextColor?: BlockColorGenqlSelection
-    textColor?: BlockColorGenqlSelection
-    textHoverColor?: BlockColorGenqlSelection
-    __typename?: boolean | number
-    __scalar?: boolean | number
-}
-
 export interface ComponentsGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     link?: LinkComponentGenqlSelection
-    linkWithSubLinks?: LinkWithSubLinksComponentGenqlSelection
-    navbar?: NavbarComponentGenqlSelection
     seo?: SeoComponentGenqlSelection
     socialMedia?: SocialMediaComponentGenqlSelection
     __typename?: boolean | number
@@ -850,7 +831,9 @@ export interface DateFilter {eq?: (Scalars['DateTime'] | null),isAfter?: (Scalar
 
 export interface DocsGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     docsPosts?: (DocsPostsGenqlSelection & { __args?: {
@@ -869,8 +852,10 @@ export interface DocsGenqlSelection{
 
 export interface DocsPostsGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _meta?: ListMetaGenqlSelection
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     items?: DocsPostsItemGenqlSelection
@@ -880,7 +865,9 @@ export interface DocsPostsGenqlSelection{
 
 export interface DocsPostsItemGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     docs?: boolean | number
@@ -888,11 +875,13 @@ export interface DocsPostsItemGenqlSelection{
     __scalar?: boolean | number
 }
 
-export interface DocsPostsItemFilterInput {AND?: (DocsPostsItemFilterInput | null),OR?: (DocsPostsItemFilterInput | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_title?: (StringFilter | null),docs?: (StringFilter | null)}
+export interface DocsPostsItemFilterInput {AND?: (DocsPostsItemFilterInput | null),OR?: (DocsPostsItemFilterInput | null),_sys_apiNamePath?: (StringFilter | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_idPath?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_slugPath?: (StringFilter | null),_sys_title?: (StringFilter | null),docs?: (StringFilter | null)}
 
 export interface HomePageGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     seo?: SeoComponentGenqlSelection
@@ -902,7 +891,9 @@ export interface HomePageGenqlSelection{
 
 export interface InsightsGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     blog?: BlogGenqlSelection
@@ -914,33 +905,12 @@ export interface InsightsGenqlSelection{
 
 export interface LinkComponentGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     externalUrl?: boolean | number
-    text?: boolean | number
-    url?: boolean | number
-    __typename?: boolean | number
-    __scalar?: boolean | number
-}
-
-export interface LinkComponentFilterInput {AND?: (LinkComponentFilterInput | null),OR?: (LinkComponentFilterInput | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_title?: (StringFilter | null),externalUrl?: (Scalars['Boolean'] | null),text?: (StringFilter | null),url?: (StringFilter | null)}
-
-export interface LinkWithSubLinksComponentGenqlSelection{
-    _id?: boolean | number
-    _slug?: boolean | number
-    _sys?: BlockDocumentSysGenqlSelection
-    _title?: boolean | number
-    externalUrl?: boolean | number
-    subLinks?: (SubLinksGenqlSelection & { __args?: {
-    /** Filter by a field. */
-    filter?: (LinkComponentFilterInput | null), 
-    /** Limit the number of items returned. Defaults to 500. */
-    first?: (Scalars['Int'] | null), 
-    /** Order by a field. */
-    orderBy?: (LinkComponentOrderByEnum | null), 
-    /** Skip the first n items. */
-    skip?: (Scalars['Int'] | null)} })
     text?: boolean | number
     url?: boolean | number
     __typename?: boolean | number
@@ -955,37 +925,16 @@ export interface ListMetaGenqlSelection{
     __scalar?: boolean | number
 }
 
-export interface NavbarComponentGenqlSelection{
-    _id?: boolean | number
-    _slug?: boolean | number
-    _sys?: BlockDocumentSysGenqlSelection
-    _title?: boolean | number
-    link?: LinkWithSubLinksComponentGenqlSelection
-    navbarColors?: ColorsSettingsComponentGenqlSelection
-    __typename?: boolean | number
-    __scalar?: boolean | number
-}
-
 export interface NumberFilter {eq?: (Scalars['Float'] | null),gt?: (Scalars['Float'] | null),gte?: (Scalars['Float'] | null),lt?: (Scalars['Float'] | null),lte?: (Scalars['Float'] | null),neq?: (Scalars['Float'] | null)}
 
-export interface PaddingsSettingsComponentGenqlSelection{
-    _id?: boolean | number
-    _slug?: boolean | number
-    _sys?: BlockDocumentSysGenqlSelection
-    _title?: boolean | number
-    paddingBottonDesktop?: boolean | number
-    paddingTopDesktop?: boolean | number
-    __typename?: boolean | number
-    __scalar?: boolean | number
-}
-
 export interface QueryGenqlSelection{
+    /** Query across all of the instances of a component. Pass in filters and sorts if you want, and get each instance via the `items` key. */
+    _componentInstances?: _componentsGenqlSelection
     _sys?: RepoSysGenqlSelection
     collections?: CollectionsGenqlSelection
     components?: ComponentsGenqlSelection
     homePage?: HomePageGenqlSelection
     insights?: InsightsGenqlSelection
-    settings?: SettingsGenqlSelection
     __typename?: boolean | number
     __scalar?: boolean | number
 }
@@ -1011,7 +960,9 @@ export interface RichTextJsonGenqlSelection{
 
 export interface SeoComponentGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     keywords?: boolean | number
@@ -1023,21 +974,12 @@ export interface SeoComponentGenqlSelection{
     __scalar?: boolean | number
 }
 
-export interface SettingsGenqlSelection{
-    _id?: boolean | number
-    _slug?: boolean | number
-    _sys?: BlockDocumentSysGenqlSelection
-    _title?: boolean | number
-    colorsSettings?: ColorsSettingsComponentGenqlSelection
-    paddingsSettings?: PaddingsSettingsComponentGenqlSelection
-    __typename?: boolean | number
-    __scalar?: boolean | number
-}
-
 export interface SocialMediaGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _meta?: ListMetaGenqlSelection
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     items?: SocialMediaComponentGenqlSelection
@@ -1047,7 +989,9 @@ export interface SocialMediaGenqlSelection{
 
 export interface SocialMediaComponentGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     icon?: BlockImageGenqlSelection
@@ -1057,29 +1001,20 @@ export interface SocialMediaComponentGenqlSelection{
     __scalar?: boolean | number
 }
 
-export interface SocialMediaComponentFilterInput {AND?: (SocialMediaComponentFilterInput | null),OR?: (SocialMediaComponentFilterInput | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_title?: (StringFilter | null),link?: (SocialMediaComponentFilterInput__link | null),name?: (StringFilter | null)}
+export interface SocialMediaComponentFilterInput {AND?: (SocialMediaComponentFilterInput | null),OR?: (SocialMediaComponentFilterInput | null),_sys_apiNamePath?: (StringFilter | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_idPath?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_slugPath?: (StringFilter | null),_sys_title?: (StringFilter | null),link?: (SocialMediaComponentFilterInput__link | null),name?: (StringFilter | null)}
 
 export interface SocialMediaComponentFilterInput__link {externalUrl?: (Scalars['Boolean'] | null),text?: (StringFilter | null),url?: (StringFilter | null)}
 
-export interface StringFilter {eq?: (Scalars['String'] | null),matches?: (StringMatchesFilter | null),notEq?: (Scalars['String'] | null)}
+export interface StringFilter {contains?: (Scalars['String'] | null),endsWith?: (Scalars['String'] | null),eq?: (Scalars['String'] | null),matches?: (StringMatchesFilter | null),notEq?: (Scalars['String'] | null),startsWith?: (Scalars['String'] | null)}
 
 export interface StringMatchesFilter {caseSensitive?: (Scalars['Boolean'] | null),pattern: Scalars['String']}
 
-export interface SubLinksGenqlSelection{
-    _id?: boolean | number
-    _meta?: ListMetaGenqlSelection
-    _slug?: boolean | number
-    _sys?: BlockDocumentSysGenqlSelection
-    _title?: boolean | number
-    items?: LinkComponentGenqlSelection
-    __typename?: boolean | number
-    __scalar?: boolean | number
-}
-
 export interface TypesGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _meta?: ListMetaGenqlSelection
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     items?: TypesItemGenqlSelection
@@ -1089,7 +1024,9 @@ export interface TypesGenqlSelection{
 
 export interface TypesItemGenqlSelection{
     _id?: boolean | number
+    _idPath?: boolean | number
     _slug?: boolean | number
+    _slugPath?: boolean | number
     _sys?: BlockDocumentSysGenqlSelection
     _title?: boolean | number
     name?: boolean | number
@@ -1098,7 +1035,66 @@ export interface TypesItemGenqlSelection{
     __scalar?: boolean | number
 }
 
-export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: (TypesItemFilterInput | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_title?: (StringFilter | null),name?: (StringFilter | null),slug?: (StringFilter | null)}
+export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: (TypesItemFilterInput | null),_sys_apiNamePath?: (StringFilter | null),_sys_createdAt?: (DateFilter | null),_sys_hash?: (StringFilter | null),_sys_id?: (StringFilter | null),_sys_idPath?: (StringFilter | null),_sys_lastModifiedAt?: (DateFilter | null),_sys_slug?: (StringFilter | null),_sys_slugPath?: (StringFilter | null),_sys_title?: (StringFilter | null),name?: (StringFilter | null),slug?: (StringFilter | null)}
+
+export interface _componentsGenqlSelection{
+    authorsItem?: (AuthorsGenqlSelection & { __args?: {
+    /** Filter by a field. */
+    filter?: (AuthorsItemFilterInput | null), 
+    /** Limit the number of items returned. Defaults to 500. */
+    first?: (Scalars['Int'] | null), 
+    /** Order by a field. */
+    orderBy?: (AuthorsItemOrderByEnum | null), 
+    /** Skip the first n items. */
+    skip?: (Scalars['Int'] | null)} })
+    blogPostsItem?: (BlogPostsGenqlSelection & { __args?: {
+    /** Filter by a field. */
+    filter?: (BlogPostsItemFilterInput | null), 
+    /** Limit the number of items returned. Defaults to 500. */
+    first?: (Scalars['Int'] | null), 
+    /** Order by a field. */
+    orderBy?: (BlogPostsItemOrderByEnum | null), 
+    /** Skip the first n items. */
+    skip?: (Scalars['Int'] | null)} })
+    categoriesItem?: (CategoriesGenqlSelection & { __args?: {
+    /** Filter by a field. */
+    filter?: (CategoriesItemFilterInput | null), 
+    /** Limit the number of items returned. Defaults to 500. */
+    first?: (Scalars['Int'] | null), 
+    /** Order by a field. */
+    orderBy?: (CategoriesItemOrderByEnum | null), 
+    /** Skip the first n items. */
+    skip?: (Scalars['Int'] | null)} })
+    docsPostsItem?: (DocsPostsGenqlSelection & { __args?: {
+    /** Filter by a field. */
+    filter?: (DocsPostsItemFilterInput | null), 
+    /** Limit the number of items returned. Defaults to 500. */
+    first?: (Scalars['Int'] | null), 
+    /** Order by a field. */
+    orderBy?: (DocsPostsItemOrderByEnum | null), 
+    /** Skip the first n items. */
+    skip?: (Scalars['Int'] | null)} })
+    socialMedia?: (SocialMediaGenqlSelection & { __args?: {
+    /** Filter by a field. */
+    filter?: (SocialMediaComponentFilterInput | null), 
+    /** Limit the number of items returned. Defaults to 500. */
+    first?: (Scalars['Int'] | null), 
+    /** Order by a field. */
+    orderBy?: (SocialMediaComponentOrderByEnum | null), 
+    /** Skip the first n items. */
+    skip?: (Scalars['Int'] | null)} })
+    typesItem?: (TypesGenqlSelection & { __args?: {
+    /** Filter by a field. */
+    filter?: (TypesItemFilterInput | null), 
+    /** Limit the number of items returned. Defaults to 500. */
+    first?: (Scalars['Int'] | null), 
+    /** Order by a field. */
+    orderBy?: (TypesItemOrderByEnum | null), 
+    /** Skip the first n items. */
+    skip?: (Scalars['Int'] | null)} })
+    __typename?: boolean | number
+    __scalar?: boolean | number
+}
 
 
     const Authors_possibleTypes: string[] = ['Authors']
@@ -1165,7 +1161,7 @@ export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: 
     
 
 
-    const BlockDocument_possibleTypes: string[] = ['Authors','AuthorsItem','Blog','BlogPosts','BlogPostsItem','Categories','CategoriesItem','Collections','ColorsSettingsComponent','Components','Docs','DocsPosts','DocsPostsItem','HomePage','Insights','LinkComponent','LinkWithSubLinksComponent','NavbarComponent','PaddingsSettingsComponent','SeoComponent','Settings','SocialMedia','SocialMediaComponent','SubLinks','Types','TypesItem']
+    const BlockDocument_possibleTypes: string[] = ['Authors','AuthorsItem','Blog','BlogPosts','BlogPostsItem','Categories','CategoriesItem','Collections','Components','Docs','DocsPosts','DocsPostsItem','HomePage','Insights','LinkComponent','SeoComponent','SocialMedia','SocialMediaComponent','Types','TypesItem']
     export const isBlockDocument = (obj?: { __typename?: any } | null): obj is BlockDocument => {
       if (!obj?.__typename) throw new Error('__typename is missing in "isBlockDocument"')
       return BlockDocument_possibleTypes.includes(obj.__typename)
@@ -1197,7 +1193,7 @@ export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: 
     
 
 
-    const BlockList_possibleTypes: string[] = ['Authors','BlogPosts','Categories','DocsPosts','SocialMedia','SubLinks','Types']
+    const BlockList_possibleTypes: string[] = ['Authors','BlogPosts','Categories','DocsPosts','SocialMedia','Types']
     export const isBlockList = (obj?: { __typename?: any } | null): obj is BlockList => {
       if (!obj?.__typename) throw new Error('__typename is missing in "isBlockList"')
       return BlockList_possibleTypes.includes(obj.__typename)
@@ -1285,14 +1281,6 @@ export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: 
     
 
 
-    const ColorsSettingsComponent_possibleTypes: string[] = ['ColorsSettingsComponent']
-    export const isColorsSettingsComponent = (obj?: { __typename?: any } | null): obj is ColorsSettingsComponent => {
-      if (!obj?.__typename) throw new Error('__typename is missing in "isColorsSettingsComponent"')
-      return ColorsSettingsComponent_possibleTypes.includes(obj.__typename)
-    }
-    
-
-
     const Components_possibleTypes: string[] = ['Components']
     export const isComponents = (obj?: { __typename?: any } | null): obj is Components => {
       if (!obj?.__typename) throw new Error('__typename is missing in "isComponents"')
@@ -1349,34 +1337,10 @@ export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: 
     
 
 
-    const LinkWithSubLinksComponent_possibleTypes: string[] = ['LinkWithSubLinksComponent']
-    export const isLinkWithSubLinksComponent = (obj?: { __typename?: any } | null): obj is LinkWithSubLinksComponent => {
-      if (!obj?.__typename) throw new Error('__typename is missing in "isLinkWithSubLinksComponent"')
-      return LinkWithSubLinksComponent_possibleTypes.includes(obj.__typename)
-    }
-    
-
-
     const ListMeta_possibleTypes: string[] = ['ListMeta']
     export const isListMeta = (obj?: { __typename?: any } | null): obj is ListMeta => {
       if (!obj?.__typename) throw new Error('__typename is missing in "isListMeta"')
       return ListMeta_possibleTypes.includes(obj.__typename)
-    }
-    
-
-
-    const NavbarComponent_possibleTypes: string[] = ['NavbarComponent']
-    export const isNavbarComponent = (obj?: { __typename?: any } | null): obj is NavbarComponent => {
-      if (!obj?.__typename) throw new Error('__typename is missing in "isNavbarComponent"')
-      return NavbarComponent_possibleTypes.includes(obj.__typename)
-    }
-    
-
-
-    const PaddingsSettingsComponent_possibleTypes: string[] = ['PaddingsSettingsComponent']
-    export const isPaddingsSettingsComponent = (obj?: { __typename?: any } | null): obj is PaddingsSettingsComponent => {
-      if (!obj?.__typename) throw new Error('__typename is missing in "isPaddingsSettingsComponent"')
-      return PaddingsSettingsComponent_possibleTypes.includes(obj.__typename)
     }
     
 
@@ -1413,14 +1377,6 @@ export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: 
     
 
 
-    const Settings_possibleTypes: string[] = ['Settings']
-    export const isSettings = (obj?: { __typename?: any } | null): obj is Settings => {
-      if (!obj?.__typename) throw new Error('__typename is missing in "isSettings"')
-      return Settings_possibleTypes.includes(obj.__typename)
-    }
-    
-
-
     const SocialMedia_possibleTypes: string[] = ['SocialMedia']
     export const isSocialMedia = (obj?: { __typename?: any } | null): obj is SocialMedia => {
       if (!obj?.__typename) throw new Error('__typename is missing in "isSocialMedia"')
@@ -1437,14 +1393,6 @@ export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: 
     
 
 
-    const SubLinks_possibleTypes: string[] = ['SubLinks']
-    export const isSubLinks = (obj?: { __typename?: any } | null): obj is SubLinks => {
-      if (!obj?.__typename) throw new Error('__typename is missing in "isSubLinks"')
-      return SubLinks_possibleTypes.includes(obj.__typename)
-    }
-    
-
-
     const Types_possibleTypes: string[] = ['Types']
     export const isTypes = (obj?: { __typename?: any } | null): obj is Types => {
       if (!obj?.__typename) throw new Error('__typename is missing in "isTypes"')
@@ -1457,6 +1405,14 @@ export interface TypesItemFilterInput {AND?: (TypesItemFilterInput | null),OR?: 
     export const isTypesItem = (obj?: { __typename?: any } | null): obj is TypesItem => {
       if (!obj?.__typename) throw new Error('__typename is missing in "isTypesItem"')
       return TypesItem_possibleTypes.includes(obj.__typename)
+    }
+    
+
+
+    const _components_possibleTypes: string[] = ['_components']
+    export const is_components = (obj?: { __typename?: any } | null): obj is _components => {
+      if (!obj?.__typename) throw new Error('__typename is missing in "is_components"')
+      return _components_possibleTypes.includes(obj.__typename)
     }
     
 
@@ -1552,27 +1508,6 @@ export const enumDocsPostsItemOrderByEnum = {
    _sys_title__DESC: '_sys_title__DESC' as const,
    docs__ASC: 'docs__ASC' as const,
    docs__DESC: 'docs__DESC' as const
-}
-
-export const enumLinkComponentOrderByEnum = {
-   _sys_createdAt__ASC: '_sys_createdAt__ASC' as const,
-   _sys_createdAt__DESC: '_sys_createdAt__DESC' as const,
-   _sys_hash__ASC: '_sys_hash__ASC' as const,
-   _sys_hash__DESC: '_sys_hash__DESC' as const,
-   _sys_id__ASC: '_sys_id__ASC' as const,
-   _sys_id__DESC: '_sys_id__DESC' as const,
-   _sys_lastModifiedAt__ASC: '_sys_lastModifiedAt__ASC' as const,
-   _sys_lastModifiedAt__DESC: '_sys_lastModifiedAt__DESC' as const,
-   _sys_slug__ASC: '_sys_slug__ASC' as const,
-   _sys_slug__DESC: '_sys_slug__DESC' as const,
-   _sys_title__ASC: '_sys_title__ASC' as const,
-   _sys_title__DESC: '_sys_title__DESC' as const,
-   externalUrl__ASC: 'externalUrl__ASC' as const,
-   externalUrl__DESC: 'externalUrl__DESC' as const,
-   text__ASC: 'text__ASC' as const,
-   text__DESC: 'text__DESC' as const,
-   url__ASC: 'url__ASC' as const,
-   url__DESC: 'url__DESC' as const
 }
 
 export const enumSocialMediaComponentOrderByEnum = {

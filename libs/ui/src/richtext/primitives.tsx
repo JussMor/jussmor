@@ -3,6 +3,8 @@ import slugify from 'slugify';
 import { extractTextFromNode, incrementID } from './utils/headings-id';
 import { marked } from 'marked';
 import Prism from 'prismjs';
+import  loadLanguages   from 'prismjs/components/'
+loadLanguages(['bash'])
 /**
  * TODOs
  *
@@ -269,7 +271,7 @@ const defaultHandlers: Handlers = {
 
     if(language !== 'markdown' && language !== 'text') {
         code =  Prism.highlight(content, Prism.languages[language], language)
-    }
+    } 
 
     return (
         <code
@@ -545,6 +547,7 @@ const Node = ({
                 }
                 break;
             }
+
             // @ts-ignore
             // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
             handler = components?.[block?.__typename] ?? (() => <></>);
