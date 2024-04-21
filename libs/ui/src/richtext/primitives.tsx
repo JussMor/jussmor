@@ -3,8 +3,7 @@ import slugify from 'slugify';
 import { extractTextFromNode, incrementID } from './utils/headings-id';
 import { marked } from 'marked';
 import Prism from 'prismjs';
-import loadLanguages  from 'prismjs/components/';
-loadLanguages(['bash'])
+
 /**
  * TODOs
  *
@@ -263,6 +262,7 @@ const defaultHandlers: Handlers = {
     s: ({ children }) => <s>{children}</s>,
     code:  ({ children, isInline, language }) => {
     let code;
+    Prism.manual = true;
 
     const content = typeof children === 'string' ? children : '';
     if(language === 'markdown' || language === 'text') {
