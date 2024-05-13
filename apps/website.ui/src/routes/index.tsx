@@ -22,7 +22,15 @@ export const useInsightsData = routeLoader$(async (req) => {
     const data = await basehub({ token: `${req.env.get('BASEHUB_TOKEN')}` }).query({
         __typename: true,
         insights: {
-          blog: blogFragment
+          blog: {
+            ...blogFragment,
+            blogPosts: {
+              ...blogFragment.blogPosts,
+              __args: {
+                orderBy: 'date__DESC'
+              }
+            }
+          }
         }
     })
 

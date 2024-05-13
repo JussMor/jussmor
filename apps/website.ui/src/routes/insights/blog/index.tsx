@@ -6,7 +6,7 @@ export default component$(() => {
 
     return (
         <Container mainClass="bg-background" class='py-32'>
-            <h1 > This page is under development  ⚙️</h1>
+            <h2 > This page is under development  ⚙️</h2>
         </Container>
     )
 })
