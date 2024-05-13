@@ -17,6 +17,7 @@ export default extendConfig(baseConfig, () => {
       ssg: {
         include: ['/*'],
         origin: 'https://www.jussmor.com',
+        sitemapOutFile: null
       }
     })],
   };
