@@ -21,7 +21,7 @@ export const onGet: RequestHandler = async (req) => {
         }
     });
 
-  const blogData = entry.insights.blog.blogPosts.items
+  const blogData = entry?.insights?.blog?.blogPosts?.items || []
 
 
   let sitemapXml =
