@@ -27,8 +27,22 @@ export const onGet: RequestHandler = async (req) => {
   let sitemapXml =
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
-  // Assuming BASE_URL is a placeholder for your actual base URL
-  const BASE_URL = 'https://www.jussmor.com'; // Replace YOUR-BASE_URL with your actual base URL
+
+  const BASE_URL = 'https://www.jussmor.com'; 
+
+  const mainPages = [
+    '',
+    'insights/blog'
+  ]
+
+  mainPages.forEach((items)=> {
+    sitemapXml += `
+      <url>
+        <loc>${BASE_URL}/${items}/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+      </url>\n`;
+  })
 
   // Adding a dynamic URL to the sitemap
   blogData.forEach((item) => {
