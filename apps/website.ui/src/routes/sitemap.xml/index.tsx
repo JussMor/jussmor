@@ -31,14 +31,14 @@ export const onGet: RequestHandler = async (req) => {
   const BASE_URL = 'https://www.jussmor.com'; // Replace YOUR-BASE_URL with your actual base URL
 
   // Adding a dynamic URL to the sitemap
-  sitemapXml += `
-    ${blogData.map((item)=> (
-      `<url>
-      <loc>${BASE_URL}/insights/blog/${item?._slug}/</loc>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-    </url>\n`
-    ))}`;
+  blogData.forEach((item) => {
+    sitemapXml += `
+      <url>
+        <loc>${BASE_URL}/insights/blog/${item?._slug}/</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>\n`;
+  });
 
   sitemapXml += "</urlset>";
 
