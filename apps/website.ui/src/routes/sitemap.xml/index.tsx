@@ -32,13 +32,13 @@ export const onGet: RequestHandler = async (req) => {
 
   const mainPages = [
     '',
-    'insights/blog'
+    'insights/blog/'
   ]
 
   mainPages.forEach((items)=> {
     sitemapXml += `
       <url>
-        <loc>${BASE_URL}/${items}/</loc>
+        <loc>${BASE_URL}/${items}</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
       </url>\n`;
