@@ -9,7 +9,7 @@
 🌟 What I'm Working On:
 
 Web3 Development: Exploring the depths of blockchain technology with Solidity and HardHat.
-Rust Enthusiast: Building robust and efficient systems with Rust. Check out my Pixakit project and feel free to contribute with your PRs!
+Rust Enthusiast: Building robust and efficient systems with Rust. Check out my [Pixakit](https://github.com/JussMor/pixakit) project and feel free to contribute with your PRs!
 Phoenix Framework: Creating feature-rich applications. I love Elixir as it allows me to experiment with different approaches to building frontend and real-time apps.
 Home Server: Developing my own home infrastructure and experimenting with various technologies like Docker, Kubernetes, and networking. 
 
