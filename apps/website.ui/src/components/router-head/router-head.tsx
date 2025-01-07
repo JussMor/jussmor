@@ -14,13 +14,16 @@ export const RouterHead = component$(() => {
 
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon"  href="/favicon.png" />
-      
+      <link rel="icon" href="/favicon.png" />
+      <script
+        src="https://analytics.ahrefs.com/analytics.js"
+        data-key="C4amfoddIHrzNPGl4TCVzQ"
+        async
+      ></script>
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
       ))}
-
 
       {head.links.map((l) => (
         <link key={l.key} {...l} />
