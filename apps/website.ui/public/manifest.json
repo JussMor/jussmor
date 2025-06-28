@@ -1,9 +1,0 @@
-{
-  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "JussMor",
-  "short_name": "JussMor",
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#fff",
-  "description": "My long term projects"
-}

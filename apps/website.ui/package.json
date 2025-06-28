@@ -1,6 +1,0 @@
-{
-  "name": "website.ui",
-  "devDependencies": {
-    "@types/prismjs": "^1.26.3"
-  }
-}
