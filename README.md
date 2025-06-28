@@ -1,37 +1,117 @@
-<div align="center">
-    <h1><img src="https://readme-typing-svg.herokuapp.com?font=Jetbrains+mono&size=40&duration=3000&color=33FF33&center=true&vCenter=true&width=435&lines=Hey..+I'm+Juss;I'm+a+Developer...;..Who+love..;...Teaching...;" alt="Typing SVG"/></h1>
-    <p><img src="termina-gh.gif" alt="Terminal GH GIF" /></p>
-</div>
+# eleventy-base-blog v9
 
+A starter repository showing how to build a blog with the [Eleventy](https://www.11ty.dev/) site generator (using the [v3.0 release](https://github.com/11ty/eleventy/releases/tag/v3.0.0)).
 
-👋 Hi there! I'm Junior, a passionate software developer with a keen interest in Web3 technologies, Rust, and the Phoenix framework. My projects often span across different languages and frameworks, showcasing my versatility and commitment to continuous learning.
+## Getting Started
 
-🌟 What I'm Working On:
+* [Want a more generic/detailed getting started guide?](https://www.11ty.dev/docs/getting-started/)
 
-- 😁 Web3 Development: Exploring the depths of blockchain technology with Solidity and HardHat.
-  
-- ☢️ Rust Enthusiast: Building robust and efficient systems with Rust. Check out my [Pixakit](https://github.com/JussMor/pixakit) project and feel free to contribute with your PRs!.
-  
-- 🐻 Phoenix Framework: Creating feature-rich applications. I love Elixir as it allows me to experiment with different approaches to building frontend and real-time apps.
-  
-- 🛌 Home Server: Developing my own home infrastructure and experimenting with various technologies like Docker, Kubernetes, and networking. 
+1. Make a directory and navigate to it:
 
+```
+mkdir my-blog-name
+cd my-blog-name
+```
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=jussmor&label=Profile%20views&color=0e75b6&style=flat" alt="jussmor" /> </p>
+2. Clone this Repository
 
-<p align="left"> <a href="https://twitter.com/jussmorx" target="blank"><img src="https://img.shields.io/twitter/follow/jussmorx?logo=twitter&style=for-the-badge" alt="jussmorx" /></a> </p>
+```
+git clone https://github.com/11ty/eleventy-base-blog.git .
+```
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://twitter.com/jussmorx" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="jussmorx" height="30" width="40" /></a>
-</p>
+_Optional:_ Review `eleventy.config.js` and `_data/metadata.js` to configure the site’s options and data.
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <img src="https://miqh.gallerycdn.vsassets.io/extensions/miqh/vscode-language-rust/0.14.0/1536151476041/Microsoft.VisualStudio.Services.Icons.Default" alt="rust" width="40" height="40"/> <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/> </a> <a href="https://azure.microsoft.com/en-in/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg" alt="azure" width="40" height="40"/> </a> <a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="bash" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://elixir-lang.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/elixir-lang/elixir-lang-icon.svg" alt="elixir" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> <a href="https://cloud.google.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://golang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a> <a href="https://graphql.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" alt="graphql" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://kotlinlang.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="kotlin" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/nextjs-2.svg" alt="nextjs" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://postman.com" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://redux.js.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" width="40" height="40"/> </a> <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> </a> <a href="https://svelte.dev" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg" alt="svelte" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
+3. Install dependencies
 
+```
+npm install
+```
 
-<div align="center">
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jussmor&theme=github_dark" alt="Jussmor's GitHub Stats"/>
-</div>
+4. Run Eleventy
 
+Generate a production-ready build to the `_site` folder:
 
+```
+npx @11ty/eleventy
+```
+
+Or build and host on a local development server:
+
+```
+npx @11ty/eleventy --serve
+```
+
+Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the internals.
+
+## Features
+
+- Using [Eleventy v3](https://github.com/11ty/eleventy/releases/tag/v3.0.0) with zero-JavaScript output.
+	- Content is exclusively pre-rendered (this is a static site).
+	- Can easily [deploy to a subfolder without changing any content](https://www.11ty.dev/docs/plugins/html-base/)
+	- All URLs are decoupled from the content’s location on the file system.
+	- Configure templates via the [Eleventy Data Cascade](https://www.11ty.dev/docs/data-cascade/)
+- **Performance focused**: four-hundos Lighthouse score out of the box!
+	- _0 Cumulative Layout Shift_
+	- _0ms Total Blocking Time_
+- Local development live reload provided by [Eleventy Dev Server](https://www.11ty.dev/docs/dev-server/).
+- Content-driven [navigation menu](https://www.11ty.dev/docs/plugins/navigation/)
+- Fully automated [Image optimization](https://www.11ty.dev/docs/plugins/image/)
+	- Zero-JavaScript output.
+	- Support for modern image formats automatically (e.g. AVIF and WebP)
+	- Processes images on-request during `--serve` for speedy local builds.
+	- Prefers `<img>` markup if possible (single image format) but switches automatically to `<picture>` for multiple image formats.
+	- Automated `<picture>` syntax markup with `srcset` and optional `sizes`
+	- Includes `width`/`height` attributes to avoid [content layout shift](https://web.dev/cls/).
+	- Includes `loading="lazy"` for native lazy loading without JavaScript.
+	- Includes [`decoding="async"`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding)
+	- Images can be co-located with blog post files.
+- Per page CSS bundles [via `eleventy-plugin-bundle`](https://github.com/11ty/eleventy-plugin-bundle).
+- Built-in [syntax highlighter](https://www.11ty.dev/docs/plugins/syntaxhighlight/) (zero-JavaScript output).
+- Draft content: use `draft: true` to mark any template as a draft. Drafts are **only** included during `--serve`/`--watch` and are excluded from full builds. This is driven by the `addPreprocessor` configuration API in `eleventy.config.js`. Schema validator will show an error if non-boolean value is set in data cascade.
+- Blog Posts
+	- Automated next/previous links
+	- Accessible deep links to headings
+- Generated Pages
+	- Home, Archive, and About pages.
+	- [Atom feed included (with easy one-line swap to use RSS or JSON](https://www.11ty.dev/docs/plugins/rss/)
+	- `sitemap.xml`
+	- Zero-maintenance tag pages ([View on the Demo](https://eleventy-base-blog.netlify.app/tags/))
+	- Content not found (404) page
+
+## Demos
+
+- [Netlify](https://eleventy-base-blog.netlify.app/)
+- [Vercel](https://demo-base-blog.11ty.dev/)
+- [Cloudflare Pages](https://eleventy-base-blog-d2a.pages.dev/)
+- [Remix on Glitch](https://glitch.com/~11ty-eleventy-base-blog)
+- [GitHub Pages](https://11ty.github.io/eleventy-base-blog/)
+
+## Deploy this to your own site
+
+Deploy this Eleventy site in just a few clicks on these services:
+
+- Read more about [Deploying an Eleventy project](https://www.11ty.dev/docs/deployment/) to the web.
+- [Deploy this to **Netlify**](https://app.netlify.com/start/deploy?repository=https://github.com/11ty/eleventy-base-blog)
+- [Deploy this to **Vercel**](https://vercel.com/import/project?template=11ty%2Feleventy-base-blog)
+- Look in `.github/workflows/gh-pages.yml.sample` for information on [Deploying to **GitHub Pages**](https://www.11ty.dev/docs/deployment/#deploy-an-eleventy-project-to-git-hub-pages).
+- [Try it out on **Stackblitz**](https://stackblitz.com/github/11ty/eleventy-base-blog)
+
+### Implementation Notes
+
+- `content/about/index.md` is an example of a content page.
+- `content/blog/` has the blog posts but really they can live in any directory. They need only the `posts` tag to be included in the blog posts [collection](https://www.11ty.dev/docs/collections/).
+- Use the `eleventyNavigation` key (via the [Eleventy Navigation plugin](https://www.11ty.dev/docs/plugins/navigation/)) in your front matter to add a template to the top level site navigation. This is in use on `content/index.njk` and `content/about/index.md`.
+- Content can be in _any template format_ (blog posts needn’t exclusively be markdown, for example). Configure your project’s supported templates in `eleventy.config.js` -> `templateFormats`.
+- The `public` folder in your input directory will be copied to the output folder (via `addPassthroughCopy` in the `eleventy.config.js` file). This means `./public/css/*` will live at `./_site/css/*` after your build completes.
+- This project uses three [Eleventy Layouts](https://www.11ty.dev/docs/layouts/):
+	- `_includes/layouts/base.njk`: the top level HTML structure
+	- `_includes/layouts/home.njk`: the home page template (wrapped into `base.njk`)
+	- `_includes/layouts/post.njk`: the blog post template (wrapped into `base.njk`)
+- `_includes/postslist.njk` is a Nunjucks include and is a reusable component used to display a list of all the posts. `content/index.njk` has an example of how to use it.
+
+#### Content Security Policy
+
+If your site enforces a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (as public-facing sites should), you have a few choices (pick one):
+
+1. In `base.njk`, remove `<style>{% getBundle "css" %}</style>` and uncomment `<link rel="stylesheet" href="{% getBundleFileUrl "css" %}">`
+2. Configure the server with the CSP directive `style-src: 'unsafe-inline'` (less secure).
