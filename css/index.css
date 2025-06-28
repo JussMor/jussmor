@@ -56,9 +56,7 @@ body {
 html {
 	overflow-y: scroll;
 }
-body {
-	max-width: 40em;
-}
+
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden:not(:focus):not(:active) {
@@ -117,14 +115,13 @@ a[href]:active {
 main,
 footer {
 	padding: 1rem;
-}
-main :first-child {
+	max-width: 61.25em;
 	margin-top: 0;
+	margin: auto;
 }
 
-header {
-	border-bottom: 1px dashed var(--color-gray-20);
-}
+
+
 
 #skip-link {
 	text-decoration: none;
@@ -194,9 +191,10 @@ code {
 /* Header */
 header {
 	display: flex;
+	border-bottom: 1px dashed var(--color-gray-20);
 	gap: 1em;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	padding: 1em;
 }
@@ -210,22 +208,130 @@ header {
 }
 
 /* Nav */
-.nav {
+
+header {
+	position: sticky;
+	top: 0;
+	background-color: rgba(17, 17, 17, 0.6);
+	padding: 10px 20px;
+	color: #fff;
+	z-index: 999;
+	backdrop-filter: blur(12px) saturate(180%);
+	-webkit-backdrop-filter: blur(12px) saturate(180%);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
 	display: flex;
-	gap: .5em 1em;
-	padding: 0;
-	margin: 0;
-	list-style: none;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	position: relative;
+	width: 100%;
+	max-width: 1024px;
 }
-.nav-item {
-	display: inline-block;
+
+.logo {
+	font-size: 1.5rem;
+	font-weight: bold;
 }
-.nav-item a[href]:not(:hover) {
+
+nav {
+	display: flex;
+	gap: 20px;
+}
+
+nav a {
+	color: #fff !important;
 	text-decoration: none;
+	transition: all 0.3s ease;
+	padding: 10px 15px;
+	border-radius: 12px;
 }
-.nav a[href][aria-current="page"] {
-	text-decoration: underline;
+
+nav a:hover {
+	color: #eee !important;
+	background: #2a2a2a;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.05);
 }
+
+.menu-toggle {
+	display: none;
+}
+
+.hamburger {
+	display: none;
+	cursor: pointer;
+	flex-direction: column;
+	gap: 5px;
+	z-index: 1001;
+}
+
+.hamburger span {
+	height: 3px;
+	width: 25px;
+	background: white;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		flex-wrap: nowrap;
+	}
+
+	.logo {
+		flex: 1;
+	}
+
+	.hamburger {
+		display: flex;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: column;
+		background-color: rgba(17, 17, 17, 0.95);
+		position: fixed;
+		top: 47px;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1000;
+		padding: 20px;
+		backdrop-filter: blur(100px) saturate(180%);
+		-webkit-backdrop-filter: blur(100px) saturate(180%);
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	.menu-toggle:checked~nav {
+		transform: scaleY(1);
+		opacity: 1;
+		pointer-events: auto;
+	}
+
+	nav a {
+		padding: 10px 15px;
+		font-size: 1.1rem;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		border-radius: 12px;
+	}
+
+	nav a:hover {
+		color: #eee;
+		background: #2a2a2a;
+		box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.05);
+	}
+}
+
+
 
 /* Posts list */
 .postlist {

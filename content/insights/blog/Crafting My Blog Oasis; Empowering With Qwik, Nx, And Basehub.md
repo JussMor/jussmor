@@ -1,3 +1,11 @@
+---
+title: Crafting My Blog Oasis; Empowering with Qwik, Nx, and Basehub.
+description: Discover how to build a high-performance personal blog using Qwik, Nx, and Basehub. Learn about modern frontend architecture, monorepo management, and a flexible headless CMS—all in one developer-friendly setup.
+date: 2024-06-28
+tags: ["frontend"]
+---
+
+
 ![](https://photos.jussmor.com/insights/blog/Crafting%20My%20Blog%20Oasis%20Empowering%20With%20Qwik%2C%20Nx%2C%20And%20Basehub/basehub-blog1.webp)
 
 Oh yeah! Another blog about how to build a blog (redundancy). Boring? Maybe, or maybe not! I’m going to share my journey building my personal blog using NX (monorepo), Qwik for the frontend, and Basehub as our CMS (Content Management System). 

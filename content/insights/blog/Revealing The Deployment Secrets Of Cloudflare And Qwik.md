@@ -1,3 +1,11 @@
+---
+title: Revealing the Deployment Secrets of Cloudflare and Qwik.
+description: Revealing the deployment secrets of Cloudflare and Qwik – a detailed developer guide to combining Qwik with Cloudflare Pages and Edge Functions. Learn configuration best practices, performance tuning, and CI/CD setup for blazing-fast, scalable web apps.
+date: 2024-04-21
+tags: ["cloud"]
+---
+
+
 ![](https://photos.jussmor.com/insights/blog/Revealing%20The%20Deployment%20Secrets%20Of%20Cloudflare%20And%20Qwik/deployment.webp)
 
 React, Next.js, Astro, and SvelteKit are powerful frameworks, and there are a lot of resources available on the internet. However, new powerful frameworks often emerge with new capabilities, and it can be challenging to find useful resources when working with these new tools. In this video, we explore the deployment of the Qwik framework to Cloudflare. I hope you enjoy this tutorial.

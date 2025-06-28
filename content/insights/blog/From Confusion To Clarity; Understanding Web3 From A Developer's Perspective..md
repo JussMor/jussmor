@@ -1,3 +1,10 @@
+---
+title: From Confusion to Clarity; Understanding Web3 from a Developer's Perspective.
+description: Transform from confusion to clarity in Web3 development with this practical guide. Learn Ethereum fundamentals—from decentralization, nodes, accounts, transactions, gas, to smart contracts—and gain the confidence to build blockchain apps.
+date: 2024-05-09
+tags: ["crypto"]
+---
+
 ![](https://photos.jussmor.com/insights/blog/From%20Confusion%20To%20Clarity%20Understanding%20Web3%20From%20A%20Developers%20Perspective/web3.webp)
 
 You’re a developer. 
