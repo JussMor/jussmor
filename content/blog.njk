@@ -1,0 +1,12 @@
+---js
+const eleventyNavigation = {
+	key: "Archive",
+	order: 2
+};
+
+const permalink = "insights/blog/";
+---
+<h1>Archive</h1>
+
+{% set postslist = collections.posts %}
+{% include "postslist.njk" %}
