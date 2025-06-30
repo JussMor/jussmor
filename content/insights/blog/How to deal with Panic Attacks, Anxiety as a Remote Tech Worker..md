@@ -1,6 +1,6 @@
 ---
 title: How to deal with Panic Attacks, Anxiety as a Remote Tech Worker.
-date: 2023-06-30
+date: 2025-06-30
 tags:
   - healthcare
 description: A powerful personal journey of a 26-year-old software engineer from Ecuador who overcame anxiety, panic attacks, and depression while working remotely. Discover how therapy, mindfulness, and resilience helped him reclaim his life.
