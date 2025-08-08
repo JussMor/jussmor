@@ -1,8 +1,9 @@
-import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
+import { HtmlBasePlugin, IdAttributePlugin, InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import pluginNavigation from "@11ty/eleventy-navigation";
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginNavigation from "@11ty/eleventy-navigation";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import siteMeta from "./_data/metadata.js";
 
 import pluginFilters from "./_config/filters.js";
 
@@ -71,12 +72,14 @@ export default async function(eleventyConfig) {
 			limit: 10,
 		},
 		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			language: siteMeta.language || "en",
+			title: siteMeta.title,
+			subtitle: siteMeta.description,
+			base: siteMeta.url,
 			author: {
-				name: "Your Name"
+				name: siteMeta.author?.name,
+				url: siteMeta.author?.url,
+				email: siteMeta.author?.email,
 			}
 		}
 	});
