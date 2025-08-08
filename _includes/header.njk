@@ -1,19 +1,24 @@
 <header>
-    <div class="navbar">
-        <div class="logo">
-            <a href="https://www.linkedin.com/in/jussmor" target="_blank" style="text-decoration:none; color:white;">JussMor</a>
-        </div>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/insights/blog/">Archive</a>
-            <a href="/about/">About</a>
-            <a href="/feed/feed.xml">Feed</a>
-        </nav>
-    </div>
+	<div class="navbar" role="navigation" aria-label="Primary">
+		<div class="logo">
+			<a href="/" class="site-title">JussMor</a>
+		</div>
+		<input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle menu"/>
+		<label for="menu-toggle" class="hamburger" aria-hidden="true">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<nav>
+			<a href="/"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+			<a href="/insights/blog/"{% if '/insights/blog/' in page.url %} aria-current="page"{% endif %}>Archive</a>
+			<a href="/about/"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+			<a href="/feed/feed.xml">Feed</a>
+			<button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme" aria-pressed="false">
+				<span class="theme-icon theme-icon-sun" aria-hidden="true">☀️</span>
+				<span class="theme-icon theme-icon-moon" aria-hidden="true">🌙</span>
+			</button>
+			<a href="https://www.linkedin.com/in/jussmor/" target="_blank" rel="noopener" class="ext-link" title="LinkedIn">LinkedIn</a>
+		</nav>
+	</div>
 </header>

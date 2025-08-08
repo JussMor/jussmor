@@ -7,6 +7,24 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 
+		{# Initialize theme early to avoid flash #}
+		<script>
+			(function () {
+				try {
+					var stored = localStorage.getItem('theme');
+					var systemDark = window.matchMedia && window
+						.matchMedia('(prefers-color-scheme: dark)')
+						.matches
+							? 'dark'
+							: 'light';
+					var theme = stored || systemDark;
+					document
+						.documentElement
+						.setAttribute('data-theme', theme);
+				} catch (e) {}
+			})();
+		</script>
+
 		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
 		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
 
@@ -77,11 +95,41 @@
 		<footer>
 			<p>
 				<em>JussMor - Copyright © 2025</a>
-				</em>
-			</p>
-		</footer>
+			</em>
+		</p>
+	</footer>
 
-		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
-		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
-	</body>
+	<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
+	<script>
+		(function () {
+			var btn = document.getElementById('theme-toggle');
+			if (!btn) 
+				return;
+			function apply(theme) {
+				document
+					.documentElement
+					.setAttribute('data-theme', theme);
+				try {
+					localStorage.setItem('theme', theme);
+				} catch (e) {}
+				btn.setAttribute('aria-pressed', theme === 'dark');
+			}
+			btn.addEventListener('click', function () {
+				var current = document
+					.documentElement
+					.getAttribute('data-theme') || 'light';
+				apply(
+					current === 'dark'
+					? 'light'
+					: 'dark');
+			});
+			// Sync initial button state
+			var initial = document
+				.documentElement
+				.getAttribute('data-theme') || 'light';
+			btn.setAttribute('aria-pressed', initial === 'dark');
+		})();
+	</script>
+	<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+</body>
 </html>

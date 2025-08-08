@@ -8,22 +8,60 @@ const numberOfLatestPostsToShow = 10;
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
+<section class="hero">
+	<div class="hero-inner">
+		<h1 class="hero-title">Insights, code, and experiments</h1>
+		<p class="hero-subtitle">Writing about frontend, cloud, and crypto—clean, fast, and minimal.</p>
+	</div>
+	<div class="hero-cta">
+		<a class="btn btn-primary" href="/insights/blog/">Browse archive</a>
+		<a class="btn" href="/about/">About me</a>
+	</div>
+	<div class="hero-metrics">
+		<span>{{ postsCount }} posts</span>
+		<span>•</span>
+		<span>Updated {{ collections.posts[0].date | readableDate('LLLL yyyy') }}</span>
+	</div>
+	<div class="hero-gradient" aria-hidden="true"></div>
+	<div class="hero-grid" aria-hidden="true"></div>
+	<div class="hero-noise" aria-hidden="true"></div>
+	<div class="hero-glow" aria-hidden="true"></div>
+</section>
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
-{% endif %}
+<section class="cards">
+	<h2 class="section-title">Latest {{ latestPostsCount }} post{% if latestPostsCount != 1 %}s{% endif %}
+	</h2>
+	<div class="card-grid">
+		{% set posts = collections.posts | head(-1 * numberOfLatestPostsToShow) | reverse %}
+		{% for post in posts %}
+			<article class="card">
+				<a class="card-link" href="{{ post.url }}" aria-label="Read {{ post.data.title }}"></a>
+				<div class="card-body">
+					<h3 class="card-title">{{ post.data.title }}</h3>
+					<p class="card-excerpt">{{ post.data.description or '' }}</p>
+					<div class="card-meta">
+						<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate('dd LLL yyyy') }}</time>
+						{% if post.data.tags %}
+							<span class="card-dot" aria-hidden="true">•</span>
+							<ul class="card-tags">
+								{% for tag in post.data.tags | filterTagList %}
+									<li>
+										<a href="/tags/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</div>
+				</div>
+			</article>
+		{% endfor %}
+	</div>
 
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
+	{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+	{% if morePosts > 0 %}
+		<p class="more-link">
+			<a href="/insights/blog/">View {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} in the archive →</a>
+		</p>
+	{% endif %}
+</section>
