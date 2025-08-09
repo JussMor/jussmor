@@ -1,0 +1,128 @@
+---js
+const eleventyNavigation = {
+  key: "About",
+  order: 3
+};
+const title = "About / Work with Junior";
+const description = "Full‑stack engineer: frontend, cloud, AI, education. Book 1:1 sessions or career support.";
+---
+<section class="about-hero">
+	<h1>Hi, I’m Junior Moreira.</h1>
+	<p class="lead">Product‑focused full‑stack engineer specializing in frontend architecture, cloud platforms, AI integrations, and developer education. I help teams move faster with clean systems, strong DX, and scalable foundations.</p>
+	<p class="meta">Based in Ecuador · Open to U.S. remote roles · <a href="/feed/feed.xml">RSS</a>
+	</p>
+</section>
+
+<section class="expertise">
+	<h2>Core Expertise</h2>
+	<ul class="pill-list">
+		<li>Frontend Platforms (React, Qwik, SvelteKit)</li>
+		<li>Design Systems & Server‑Driven UI</li>
+		<li>Cloud & Edge (AWS, Cloudflare)</li>
+		<li>AI & LLM Integration</li>
+		<li>Monorepos (Nx)</li>
+		<li>APIs & FastAPI</li>
+		<li>Performance & Observability</li>
+		<li>Developer Experience Tooling</li>
+	</ul>
+</section>
+
+<section class="experience">
+	<h2>Recent Impact</h2>
+	<div class="xp-grid">
+		<article class="xp-card">
+			<h3>Moseley Consulting Group</h3>
+			<p class="role">Frontend Engineer · 2025—Now · Remote (US)</p>
+			<ul>
+				<li>Architected modular platform accelerating regulated product delivery.</li>
+				<li>Delivered real‑time clinical decision support integrating LLM + data pipelines.</li>
+				<li>Optimized performance & security within HIPAA constraints.</li>
+			</ul>
+		</article>
+		<article class="xp-card">
+			<h3>Jobisty</h3>
+			<p class="role">Full Stack Developer · 2022—2024</p>
+			<ul>
+				<li>Built AI microservice matching product data → +20% sales relevance.</li>
+				<li>Implemented server‑driven UI system reducing dev cycle time.</li>
+				<li>Cut deployment time 17 → 5 min via infra + pipeline refinements.</li>
+			</ul>
+		</article>
+		<article class="xp-card">
+			<h3>Eduland Academy</h3>
+			<p class="role">Front‑End Developer · 2020—2021</p>
+			<ul>
+				<li>Delivered education platform features with cross‑discipline team.</li>
+				<li>Improved reliability with test coverage and code review practices.</li>
+			</ul>
+		</article>
+	</div>
+</section>
+
+<section class="services" id="services">
+	<h2>Work With Me</h2>
+	<p>I offer focused sessions for engineers, founders, and teams. Secure checkout is handled via Stripe.</p>
+	<div class="service-grid">
+		<article class="service-card">
+			<h3>1:1 Engineering Call</h3>
+			<p class="price">$35 <span>/ 60 min</span></p>
+			<p class="desc">Architecture review, career guidance, or debugging a tough problem. You bring context—leave with a clear path.</p>
+			<a class="btn btn-primary" href="https://buy.stripe.com/test_1h_session_placeholder" rel="noopener" target="_blank">Book 1 Hour →</a>
+		</article>
+		<article class="service-card">
+			<h3>Career Support Pack</h3>
+			<p class="price">2 × 50 min <span>($??)</span></p>
+			<p class="desc">Two deep sessions: positioning, portfolio/code review, roadmap & accountability. Ideal for transitions or leveling up.</p>
+			<a class="btn" href="https://buy.stripe.com/test_career_pack_placeholder" rel="noopener" target="_blank">Reserve Pack →</a>
+		</article>
+		<article class="service-card alt">
+			<h3>Team Advisory (Inquiry)</h3>
+			<p class="price">Custom</p>
+			<p class="desc">Need help with monorepo strategy, DX tooling, or AI integration? I can embed short‑term to accelerate delivery.</p>
+			<a class="btn" href="mailto:contact@jussmor.com?subject=Team%20Advisory%20Inquiry">Start Conversation →</a>
+		</article>
+	</div>
+	<p class="note">Stripe links are placeholders—replace with live checkout URLs (Dashboard → Payments → Products).</p>
+</section>
+
+<section class="cta">
+	<h2>Let’s Build Something</h2>
+	<p>Email <a href="mailto:contact@jussmor.com">contact@jussmor.com</a> or connect on <a href="https://www.linkedin.com/in/jussmor/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+</section>
+
+{% css %}
+.about-hero { max-width: 60rem; margin: 0 auto 2.5rem; }
+.about-hero h1 { margin: 0 0 .6rem; font-size: clamp(2rem,4vw,2.8rem); }
+.about-hero .lead { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); }
+.about-hero .meta { font-size: .85rem; color: var(--text-muted); margin-top: .75rem; }
+
+.pill-list { list-style: none; padding:0; margin: .75rem 0 2rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.pill-list li { padding: .45rem .75rem; font-size: .8rem; border:1px solid var(--border-color); border-radius: 999px; background: var(--elevated-color); }
+
+.expertise, .experience, .services, .cta { max-width: 60rem; margin: 0 auto 3rem; }
+.experience h2, .expertise h2, .services h2, .cta h2 { font-size: 1.4rem; margin-bottom: .75rem; }
+
+.xp-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
+.xp-card { border:1px solid var(--border-color); border-radius: var(--radius); background: var(--surface-color); padding: 1rem 1.1rem .9rem; box-shadow: var(--shadow-sm); }
+.xp-card h3 { margin: 0 0 .35rem; font-size: 1.05rem; }
+.xp-card .role { margin: 0 0 .5rem; font-size: .75rem; font-weight: 600; letter-spacing: .5px; color: var(--text-muted); text-transform: uppercase; }
+.xp-card ul { margin: 0; padding-left: 1.1rem; font-size: .85rem; line-height: 1.35; }
+.xp-card li { margin-bottom: .4rem; }
+
+.service-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); align-items: stretch; }
+.service-card { position: relative; display:flex; flex-direction:column; border:1px solid var(--border-color); border-radius: var(--radius); background: var(--surface-color); padding: 1.15rem 1.15rem 1.2rem; box-shadow: var(--shadow-sm); transition: transform .12s ease, box-shadow .2s ease; }
+.service-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.service-card.alt { background: linear-gradient(140deg, color-mix(in oklab, var(--surface-color) 96%, transparent), color-mix(in oklab, var(--elevated-color) 92%, transparent)); }
+.service-card h3 { margin: 0 0 .4rem; font-size: 1rem; }
+.service-card .price { margin: 0 0 .4rem; font-size: .9rem; font-weight: 600; color: var(--text-color); }
+.service-card .price span { font-weight: normal; color: var(--text-muted); }
+.service-card .desc { flex-grow:1; font-size: .8rem; line-height: 1.4; color: var(--text-muted); margin: 0 0 .75rem; }
+.service-card .btn { width: 100%; justify-content: center; font-size: .85rem; }
+.note { margin-top: 1rem; font-size: .7rem; color: var(--text-muted); }
+
+.cta { text-align: center; padding: 2.5rem 1rem 3rem; border:1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--surface-color); box-shadow: var(--shadow); }
+.cta h2 { margin:0 0 .75rem; font-size: 1.6rem; }
+.cta p { margin:0; font-size: .95rem; }
+
+@media (min-width: 800px) { .service-card h3 { font-size: 1.05rem; } }
+{% endcss %}
