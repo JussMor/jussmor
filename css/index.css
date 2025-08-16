@@ -493,6 +493,8 @@ nav .ext-link { color: var(--text-color-link); }
 .card-tags { list-style: none; padding: 0; margin: 0; display: inline-flex; gap: .35rem; }
 .card-tags a { font-style: normal; font-size: .85rem; padding: .2rem .5rem; border: 1px solid var(--border-color); border-radius: 999px; text-decoration: none; color: var(--text-color); background: var(--elevated-color); }
 .more-link { margin: 1.25rem 0 0; }
+
+
 /* Tags */
 .post-tag {
 	display: inline-flex;

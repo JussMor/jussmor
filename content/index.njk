@@ -17,6 +17,9 @@ const numberOfLatestPostsToShow = 10;
 	<div class="hero-cta">
 		<a class="btn btn-primary" href="/insights/blog/">Browse archive</a>
 		<a class="btn" href="/about/">About me</a>
+		{% if metadata.calendarUrl %}
+			<a class="btn btn-primary" href="{{ metadata.calendarUrl }}" target="_blank" rel="noopener noreferrer">Book a Power Up</a>
+		{% endif %}
 	</div>
 	<div class="hero-metrics">
 		<span>{{ postsCount }} posts</span>

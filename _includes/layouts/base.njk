@@ -7,6 +7,21 @@
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 
+		{# SEO: canonical + social sharing images #}
+		<link rel="canonical" href="{{ page.url | absoluteUrl(metadata.url) }}">
+		<meta property="og:title" content="{{ title or metadata.title }}">
+		<meta property="og:description" content="{{ description or metadata.description }}">
+		<meta property="og:url" content="{{ page.url | absoluteUrl(metadata.url) }}">
+		<meta property="og:type" content="website">
+		{% set seoImg = seoImage or image or metadata.socialImage %}
+		{% if seoImg %}
+			<meta property="og:image" content="{{ seoImg | absoluteUrl(metadata.url) }}">
+			<meta name="twitter:card" content="summary_large_image">
+			<meta name="twitter:image" content="{{ seoImg | absoluteUrl(metadata.url) }}">
+		{% else %}
+			<meta name="twitter:card" content="summary">
+		{% endif %}
+
 		{# Initialize theme early to avoid flash #}
 		<script>
 			(function () {
