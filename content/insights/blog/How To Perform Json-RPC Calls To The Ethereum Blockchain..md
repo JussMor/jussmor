@@ -2,7 +2,9 @@
 title: How to perform Json-RPC calls to the Ethereum Blockchain.
 description: Transform from confusion to clarity in Web3 development with this practical guide. Learn Ethereum fundamentals—from decentralization, nodes, accounts, transactions, gas, to smart contracts—and gain the confidence to build blockchain apps.
 date: 2024-05-14
-tags: ["crypto"]
+tags:
+  - crypto
+seoImage: https://photos.jussmor.com/insights/blog/How%20To%20Perform%20Json-RPC%20Calls%20To%20The%20Ethereum%20Blockchain./ethereum-rpc.webp
 ---
 
 ![](https://photos.jussmor.com/insights/blog/How%20To%20Perform%20Json-RPC%20Calls%20To%20The%20Ethereum%20Blockchain./ethereum-rpc.webp)

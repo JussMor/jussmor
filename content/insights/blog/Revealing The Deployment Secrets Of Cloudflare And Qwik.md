@@ -2,7 +2,9 @@
 title: Revealing the Deployment Secrets of Cloudflare and Qwik.
 description: Revealing the deployment secrets of Cloudflare and Qwik – a detailed developer guide to combining Qwik with Cloudflare Pages and Edge Functions. Learn configuration best practices, performance tuning, and CI/CD setup for blazing-fast, scalable web apps.
 date: 2024-04-21
-tags: ["cloud"]
+tags:
+  - cloud
+seoImage: https://photos.jussmor.com/insights/blog/Revealing%20The%20Deployment%20Secrets%20Of%20Cloudflare%20And%20Qwik/deployment.webp
 ---
 
 
