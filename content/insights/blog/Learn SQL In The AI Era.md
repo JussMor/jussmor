@@ -50,11 +50,11 @@ Depending on the database engine, syntax may vary:
 
 - **MySQL:** Allows character sets and collations.
 
-  ```sql
-    CREATE DATABASE my_database_name 
-    CHARACTER SET utf8mb4 
-   COLLATE utf8mb4_unicode_ci;
-    ```
+```sql
+CREATE DATABASE my_database_name 
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_unicode_ci;
+```
 
 - **SQL Server:** Often includes file specifications and configurations.
 
@@ -73,6 +73,7 @@ CREATE TABLE Customers (
   RegistrationDate DATE
 );
 ```
+
 
 ---
 
