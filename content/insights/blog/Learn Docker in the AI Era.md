@@ -8,6 +8,7 @@ tags:
   - ai
   - cheatsheet
   - cloud
+seoImage: https://photos.jussmor.com/insights/blog/Learn%20docker%20IA/DockerForData.webp
 ---
 
 
