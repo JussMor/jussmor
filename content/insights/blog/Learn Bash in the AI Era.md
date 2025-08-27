@@ -109,7 +109,7 @@ rm -r projects/
 
 ## Recommended Resources
 
-- 📄 Download my **Bash Cheat Sheet** 
+- 📄 Download my **Bash Cheat Sheet**  ([Download the Cheat Sheet HERE!](https://photos.jussmor.com/insights/blog/Cheat%20sheet/BASH%201.pdf)) 
 
 ##  Conclusion
 
