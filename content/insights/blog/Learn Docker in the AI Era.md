@@ -134,11 +134,9 @@ This is where it gets exciting. AI isn’t replacing Docker. it’s accelerating
 
 ## Recommended Resources
 
- HEAD
-- 📄 Download my **Docker Cheat Sheet** 
-![](https://photos.jussmor.com/insights/blog/Cheat%20sheet/DOCKER_.pdf)
 
-- 📄 Download my **SQL Cheat Sheet**  ([Download the Cheat Sheet HERE!](https://photos.jussmor.com/insights/blog/Cheat%20sheet/DOCKER_.pdf)) 
+
+- 📄 Download my **Docker Cheat Sheet**  ([Download the Cheat Sheet HERE!](https://photos.jussmor.com/insights/blog/Cheat%20sheet/DOCKER_.pdf)) 
 
 ##  Conclusion
 
