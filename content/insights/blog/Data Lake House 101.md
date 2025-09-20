@@ -10,7 +10,6 @@ tags:
 seoImage: https://photos.jussmor.com/insights/blog/data%20lakehouse/DataLake.png
 ---
 
-# Data Lakehouse 101: A Simple Guide for Everyone
 
 ![](https://photos.jussmor.com/insights/blog/data%20lakehouse/DataLake.png)
 
