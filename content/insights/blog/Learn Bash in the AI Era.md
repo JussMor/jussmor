@@ -8,7 +8,7 @@ tags:
   - devops
   - cheatsheet
   - ai
-seolink: https://photos.jussmor.com/insights/blog/learn%20bash%20in%20the%20AI%20Era/image.webp
+seoImage: https://photos.jussmor.com/insights/blog/learn%20bash%20in%20the%20AI%20Era/image.webp
 ---
 
 
@@ -109,7 +109,10 @@ rm -r projects/
 
 ## Recommended Resources
 
+
 - 📄 Download my **Bash Cheat Sheet**  ([Download the Cheat Sheet HERE!](https://photos.jussmor.com/insights/blog/Cheat%20sheet/BASH%201.pdf)) 
+
+![](https://photos.jussmor.com/insights/blog/Cheat%20sheet/BASH%201.webp)
 
 ##  Conclusion
 

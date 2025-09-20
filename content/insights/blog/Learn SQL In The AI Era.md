@@ -89,13 +89,9 @@ ORDER BY LastName ASC;
 ```
 
 - `SELECT`: columns to retrieve
-    
 - `FROM`: source table
-    
 - `WHERE`: filters results
-    
 - `ORDER BY`: sorts results
-    
 
 ### Insert Data
 
@@ -144,7 +140,7 @@ Once you’ve mastered the essentials, explore advanced SQL concepts:
 
 - 📄 Download my **SQL Cheat Sheet** ([Download the Cheat Sheet HERE!](https://photos.jussmor.com/insights/blog/Cheat%20sheet/pdf/SQL.pdf))
 
-![](https://photos.jussmor.com/insights/blog/Cheat%20sheet/SQL%201.png)
+![](https://photos.jussmor.com/insights/blog/Cheat%20sheet/SQL%201.webp)
 
 
 
