@@ -1,7 +1,7 @@
 ---
 title: What is Data Engineering?
 description: A clear guide to data engineering, explaining its origins, purpose, and how it powers modern data-driven organizations.
-date: 2025-09-23
+date: 2025-10-14
 tags:
   - analytics
   - cloud
