@@ -5,7 +5,7 @@ date: 2025-10-07
 tags:
   - AI
   - RAG
-seoImage: https://www.jussmor.com/assets/images/blog/ai-agents-cover.png
+seoImage: https://photos.jussmor.com/insights/blog/AI%20Agents%20Explained/data.png
 ---
 
 ![](https://photos.jussmor.com/insights/blog/AI%20Agents%20Explained/data.png)

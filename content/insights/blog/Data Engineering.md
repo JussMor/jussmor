@@ -6,7 +6,7 @@ tags:
   - analytics
   - cloud
   - AI
-seoImage: https://www.jussmor.com/assets/images/blog/what-is-data-engineering-cover.png
+seoImage: https://photos.jussmor.com/insights/blog/Data%20ING/What%20is%20Data%20Eng.png
 ---
 
 ![](https://photos.jussmor.com/insights/blog/Data%20ING/What%20is%20Data%20Eng.png)
