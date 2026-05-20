@@ -54,8 +54,15 @@
 /* ── View Transitions ─────────────────────────────────────── */
 @view-transition { navigation: auto; }
 
+/* Freeze the header - it looks the same on every page */
 header { view-transition-name: site-nav; }
+::view-transition-old(site-nav),
+::view-transition-new(site-nav) {
+	animation: none;
+	mix-blend-mode: normal;
+}
 
+/* Slide the main content */
 ::view-transition-old(root) { animation: 180ms ease-in  vt-out; }
 ::view-transition-new(root) { animation: 320ms ease-out vt-in;  }
 
