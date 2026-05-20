@@ -3,42 +3,30 @@ const eleventyNavigation = {
 	key: "Home",
 	order: 1
 };
-
 const numberOfLatestPostsToShow = 12;
 ---
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 
-<section class="hero">
-	<div class="hero-inner">
-		<h1 class="hero-title">Insights, code, and experiments</h1>
-		<p class="hero-subtitle">Writing about frontend, cloud, and crypto—clean, fast, and minimal.</p>
-	</div>
-	<div class="hero-cta">
-		<a class="btn btn-primary" href="/insights/blog/">Browse archive</a>
-		<a class="btn" href="/about/">About me</a>
+<section class="hero-main">
+	<p class="hero-eyebrow">Senior Full-Stack &middot; AI &middot; Cloud</p>
+	<h1 class="hero-name">Junior<br>Moreira.</h1>
+	<p class="hero-desc">9+ years shipping scalable systems across FinTech and E-commerce. React, NestJS, Python &mdash; built for production.</p>
+	<div class="hero-actions">
+		<a class="btn btn-primary" href="/about/">Work with me &rarr;</a>
+		<a class="btn" href="/insights/blog/">Read insights</a>
 		{% if metadata.calendarUrl %}
-			<a class="btn btn-primary" href="{{ metadata.calendarUrl }}" target="_blank" rel="noopener noreferrer">Book a Power Up</a>
+			<a class="btn" href="{{ metadata.calendarUrl }}" target="_blank" rel="noopener noreferrer">Book a call</a>
 		{% endif %}
 	</div>
-	<div class="hero-metrics">
-		<span>{{ postsCount }} posts</span>
-		<span>•</span>
-		<span>Updated {{ collections.posts[0].date | readableDate('LLLL yyyy') }}</span>
-	</div>
-	<div class="hero-gradient" aria-hidden="true"></div>
-	<div class="hero-grid" aria-hidden="true"></div>
-	<div class="hero-noise" aria-hidden="true"></div>
-	<div class="hero-glow" aria-hidden="true"></div>
 </section>
 
-<section class="cards">
-	<h2 class="section-title">Latest {{ latestPostsCount }} post{% if latestPostsCount != 1 %}s{% endif %}
-	</h2>
+<section class="posts-section">
+	<h2 class="section-label">Latest {{ latestPostsCount }} post{% if latestPostsCount != 1 %}s{% endif %}</h2>
 	<div class="card-grid">
 		{% set posts = collections.posts | head(-1 * numberOfLatestPostsToShow) | reverse %}
 		{% for post in posts %}
-			<article class="card">
+			<article class="card reveal" style="--reveal-delay: {{ loop.index0 * 40 }}ms">
 				<a class="card-link" href="{{ post.url }}" aria-label="Read {{ post.data.title }}"></a>
 				<div class="card-body">
 					<h3 class="card-title">{{ post.data.title }}</h3>
@@ -46,12 +34,10 @@ const numberOfLatestPostsToShow = 12;
 					<div class="card-meta">
 						<time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate('dd LLL yyyy') }}</time>
 						{% if post.data.tags %}
-							<span class="card-dot" aria-hidden="true">•</span>
+							<span class="card-dot" aria-hidden="true">&bull;</span>
 							<ul class="card-tags">
 								{% for tag in post.data.tags | filterTagList %}
-									<li>
-										<a href="/tags/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a>
-									</li>
+									<li><a href="/tags/{{ tag | slugify }}/" class="post-tag">{{ tag }}</a></li>
 								{% endfor %}
 							</ul>
 						{% endif %}
@@ -60,11 +46,8 @@ const numberOfLatestPostsToShow = 12;
 			</article>
 		{% endfor %}
 	</div>
-
 	{% set morePosts = postsCount - numberOfLatestPostsToShow %}
 	{% if morePosts > 0 %}
-		<p class="more-link">
-			<a href="/insights/blog/">View {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} in the archive →</a>
-		</p>
+		<p class="more-link"><a href="/insights/blog/">View {{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} &rarr;</a></p>
 	{% endif %}
 </section>
