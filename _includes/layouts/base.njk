@@ -67,7 +67,9 @@
 		</footer>
 
 		<!-- {{ page.url }} built on {% currentBuildDate %} -->
+
 		<script>
+			/* Theme toggle */
 			(function () {
 				var btn = document.getElementById('theme-toggle');
 				if (!btn) return;
@@ -80,12 +82,63 @@
 					var current = document.documentElement.getAttribute('data-theme') || 'dark';
 					apply(current === 'dark' ? 'light' : 'dark');
 				});
-				var initial = document.documentElement.getAttribute('data-theme') || 'dark';
-				btn.setAttribute('aria-pressed', initial === 'dark');
+				apply(document.documentElement.getAttribute('data-theme') || 'dark');
 			})();
 		</script>
+
 		<script>
+			/* View Transitions: directional types + reveal blink fix */
 			(function () {
+				/* Map URLs to a nav order so we know forward vs backward */
+				function navOrder(url) {
+					if (!url) return 0;
+					if (url.indexOf('/about/') !== -1) return 3;
+					if (url.indexOf('/insights/') !== -1 ||
+						url.indexOf('/blog/')    !== -1 ||
+						url.indexOf('/tags/')    !== -1) return 2;
+					return 1;
+				}
+
+				/* pageswap: fires on the OLD page before snapshot capture.
+				   Set the transition type so CSS can read it on both sides. */
+				window.addEventListener('pageswap', function (e) {
+					if (!e.viewTransition || !e.activation) return;
+					var from = navOrder(e.activation.from  && e.activation.from.url);
+					var to   = navOrder(e.activation.entry && e.activation.entry.url);
+					if (to > from) e.viewTransition.types.add('forward');
+					else if (to < from) e.viewTransition.types.add('backward');
+				});
+
+				/* pagereveal: fires on the NEW page before first paint.
+				   Mark in-viewport .reveal elements visible immediately
+				   so they don’t blink when the transition layer lifts. */
+				window.addEventListener('pagereveal', function (e) {
+					var vh = window.innerHeight;
+					document.querySelectorAll('.reveal:not(.in-view)').forEach(function (el) {
+						if (el.getBoundingClientRect().top < vh) {
+							el.style.transition = 'none';
+							el.classList.add('in-view');
+							requestAnimationFrame(function () { el.style.transition = ''; });
+						}
+					});
+
+					/* Set direction type on incoming page too */
+					if (!e.viewTransition) return;
+					try {
+						var act = navigation.activation;
+						var from = navOrder(act && act.from && act.from.url);
+						var to   = navOrder(location.href);
+						if (to > from) e.viewTransition.types.add('forward');
+						else if (to < from) e.viewTransition.types.add('backward');
+					} catch (_) {}
+				});
+			})();
+		</script>
+
+		<script>
+			/* Scroll reveal: IntersectionObserver for below-fold elements */
+			(function () {
+				var vh = window.innerHeight;
 				var obs = new IntersectionObserver(function (entries) {
 					entries.forEach(function (e) {
 						if (e.isIntersecting) {
@@ -94,9 +147,18 @@
 						}
 					});
 				}, { threshold: 0.08 });
-				document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+
+				document.querySelectorAll('.reveal:not(.in-view)').forEach(function (el) {
+					if (el.getBoundingClientRect().top < vh) {
+						el.style.transition = 'none';
+						el.classList.add('in-view');
+					} else {
+						obs.observe(el);
+					}
+				});
 			})();
 		</script>
+
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
 	</body>
 </html>

@@ -54,13 +54,37 @@
 /* ── View Transitions ─────────────────────────────────────── */
 @view-transition { navigation: auto; }
 
+/* Header is identical on every page — freeze it */
 header { view-transition-name: site-nav; }
+::view-transition-old(site-nav),
+::view-transition-new(site-nav) { animation: none; mix-blend-mode: normal; }
 
-::view-transition-old(root) { animation: 180ms ease-in  vt-out; }
-::view-transition-new(root) { animation: 320ms ease-out vt-in;  }
+/* Default (same-level navigation): subtle slide up */
+::view-transition-old(root) { animation: 180ms ease-in  vt-up-out; }
+::view-transition-new(root) { animation: 300ms ease-out vt-up-in;  }
 
-@keyframes vt-out { to   { opacity: 0; transform: translateY(-10px); } }
-@keyframes vt-in  { from { opacity: 0; transform: translateY(14px);  } }
+/* Forward navigation (e.g. Home → Archive → About): slide left */
+html:active-view-transition-type(forward) ::view-transition-old(root) {
+	animation: 200ms ease-in vt-left-out;
+}
+html:active-view-transition-type(forward) ::view-transition-new(root) {
+	animation: 300ms ease-out vt-left-in;
+}
+
+/* Backward navigation (e.g. About → Archive → Home): slide right */
+html:active-view-transition-type(backward) ::view-transition-old(root) {
+	animation: 200ms ease-in vt-right-out;
+}
+html:active-view-transition-type(backward) ::view-transition-new(root) {
+	animation: 300ms ease-out vt-right-in;
+}
+
+@keyframes vt-up-out    { to   { opacity: 0; transform: translateY(-10px); } }
+@keyframes vt-up-in     { from { opacity: 0; transform: translateY(14px);  } }
+@keyframes vt-left-out  { to   { opacity: 0; transform: translateX(-24px); } }
+@keyframes vt-left-in   { from { opacity: 0; transform: translateX(24px);  } }
+@keyframes vt-right-out { to   { opacity: 0; transform: translateX(24px);  } }
+@keyframes vt-right-in  { from { opacity: 0; transform: translateX(-24px); } }
 
 /* ── Reset ────────────────────────────────────────────────── */
 * { box-sizing: border-box; }
