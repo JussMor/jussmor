@@ -9,8 +9,7 @@ const description = "Full‑stack engineer: frontend, cloud, AI, education. Book
 <section class="about-hero">
 	<h1>Hi, I'm Junior Moreira.</h1>
 	<p class="lead">Product‑focused full‑stack engineer specializing in frontend architecture, cloud platforms, AI integrations, and developer education. I help teams move faster with clean systems, strong DX, and scalable foundations.</p>
-	<p class="meta">Based in Ecuador · Open to U.S. remote roles · <a href="/feed/feed.xml">RSS</a>
-	</p>
+	<p class="meta">Based in Ecuador &middot; Open to U.S. remote roles &middot; <a href="/feed/feed.xml">RSS</a></p>
 	{% if metadata.calendarUrl %}
 		<p class="about-hero-cta">
 			<a class="btn btn-primary" href="{{ metadata.calendarUrl }}" target="_blank" rel="noopener noreferrer">Book a Power Up</a>
@@ -22,59 +21,76 @@ const description = "Full‑stack engineer: frontend, cloud, AI, education. Book
 	<h2>Core Expertise</h2>
 	<ul class="pill-list">
 		<li>Frontend Platforms (React, Qwik, SvelteKit)</li>
-		<li>Design Systems & Server‑Driven UI</li>
-		<li>Cloud & Edge (AWS, Cloudflare)</li>
-		<li>AI & LLM Integration</li>
+		<li>Design Systems &amp; Server‑Driven UI</li>
+		<li>Cloud &amp; Edge (AWS, Cloudflare)</li>
+		<li>AI &amp; LLM Integration</li>
 		<li>Monorepos (Nx)</li>
-		<li>APIs & FastAPI</li>
-		<li>Performance & Observability</li>
+		<li>APIs &amp; FastAPI</li>
+		<li>Performance &amp; Observability</li>
 		<li>Developer Experience Tooling</li>
 	</ul>
 </section>
 
 <section class="experience">
 	<h2>Experience</h2>
-	<div class="xp-grid">
-		<article class="xp-card">
-			<h3>Everbetter Medicine</h3>
-			<p class="role">Senior Front-End Engineer · 2025–2026 · Remote (US)</p>
+	<div class="timeline">
+
+		<div class="timeline-item reveal" style="--reveal-delay: 0ms">
+			<div class="timeline-header">
+				<h3>Everbetter Medicine</h3>
+				<span class="timeline-period">2025&ndash;2026</span>
+			</div>
+			<p class="timeline-role">Senior Front-End Engineer &middot; Remote (US)</p>
 			<ul>
-				<li>Led frontend development for a mobile-first healthcare platform using React, TypeScript, and AWS services.</li>
-				<li>Built patient-facing dashboards and account management features with React, REST APIs, and responsive UI patterns.</li>
-				<li>Integrated third-party APIs and AI-assisted recommendation features through external API integration.</li>
-				<li>Improved performance with lazy loading, reusable hooks, and optimized rendering for mobile devices.</li>
+				<li>Led frontend for a mobile-first healthcare platform using React, TypeScript, and AWS.</li>
+				<li>Built patient dashboards and account management with React, REST APIs, and responsive UI patterns.</li>
+				<li>Integrated AI-assisted recommendations and third-party APIs via external API integration.</li>
+				<li>Improved mobile performance with lazy loading, reusable hooks, and optimized rendering.</li>
 			</ul>
-		</article>
-		<article class="xp-card">
-			<h3>Jobsity</h3>
-			<p class="role">Full Stack Developer · 2022–2024 · Remote (US)</p>
+		</div>
+
+		<div class="timeline-item reveal" style="--reveal-delay: 80ms">
+			<div class="timeline-header">
+				<h3>Jobsity</h3>
+				<span class="timeline-period">2022&ndash;2024</span>
+			</div>
+			<p class="timeline-role">Full Stack Developer &middot; Remote (US)</p>
 			<ul>
 				<li>Built and scaled e-commerce and FinTech platforms using Next.js, React, TypeScript, and Tailwind CSS.</li>
 				<li>Designed a GraphQL API gateway with Apollo, NestJS, and Redis, unifying data from multiple backends.</li>
 				<li>Built backend services for transaction monitoring using NestJS, PostgreSQL, Redis, and event-driven patterns.</li>
 				<li>Migrated legacy .NET services to Node.js/NestJS and set up Docker-based CI/CD pipelines.</li>
 			</ul>
-		</article>
-		<article class="xp-card">
-			<h3>Accenture</h3>
-			<p class="role">Back-End Engineer · 2021–2022 · Remote, Contract (AR)</p>
+		</div>
+
+		<div class="timeline-item reveal" style="--reveal-delay: 160ms">
+			<div class="timeline-header">
+				<h3>Accenture</h3>
+				<span class="timeline-period">2021&ndash;2022</span>
+			</div>
+			<p class="timeline-role">Back-End Engineer &middot; Remote, Contract (AR)</p>
 			<ul>
-				<li>Built backend services for an e-commerce SaaS platform using Python (FastAPI) for product, order, and auth flows.</li>
+				<li>Built backend services for an e-commerce SaaS using Python (FastAPI) for product, order, and auth flows.</li>
 				<li>Designed and optimized data models in PostgreSQL and MongoDB for high-traffic endpoints.</li>
 				<li>Implemented serverless components with AWS Lambda and API Gateway for scalable background jobs.</li>
 				<li>Automated build and deployment workflows with CI/CD pipelines (GitHub Actions / Jenkins).</li>
 			</ul>
-		</article>
-		<article class="xp-card">
-			<h3>Eduland Academy</h3>
-			<p class="role">Software Developer · 2017–2021 · Remote (EC)</p>
+		</div>
+
+		<div class="timeline-item reveal" style="--reveal-delay: 240ms">
+			<div class="timeline-header">
+				<h3>Eduland Academy</h3>
+				<span class="timeline-period">2017&ndash;2021</span>
+			</div>
+			<p class="timeline-role">Software Developer &middot; Remote (EC)</p>
 			<ul>
 				<li>Developed full-stack features using React and Node.js (Express) for e-commerce and SaaS applications.</li>
 				<li>Built and maintained RESTful APIs for product catalog management, user authentication, and order processing.</li>
 				<li>Designed relational data models in PostgreSQL with optimized queries for high-usage endpoints.</li>
 				<li>Set up CI/CD pipelines (GitHub Actions / Jenkins), automating testing and deployment processes.</li>
 			</ul>
-		</article>
+		</div>
+
 	</div>
 </section>
 
@@ -85,62 +101,97 @@ const description = "Full‑stack engineer: frontend, cloud, AI, education. Book
 		<article class="service-card">
 			<h3>1:1 Engineering Call</h3>
 			<p class="price">$35 <span>/ 60 min</span></p>
-			<p class="desc">Architecture review, career guidance, or debugging a tough problem. You bring context—leave with a clear path.</p>
-			<a class="btn btn-primary" href="https://buy.stripe.com/cNi28q8d364B32m1Kv43S00" rel="noopener" target="_blank">Book 1 Hour →</a>
+			<p class="desc">Architecture review, career guidance, or debugging a tough problem. You bring context&mdash;leave with a clear path.</p>
+			<a class="btn btn-primary" href="https://buy.stripe.com/cNi28q8d364B32m1Kv43S00" rel="noopener" target="_blank">Book 1 Hour &rarr;</a>
 		</article>
 		<article class="service-card">
 			<h3>Career Support Pack</h3>
-			<p class="price">2 × 50 min <span>($50)</span></p>
-			<p class="desc">Two deep sessions: positioning, portfolio/code review, roadmap & accountability. Ideal for transitions or leveling up.</p>
-			<a class="btn" href="https://buy.stripe.com/3cI5kCeBr3Wt7iC0Gr43S01" rel="noopener" target="_blank">Reserve Pack →</a>
+			<p class="price">2 &times; 50 min <span>($50)</span></p>
+			<p class="desc">Two deep sessions: positioning, portfolio/code review, roadmap &amp; accountability. Ideal for transitions or leveling up.</p>
+			<a class="btn" href="https://buy.stripe.com/3cI5kCeBr3Wt7iC0Gr43S01" rel="noopener" target="_blank">Reserve Pack &rarr;</a>
 		</article>
 		<article class="service-card alt">
 			<h3>Team Advisory (Inquiry)</h3>
 			<p class="price">Custom</p>
 			<p class="desc">Need help with monorepo strategy, DX tooling, or AI integration? I can embed short‑term to accelerate delivery.</p>
-			<a class="btn" href="mailto:contact@jussmor.com?subject=Team%20Advisory%20Inquiry">Start Conversation →</a>
+			<a class="btn" href="mailto:contact@jussmor.com?subject=Team%20Advisory%20Inquiry">Start Conversation &rarr;</a>
 		</article>
 	</div>
 </section>
 
 <section class="cta">
-	<h2>Let's Build Something</h2>
+	<h2>Let&rsquo;s Build Something</h2>
 	<p>Email <a href="mailto:contact@jussmor.com">contact@jussmor.com</a> or connect on <a href="https://www.linkedin.com/in/jussmor/" target="_blank" rel="noopener">LinkedIn</a>.</p>
 </section>
 
 {% css %}
-.about-hero { max-width: 60rem; margin: 0 auto 2.5rem; }
-.about-hero h1 { margin: 0 0 .6rem; font-size: clamp(2rem,4vw,2.8rem); }
-.about-hero .lead { font-size: 1.05rem; line-height: 1.5; color: var(--text-muted); }
-.about-hero .meta { font-size: .85rem; color: var(--text-muted); margin-top: .75rem; }
+.about-hero { max-width: 60rem; margin: 0 auto 3rem; }
+.about-hero h1 { margin: 0 0 .7rem; font-size: clamp(2rem,4vw,2.8rem); }
+.about-hero .lead { font-size: 1.05rem; line-height: 1.6; color: var(--text-muted); max-width: 60ch; }
+.about-hero .meta { font-size: .82rem; color: var(--text-muted); margin-top: .75rem; }
+.about-hero-cta { margin-top: 1.5rem; }
 
-.pill-list { list-style: none; padding:0; margin: .75rem 0 2rem; display: flex; flex-wrap: wrap; gap: .5rem; }
-.pill-list li { padding: .45rem .75rem; font-size: .8rem; border:1px solid var(--border-color); border-radius: 999px; background: var(--elevated-color); }
+.pill-list { list-style: none; padding: 0; margin: .75rem 0 2.5rem; display: flex; flex-wrap: wrap; gap: .4rem; }
+.pill-list li { padding: .4rem .75rem; font-size: .78rem; border: 1px solid var(--border-color); border-radius: 999px; background: var(--elevated-color); color: var(--text-muted); }
 
-.expertise, .experience, .services, .cta { max-width: 60rem; margin: 0 auto 3rem; }
-.experience h2, .expertise h2, .services h2, .cta h2 { font-size: 1.4rem; margin-bottom: .75rem; }
+.expertise, .experience, .services, .cta { max-width: 60rem; margin: 0 auto 3.5rem; }
+.expertise h2, .experience h2, .services h2, .cta h2 { font-size: 1.35rem; margin-bottom: 1.25rem; font-weight: 600; }
 
-.xp-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
-.xp-card { border:1px solid var(--border-color); border-radius: var(--radius); background: var(--surface-color); padding: 1rem 1.1rem .9rem; box-shadow: var(--shadow-sm); }
-.xp-card h3 { margin: 0 0 .35rem; font-size: 1.05rem; }
-.xp-card .role { margin: 0 0 .5rem; font-size: .75rem; font-weight: 600; letter-spacing: .5px; color: var(--text-muted); text-transform: uppercase; }
-.xp-card ul { margin: 0; padding-left: 1.1rem; font-size: .85rem; line-height: 1.35; }
-.xp-card li { margin-bottom: .4rem; }
+/* Timeline */
+.timeline {
+	position: relative;
+	padding-left: 1.75rem;
+}
+.timeline::before {
+	content: '';
+	position: absolute;
+	left: 0; top: .5rem; bottom: .5rem;
+	width: 1px;
+	background: var(--border-color);
+}
+.timeline-item {
+	position: relative;
+	padding-bottom: 2.75rem;
+}
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before {
+	content: '';
+	position: absolute;
+	left: -2.15rem;
+	top: .5rem;
+	width: 7px; height: 7px;
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 10px var(--accent-dim);
+}
+.timeline-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1rem;
+	margin-bottom: .2rem;
+}
+.timeline-header h3 { margin: 0; font-size: 1.05rem; font-weight: 600; }
+.timeline-period { font-size: .72rem; color: var(--text-muted); white-space: nowrap; letter-spacing: .06em; }
+.timeline-role { margin: 0 0 .65rem; font-size: .72rem; font-weight: 500; letter-spacing: .08em; color: var(--text-muted); text-transform: uppercase; }
+.timeline-item ul { margin: 0; padding-left: 1rem; font-size: .875rem; line-height: 1.55; color: var(--text-muted); }
+.timeline-item li { margin-bottom: .35rem; }
 
+/* Services */
 .service-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); align-items: stretch; }
-.service-card { position: relative; display:flex; flex-direction:column; border:1px solid var(--border-color); border-radius: var(--radius); background: var(--surface-color); padding: 1.15rem 1.15rem 1.2rem; box-shadow: var(--shadow-sm); transition: transform .12s ease, box-shadow .2s ease; }
+.service-card { position: relative; display: flex; flex-direction: column; border: 1px solid var(--border-color); border-radius: var(--radius); background: var(--surface-color); padding: 1.15rem 1.15rem 1.2rem; box-shadow: var(--shadow-sm); transition: transform .12s ease, box-shadow .2s ease; }
 .service-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
-.service-card.alt { background: linear-gradient(140deg, color-mix(in oklab, var(--surface-color) 96%, transparent), color-mix(in oklab, var(--elevated-color) 92%, transparent)); }
+.service-card.alt { background: var(--elevated-color); }
 .service-card h3 { margin: 0 0 .4rem; font-size: 1rem; }
 .service-card .price { margin: 0 0 .4rem; font-size: .9rem; font-weight: 600; color: var(--text-color); }
 .service-card .price span { font-weight: normal; color: var(--text-muted); }
-.service-card .desc { flex-grow:1; font-size: .8rem; line-height: 1.4; color: var(--text-muted); margin: 0 0 .75rem; }
+.service-card .desc { flex-grow: 1; font-size: .82rem; line-height: 1.5; color: var(--text-muted); margin: 0 0 .75rem; }
 .service-card .btn { width: 100%; justify-content: center; font-size: .85rem; }
-.note { margin-top: 1rem; font-size: .7rem; color: var(--text-muted); }
 
-.cta { text-align: center; padding: 2.5rem 1rem 3rem; border:1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--surface-color); box-shadow: var(--shadow); }
-.cta h2 { margin:0 0 .75rem; font-size: 1.6rem; }
-.cta p { margin:0; font-size: .95rem; }
+/* CTA */
+.cta { text-align: center; padding: 2.5rem 1rem 3rem; border: 1px solid var(--border-color); border-radius: var(--radius-lg); background: var(--surface-color); box-shadow: var(--shadow); }
+.cta h2 { margin: 0 0 .75rem; font-size: 1.6rem; }
+.cta p { margin: 0; font-size: .95rem; }
 
-@media (min-width: 800px) { .service-card h3 { font-size: 1.05rem; } }
+@media (min-width: 640px) { .timeline-header h3 { font-size: 1.1rem; } }
 {% endcss %}

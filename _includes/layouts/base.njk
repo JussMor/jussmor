@@ -3,12 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<script src="https://analytics.ahrefs.com/analytics.js" data-key="C4amfoddIHrzNPGl4TCVzQ" async></script>
 
-		{# SEO: canonical + social sharing images #}
 		<link rel="canonical" href="{{ page.url | absoluteUrl(metadata.url) }}">
 		<meta property="og:title" content="{{ title or metadata.title }}">
 		<meta property="og:description" content="{{ description or metadata.description }}">
@@ -23,60 +25,28 @@
 			<meta name="twitter:card" content="summary">
 		{% endif %}
 
-		{# Initialize theme early to avoid flash #}
 		<script>
 			(function () {
 				try {
 					var stored = localStorage.getItem('theme');
-					var systemDark = window.matchMedia && window
-						.matchMedia('(prefers-color-scheme: dark)')
-						.matches
-							? 'dark'
-							: 'light';
-					var theme = stored || systemDark;
-					document
-						.documentElement
-						.setAttribute('data-theme', theme);
+					var theme = stored || 'dark';
+					document.documentElement.setAttribute('data-theme', theme);
 				} catch (e) {}
 			})();
 		</script>
 
-		{#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-		{#- <meta name="generator" content="{{ eleventy.generator }}"> #}
-
-		{#-
-		Plain-text bundles are provided via the `eleventy-plugin-bundle` plugin:
-		1. CSS:
-			* Add to a per-page bundle using `{% css %}{% endcss %}`
-			* Retrieve bundle content using `{% getBundle "css" %}` or `{% getBundleFileUrl "css" %}`
-		2. Or for JavaScript:
-			* Add to a per-page bundle using `{% js %}{% endjs %}`
-			* Retrieve via `{% getBundle "js" %}` or `{% getBundleFileUrl "js" %}`
-		3. Learn more: https://github.com/11ty/eleventy-plugin-bundle
-		#}
-
-		{#- Add CSS to the bundle #}
 		<style>
 			/* This is an arbitrary CSS string added to the bundle */
 		</style>
 
-		{#- Add the contents of a file to the bundle #}
 		<style>
 			{% include "css/index.css" %}
 		</style>
 
-		{#- Or you can add from node_modules #}
-		{# <style>{% include "node_modules/something.css" %}</style> #}
-
-		{#- Render the CSS bundle using inlined CSS (for the fastest site performance in production) #}
 		<style>
 			{% getBundle "css" %}
 		</style>
 
-		{#- Renders the CSS bundle using a separate file, if you can't set CSP directive style-src: 'unsafe-inline' #}
-		{#- <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> #}
-
-		{#- Add the heading-anchors web component to the JavaScript bundle #}
 		<script type="module">
 			{% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
 		</script>
@@ -86,22 +56,6 @@
 
 		{% include "header.njk" %}
 
-		{# <header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
-
-			Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ 
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-					{%- for entry in collections.all | eleventyNavigation %}
-						<li class="nav-item">
-							<a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a>
-						</li>
-					{%- endfor %}
-				</ul>
-			</nav>
-		</header> #}
-
 		<main id="main">
 			<heading-anchors>
 				{{ content | safe }}
@@ -109,43 +63,40 @@
 		</main>
 
 		<footer>
-			<p>
-				<em>JussMor - Copyright © 2025</a>
-			</em>
-		</p>
-	</footer>
+			<p><em>JussMor &mdash; &copy; 2025</em></p>
+		</footer>
 
-	<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
-	<script>
-		(function () {
-			var btn = document.getElementById('theme-toggle');
-			if (!btn) 
-				return;
-			function apply(theme) {
-				document
-					.documentElement
-					.setAttribute('data-theme', theme);
-				try {
-					localStorage.setItem('theme', theme);
-				} catch (e) {}
-				btn.setAttribute('aria-pressed', theme === 'dark');
-			}
-			btn.addEventListener('click', function () {
-				var current = document
-					.documentElement
-					.getAttribute('data-theme') || 'light';
-				apply(
-					current === 'dark'
-					? 'light'
-					: 'dark');
-			});
-			// Sync initial button state
-			var initial = document
-				.documentElement
-				.getAttribute('data-theme') || 'light';
-			btn.setAttribute('aria-pressed', initial === 'dark');
-		})();
-	</script>
-	<script type="module" src="{% getBundleFileUrl "js" %}"></script>
-</body>
+		<!-- {{ page.url }} built on {% currentBuildDate %} -->
+		<script>
+			(function () {
+				var btn = document.getElementById('theme-toggle');
+				if (!btn) return;
+				function apply(theme) {
+					document.documentElement.setAttribute('data-theme', theme);
+					try { localStorage.setItem('theme', theme); } catch (e) {}
+					btn.setAttribute('aria-pressed', theme === 'dark');
+				}
+				btn.addEventListener('click', function () {
+					var current = document.documentElement.getAttribute('data-theme') || 'dark';
+					apply(current === 'dark' ? 'light' : 'dark');
+				});
+				var initial = document.documentElement.getAttribute('data-theme') || 'dark';
+				btn.setAttribute('aria-pressed', initial === 'dark');
+			})();
+		</script>
+		<script>
+			(function () {
+				var obs = new IntersectionObserver(function (entries) {
+					entries.forEach(function (e) {
+						if (e.isIntersecting) {
+							e.target.classList.add('in-view');
+							obs.unobserve(e.target);
+						}
+					});
+				}, { threshold: 0.08 });
+				document.querySelectorAll('.reveal').forEach(function (el) { obs.observe(el); });
+			})();
+		</script>
+		<script type="module" src="{% getBundleFileUrl "js" %}"></script>
+	</body>
 </html>
